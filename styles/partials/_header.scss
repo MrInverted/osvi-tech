@@ -1,0 +1,30 @@
+.header {
+  padding-top: 40px;
+
+  &__content {
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    a {
+      display: block;
+      padding: 5px 10px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {}
+
+  &__right {
+    max-width: 760px;
+    width: 100%;
+  }
+}

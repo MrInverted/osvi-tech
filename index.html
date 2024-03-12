@@ -55,14 +55,14 @@
                   <p>Заповни форму та отримай <b>безкоштовний вводний урок</b></p>
                   <div class="intro__chooser chooser">
                     <div class="chooser__tabs">
-                      <chooser-tab class="tab-size bg-blue ol-blue active">Програмування</chooser-tab>
-                      <chooser-tab class="tab-size bg-yellow ol-yellow disabled">Шкільна програма</chooser-tab>
-                      <chooser-tab class="tab-size bg-red ol-red disabled">Іноземні мови</chooser-tab>
+                      <chooser-tab class="chooser__tab tab-size bg-blue ol-blue active">Програмування</chooser-tab>
+                      <chooser-tab class="chooser__tab tab-size bg-yellow ol-yellow disabled">Шкільна програма</chooser-tab>
+                      <chooser-tab class="chooser__tab tab-size bg-red ol-red disabled">Іноземні мови</chooser-tab>
                     </div>
 
                     <div class="chooser__select closed shown">
-                      <chooser-main-select class="tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
-                      <chooser-content>
+                      <chooser-main-select class="chooser__title tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
+                      <chooser-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="chooser__courses-flex">
                             <chooser-course class="item-size ol-blue">Основи програмування</chooser-course>
@@ -75,8 +75,8 @@
                     </div>
 
                     <div class="chooser__select closed hidden">
-                      <chooser-main-select class="tab-size bg-yellow ol-yellow">Обрати предмет</chooser-main-select>
-                      <chooser-content>
+                      <chooser-main-select class="chooser__title tab-size bg-yellow ol-yellow">Обрати предмет</chooser-main-select>
+                      <chooser-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="chooser__courses-flex">
                             <chooser-course class="item-size ol-yellow">Математика</chooser-course>
@@ -95,8 +95,8 @@
                     </div>
 
                     <div class="chooser__select closed hidden">
-                      <chooser-main-select class="tab-size bg-red ol-red">Обрати предмет</chooser-main-select>
-                      <chooser-content>
+                      <chooser-main-select class="chooser__title tab-size bg-red ol-red">Обрати предмет</chooser-main-select>
+                      <chooser-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="chooser__courses-flex">
                             <chooser-course class="item-size ol-red">Англійська мова</chooser-course>
@@ -156,9 +156,9 @@
 
                 <div class="about__right">
                   <div class="about__tabs">
-                    <about-tab class="opened">
-                      <about-tab-title class="tab-size bg-blue ol-blue">Програмування</about-tab-title>
-                      <about-tab-content>
+                    <about-tab class="chooser__select opened">
+                      <about-tab-title class="chooser__title tab-size bg-blue ol-blue">Програмування</about-tab-title>
+                      <about-tab-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="about__tab-flex">
                             <about-tab-item class="item-size ol-blue">Основи програмування</about-tab-item>
@@ -170,9 +170,9 @@
                       </about-tab-content>
                     </about-tab>
 
-                    <about-tab class="closed">
-                      <about-tab-title class="tab-size bg-yellow ol-yellow">Шкільна програма</about-tab-title>
-                      <about-tab-content>
+                    <about-tab class="chooser__select closed">
+                      <about-tab-title class="chooser__title tab-size bg-yellow ol-yellow">Шкільна програма</about-tab-title>
+                      <about-tab-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="about__tab-flex">
                             <about-tab-item class="item-size ol-yellow">Математика</about-tab-item>
@@ -190,9 +190,9 @@
                       </about-tab-content>
                     </about-tab>
 
-                    <about-tab class="closed">
-                      <about-tab-title class="tab-size bg-red ol-red">Іноземні мови</about-tab-title>
-                      <about-tab-content>
+                    <about-tab class="chooser__select closed">
+                      <about-tab-title class="chooser__title tab-size bg-red ol-red">Іноземні мови</about-tab-title>
+                      <about-tab-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="about__tab-flex">
                             <about-tab-item class="item-size ol-red">Англійська мова</about-tab-item>
@@ -211,12 +211,73 @@
           </my-container>
         </section>
 
-        <section></section>
+        <section class="reviews">
+          <my-container>
+            <div class="reviews__content">
+              <h2>Відгуки</h2>
+              <div class="reviews__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <reviews-slide class="swiper-slide">
+                      <div class="reviews__slide">
+                        <div class="reviews__video" data-video="JEy0C586KeI?si=6m70FApX4pMdqTFn">
+                          <img src="./images/reviews-video.jpg" alt="">
+                        </div>
+                        <div class="reviews__text">
+                          <span class="reviews__category item-size ol-red">Німецька мова</span>
+                          <blockquote>
+                            <span>“Займаюсь відносно нещодавно, вивчаю німецьку мову. Я дуже рада, що потрапила в цю школу, тому що тут працюють неймовірні викладачі. Наші заняття проходять весело та цікаво, і я завжди засвоюю матеріал. Пояснюють все зрозумілою для мене мовою. Я задоволена цією школою. Величезне дякую!”</span>
+                            <cite>— Настя, 15 років</cite>
+                          </blockquote>
+                        </div>
+
+                        <img class="reviews__book" src="./images/reviews-book.png" alt="">
+                      </div>
+                    </reviews-slide>
+
+                    <reviews-slide class="swiper-slide">
+                      <div class="reviews__slide">
+                        <div class="reviews__video" data-video="JEy0C586KeI?si=6m70FApX4pMdqTFn">
+                          <img src="./images/reviews-video.jpg" alt="">
+                        </div>
+                        <div class="reviews__text">
+                          <span class="reviews__category item-size ol-red">Німецька мова</span>
+                          <blockquote>
+                            <span>“Займаюсь відносно нещодавно, вивчаю німецьку мову. Я дуже рада, що потрапила в цю школу, тому що тут працюють неймовірні викладачі. Наші заняття проходять весело та цікаво, і я завжди засвоюю матеріал. Пояснюють все зрозумілою для мене мовою. Я задоволена цією школою. Величезне дякую!”</span>
+                            <cite>— Настя, 15 років</cite>
+                          </blockquote>
+                        </div>
+
+                        <img class="reviews__book" src="./images/reviews-book.png" alt="">
+                      </div>
+                    </reviews-slide>
+                  </div>
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-buttons">
+                    <div class="swiper-button-prev">
+                      <img src="./images/reviews-slider-arrow.svg" alt="">
+                    </div>
+
+                    <div class="swiper-button-next">
+                      <img src="./images/reviews-slider-arrow.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <img class="reviews__star-1" src="./images/reviews-star.png" alt="">
+              <img class="reviews__star-2" src="./images/reviews-star.png" alt="">
+              <img class="reviews__star-3" src="./images/reviews-star.png" alt="">
+            </div>
+          </my-container>
+        </section>
       </main>
 
       <footer></footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 

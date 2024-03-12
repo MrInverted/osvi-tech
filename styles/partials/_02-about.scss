@@ -17,48 +17,14 @@
 
     about-tab-title {
       display: block;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 16px;
-        height: 16px;
-        background-image: url("../images/chevron.svg");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-
-        position: absolute;
-        right: 32px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
     }
 
     about-tab-content {
-      display: block;
       padding: 0 20px;
-
-      display: grid;
-      grid-template-rows: 0fr;
-      overflow: hidden;
-      transition: 0.6s;
-    }
-
-    about-tab.opened about-tab-content {
-      grid-template-rows: 1fr;
     }
 
     about-tab.opened about-tab-title {
       margin-bottom: 20px;
-    }
-
-    about-tab.closed about-tab-title:not(:hover) {
-      background-color: unset;
-    }
-
-    about-tab.closed about-tab-title::after {
-      transform: translateY(-50%) rotate(180deg);
     }
 
     about-tab-item {

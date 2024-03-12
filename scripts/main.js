@@ -56,3 +56,48 @@ aboutTab.forEach(item => {
     addActiveClass(item, "opened", "closed");
   }
 })
+
+
+
+// ---------------------------------------------------------------------
+
+
+
+const swiper = new Swiper('.reviews .swiper', {
+  loop: false,
+  speed: 400,
+  spaceBetween: 200,
+  grabCursor: true,
+  loopPreventsSliding: false,
+
+  pagination: {
+    el: '.reviews .swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
+// ---------------------------------------------------------------------
+
+
+
+const reviewsVideo = document.querySelectorAll(".reviews__video");
+
+reviewsVideo.forEach(item => {
+  item.onclick = () => {
+    item.outerHTML = `
+      <iframe src="https://www.youtube.com/embed/${item.dataset.video}&autoplay=1&rel=0&modestbranding=1" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+      </iframe>
+    `;
+  }
+})

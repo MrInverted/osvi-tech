@@ -6,8 +6,16 @@
     margin-bottom: 24px;
   }
 
+  &__tab {
+    display: block;
+  }
+
   &__tab:not(.active):not(:hover) {
     background-color: unset;
+  }
+
+  &__select {
+    display: block;
   }
 
   &__select.shown {
@@ -22,7 +30,7 @@
     grid-template-rows: 1fr;
   }
 
-  &__select.opened chooser-main-select::after {
+  &__select.opened .chooser__title::after {
     transform: translateY(-50%) rotate(180deg);
   }
 
@@ -32,6 +40,10 @@
 
   &__select.closed .chooser__title:not(:hover) {
     background-color: unset;
+  }
+
+  &__title {
+    display: block;
   }
 
   &__title::after {

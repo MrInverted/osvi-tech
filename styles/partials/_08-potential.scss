@@ -1,0 +1,155 @@
+.potential {
+  margin-bottom: 80px;
+
+  &__content {
+    border-radius: 60px;
+    padding: 120px 140px;
+    background: #aa80f1;
+
+    h2 {
+      margin-bottom: 24px;
+      color: white;
+    }
+
+    chooser-tab {
+      border: 2px solid white;
+      color: white;
+    }
+
+    chooser-tab:hover {
+      background-color: white;
+      color: #000;
+    }
+
+    chooser-tab.active {
+      background-color: white;
+      color: #000;
+    }
+
+    chooser-main-select {
+      border: 2px solid white;
+      background-color: unset;
+      color: white;
+      margin-bottom: 20px;
+
+      &::after {
+        background-image: url("../images/chevron-white.svg");
+      }
+    }
+
+    chooser-content {
+      padding: 0 20px;
+    }
+
+    chooser-course {
+      display: inline-block;
+    }
+
+    .chooser__select.opened chooser-content {
+      margin-bottom: 24px;
+    }
+
+    .chooser__select.opened chooser-main-select {
+      background-color: white;
+      color: #000;
+    }
+
+    .chooser__select.opened chooser-main-select::after {
+      background-image: url("../images/chevron.svg");
+    }
+
+    chooser-course {
+      border: 2px solid white;
+      color: white;
+    }
+
+    input:not([type="checkbox"]) {
+      flex: 1;
+
+      display: block;
+      border: 2px solid #fff;
+      background-color: unset;
+      border-radius: 100px;
+      padding: 20px 32px;
+
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+
+      &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+        opacity: 0.8;
+      }
+    }
+
+    input[type="checkbox"] {
+      accent-color: white;
+    }
+
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      color: white;
+
+      a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+    }
+
+    button {
+      background-color: white;
+      color: #aa80f1;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__left {
+    flex: 0 1 540px;
+    color: white;
+    position: relative;
+    padding-top: 180px;
+  }
+
+  &__right {
+    flex: 0 1 680px;
+  }
+
+  &__form-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+
+
+.potential {
+
+  &__bulb {
+    position: absolute;
+    top: -32px;
+    left: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -88px;
+    right: -88px;
+    transform: rotate(27deg);
+  }
+}

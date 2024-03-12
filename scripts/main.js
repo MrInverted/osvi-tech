@@ -113,3 +113,56 @@ reviewsVideo.forEach(item => {
     `;
   }
 })
+
+
+
+// ---------------------------------------------------------------------
+
+
+
+const faqBlock = document.querySelectorAll(".faq dl");
+
+faqBlock.forEach(item => {
+  const faqTitle = item.querySelector("dt");
+
+  faqTitle.onclick = () => {
+    item.classList.toggle("opened")
+  }
+})
+
+
+
+// ---------------------------------------------------------------------
+
+
+
+const potentialAccordion = document.querySelectorAll(".potential .chooser__select");
+const potentialTab = document.querySelectorAll(".potential .chooser__tab");
+
+potentialAccordion.forEach(item => {
+  const title = item.querySelector("chooser-main-select");
+
+  title.onclick = () => {
+    if (item.classList.contains("closed")) {
+      for (let item of potentialAccordion) {
+        addActiveClass(item, "opened", "closed");
+      }
+    } else {
+      for (let item of potentialAccordion) {
+        removeActiveClass(item, "opened", "closed");
+      }
+    }
+  }
+})
+
+potentialTab.forEach((item, index) => {
+  item.onclick = () => {
+    for (let i = 0; i < potentialTab.length; i++) {
+      removeActiveClass(potentialTab[i], "active", "disabled");
+      removeActiveClass(potentialAccordion[i], "shown", "hidden");
+    }
+
+    addActiveClass(item, "active", "disabled");
+    addActiveClass(potentialAccordion[index], "shown", "hidden");
+  }
+})

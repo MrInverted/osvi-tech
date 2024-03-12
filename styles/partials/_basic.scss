@@ -39,6 +39,14 @@ h2 {
   color: #000;
 }
 
+h3 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  color: #000;
+}
+
 .btn {
   width: 100%;
 
@@ -59,6 +67,7 @@ h2 {
   position: relative;
   transition: 0.3s;
   cursor: pointer;
+  text-align: center;
 }
 
 .item-size {
@@ -66,6 +75,7 @@ h2 {
   padding: 10px 32px;
   position: relative;
   transition: 0.3s;
+  text-align: center;
 }
 
 .bg-blue {

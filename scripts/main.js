@@ -18,11 +18,23 @@ introAccordion.forEach(item => {
 
   title.onclick = () => {
     if (item.classList.contains("closed")) {
-      addActiveClass(item, "opened", "closed");
+      for (let item of introAccordion) {
+        addActiveClass(item, "opened", "closed");
+      }
     } else {
-      removeActiveClass(item, "opened", "closed");
+      for (let item of introAccordion) {
+        removeActiveClass(item, "opened", "closed");
+      }
     }
   }
+
+  // title.onclick = () => {
+  //   if (item.classList.contains("closed")) {
+  //     addActiveClass(item, "opened", "closed");
+  //   } else {
+  //     removeActiveClass(item, "opened", "closed");
+  //   }
+  // }
 })
 
 introTab.forEach((item, index) => {
@@ -30,8 +42,8 @@ introTab.forEach((item, index) => {
     for (let i = 0; i < introTab.length; i++) {
       removeActiveClass(introTab[i], "active", "disabled");
       removeActiveClass(introAccordion[i], "shown", "hidden");
-      if (i === index) continue;
-      removeActiveClass(introAccordion[i], "opened", "closed");
+      // if (i === index) continue;
+      // removeActiveClass(introAccordion[i], "opened", "closed");
     }
 
     addActiveClass(item, "active", "disabled");

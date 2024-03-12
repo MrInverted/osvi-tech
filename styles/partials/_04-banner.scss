@@ -1,0 +1,91 @@
+.banner {
+
+  &__content {
+    background-color: #ffd66c;
+    padding: 100px 140px;
+    border-radius: 60px;
+    position: relative;
+
+    h2 {
+      max-width: 540px;
+      margin: 0 auto;
+      margin-bottom: 24px;
+
+      text-align: center;
+    }
+
+    p {
+      max-width: 420px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+
+      text-align: center;
+      font-size: 24px;
+      line-height: 140%;
+
+      b {
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
+
+    button {
+      display: block;
+      max-width: 540px;
+      margin: 0 auto;
+
+      background: #f1807e;
+    }
+  }
+}
+
+
+.banner {
+
+  &__star-1,
+  &__star-11 {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 88px;
+  }
+
+  &__star-2,
+  &__star-12 {
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 265px;
+  }
+
+  &__pc-1,
+  &__pc-11 {
+    width: 86px;
+    position: absolute;
+    bottom: 80px;
+  }
+
+  &__star-1 {
+    left: 232px;
+  }
+
+  &__star-11 {
+    right: 232px;
+  }
+
+  &__star-2 {
+    left: 375px;
+  }
+
+  &__star-12 {
+    right: 375px;
+  }
+
+  &__pc-1 {
+    left: 130px;
+  }
+
+  &__pc-11 {
+    right: 130px;
+  }
+}

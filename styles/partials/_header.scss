@@ -8,11 +8,6 @@
       align-items: center;
       justify-content: space-between;
     }
-
-    a {
-      display: block;
-      padding: 5px 10px;
-    }
   }
 
   &__row {
@@ -21,10 +16,25 @@
     align-items: center;
   }
 
-  &__left {}
+  &__left a:hover {
+    opacity: 0.6;
+  }
 
   &__right {
     max-width: 760px;
     width: 100%;
+
+    a {
+      display: block;
+      padding: 5px 10px;
+
+      &:hover {
+        color: #aa80f1;
+      }
+
+      &:active {
+        color: #959595;
+      }
+    }
   }
 }

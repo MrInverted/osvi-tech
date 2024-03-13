@@ -42,6 +42,20 @@
       gap: 20px;
       margin-top: auto;
     }
+
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+
+      &:hover {
+        fill: #aa80f1;
+      }
+
+      &:active {
+        fill: #959595;
+      }
+    }
   }
 
   &__row {
@@ -61,6 +75,10 @@
       font-size: 22px;
       line-height: 140%;
     }
+
+    a:hover {
+      opacity: 0.8;
+    }
   }
 
   &__right {
@@ -69,6 +87,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+
+    a:hover {
+      color: #aa80f1;
+    }
+
+    a:active {
+      color: #959595;
+    }
   }
 
   &__sub {

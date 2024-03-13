@@ -35,6 +35,14 @@
       margin: 0 auto;
 
       background: #f1807e;
+
+      &:hover {
+        background-color: #d36260;
+      }
+
+      &:active {
+        background-color: #ff9e9c;
+      }
     }
   }
 }

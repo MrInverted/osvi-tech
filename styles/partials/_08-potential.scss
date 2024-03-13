@@ -37,12 +37,28 @@
       }
     }
 
+    chooser-main-select:hover {
+      background-color: white;
+      color: #000;
+
+      &::after {
+        background-image: url("../images/chevron.svg");
+      }
+    }
+
     chooser-content {
       padding: 0 20px;
     }
 
     chooser-course {
       display: inline-block;
+      border: 2px solid white;
+      color: white;
+    }
+
+    chooser-course:hover {
+      background-color: white;
+      color: #000;
     }
 
     .chooser__select.opened chooser-content {
@@ -56,11 +72,6 @@
 
     .chooser__select.opened chooser-main-select::after {
       background-image: url("../images/chevron.svg");
-    }
-
-    chooser-course {
-      border: 2px solid white;
-      color: white;
     }
 
     input:not([type="checkbox"]) {
@@ -84,8 +95,12 @@
         font-size: 16px;
         line-height: 150%;
         color: #fff;
-        opacity: 0.8;
+        opacity: 0.5;
       }
+    }
+
+    input:hover::placeholder {
+      opacity: 1;
     }
 
     input[type="checkbox"] {
@@ -109,6 +124,16 @@
       background-color: white;
       color: #aa80f1;
       margin-bottom: 24px;
+
+      &:hover {
+        background-color: white;
+        color: #aa80f1;
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
     }
   }
 

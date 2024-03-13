@@ -185,6 +185,12 @@ h3 {
   font-weight: 700;
   text-transform: uppercase;
 }
+.btn:hover {
+  background-color: #8c62d3;
+}
+.btn:active {
+  background-color: #c89eff;
+}
 
 .tab-size {
   border-radius: 100px;
@@ -200,6 +206,7 @@ h3 {
   padding: 10px 32px;
   position: relative;
   transition: 0.3s;
+  cursor: pointer;
   text-align: center;
 }
 
@@ -225,6 +232,18 @@ h3 {
 
 .ol-red {
   border: 2px solid #f1807e;
+}
+
+.hover-blue:hover {
+  background-color: #7ec0f1;
+}
+
+.hover-yellow:hover {
+  background-color: #ffd66c;
+}
+
+.hover-red:hover {
+  background-color: #f1807e;
 }
 
 .chooser__tabs {
@@ -296,18 +315,27 @@ h3 {
   align-items: center;
   justify-content: space-between;
 }
-.header__content a {
-  display: block;
-  padding: 5px 10px;
-}
 .header__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.header__left a:hover {
+  opacity: 0.6;
+}
 .header__right {
   max-width: 760px;
   width: 100%;
+}
+.header__right a {
+  display: block;
+  padding: 5px 10px;
+}
+.header__right a:hover {
+  color: #aa80f1;
+}
+.header__right a:active {
+  color: #959595;
 }
 
 .intro__content h1 {
@@ -475,7 +503,7 @@ h3 {
   cursor: pointer;
 }
 .reviews__video:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 .reviews__video::before {
   content: "";
@@ -614,6 +642,12 @@ h3 {
   max-width: 540px;
   margin: 0 auto;
   background: #f1807e;
+}
+.banner__content button:hover {
+  background-color: #d36260;
+}
+.banner__content button:active {
+  background-color: #ff9e9c;
 }
 
 .banner__star-1, .banner__star-11 {
@@ -763,7 +797,7 @@ h3 {
 }
 .faq__content dt {
   padding-right: 40px;
-  transition: 0.6s;
+  transition: margin 0.6s;
   cursor: pointer;
   position: relative;
 }
@@ -780,6 +814,9 @@ h3 {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+}
+.faq__content dt:hover {
+  color: #aa80f1;
 }
 .faq__content dd {
   display: grid;
@@ -849,11 +886,24 @@ h3 {
 .potential__content chooser-main-select::after {
   background-image: url("../images/chevron-white.svg");
 }
+.potential__content chooser-main-select:hover {
+  background-color: white;
+  color: #000;
+}
+.potential__content chooser-main-select:hover::after {
+  background-image: url("../images/chevron.svg");
+}
 .potential__content chooser-content {
   padding: 0 20px;
 }
 .potential__content chooser-course {
   display: inline-block;
+  border: 2px solid white;
+  color: white;
+}
+.potential__content chooser-course:hover {
+  background-color: white;
+  color: #000;
 }
 .potential__content .chooser__select.opened chooser-content {
   margin-bottom: 24px;
@@ -864,10 +914,6 @@ h3 {
 }
 .potential__content .chooser__select.opened chooser-main-select::after {
   background-image: url("../images/chevron.svg");
-}
-.potential__content chooser-course {
-  border: 2px solid white;
-  color: white;
 }
 .potential__content input:not([type=checkbox]) {
   flex: 1;
@@ -888,7 +934,7 @@ h3 {
   font-size: 16px;
   line-height: 150%;
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 .potential__content input:not([type=checkbox])::placeholder {
   font-family: var(--font-family);
@@ -896,7 +942,13 @@ h3 {
   font-size: 16px;
   line-height: 150%;
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.5;
+}
+.potential__content input:hover::-moz-placeholder {
+  opacity: 1;
+}
+.potential__content input:hover::placeholder {
+  opacity: 1;
 }
 .potential__content input[type=checkbox] {
   accent-color: white;
@@ -916,6 +968,14 @@ h3 {
   background-color: white;
   color: #aa80f1;
   margin-bottom: 24px;
+}
+.potential__content button:hover {
+  background-color: white;
+  color: #aa80f1;
+  opacity: 0.8;
+}
+.potential__content button:active {
+  opacity: 0.6;
 }
 .potential__row {
   display: flex;
@@ -986,6 +1046,17 @@ h3 {
   gap: 20px;
   margin-top: auto;
 }
+.footer__content svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+.footer__content svg:hover {
+  fill: #aa80f1;
+}
+.footer__content svg:active {
+  fill: #959595;
+}
 .footer__row {
   display: flex;
   justify-content: space-between;
@@ -1001,11 +1072,20 @@ h3 {
   font-size: 22px;
   line-height: 140%;
 }
+.footer__left a:hover {
+  opacity: 0.8;
+}
 .footer__right {
   flex: 0 1 840px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+.footer__right a:hover {
+  color: #aa80f1;
+}
+.footer__right a:active {
+  color: #959595;
 }
 .footer__sub {
   margin-top: 60px;

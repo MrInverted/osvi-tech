@@ -1,7 +1,5 @@
 :root {
   --font-family: "Raleway", sans-serif;
-  // --second-family: "Handjet", sans-serif;
-  // --third-family: "Darker Grotesque", sans-serif;
 }
 
 body {
@@ -59,6 +57,14 @@ h3 {
   line-height: 1.5;
   font-weight: 700;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #8c62d3;
+  }
+
+  &:active {
+    background-color: #c89eff;
+  }
 }
 
 .tab-size {
@@ -75,6 +81,7 @@ h3 {
   padding: 10px 32px;
   position: relative;
   transition: 0.3s;
+  cursor: pointer;
   text-align: center;
 }
 
@@ -100,4 +107,16 @@ h3 {
 
 .ol-red {
   border: 2px solid #f1807e;
+}
+
+.hover-blue:hover {
+  background-color: #7ec0f1;
+}
+
+.hover-yellow:hover {
+  background-color: #ffd66c;
+}
+
+.hover-red:hover {
+  background-color: #f1807e;
 }

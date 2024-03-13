@@ -1,8 +1,21 @@
 .intro {
+  padding-top: 80px;
+
+  @media (max-width: $forMobile) {
+    padding-top: 60px;
+  }
 
   &__content {
     h1 {
       margin-bottom: 32px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: $forMobile) {
+        text-align: center;
+      }
     }
 
     h1+p {
@@ -11,6 +24,16 @@
       max-width: 420px;
       position: relative;
       margin-bottom: 60px;
+
+      @media (max-width: $forDesktop) {
+        font-size: 22px;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $forMobile) {
+        font-size: 18px;
+        text-align: center;
+      }
 
       b {
         font-weight: 500;
@@ -22,6 +45,20 @@
         display: block;
         width: 190px;
         height: 160px;
+
+        @media (max-width: $forDesktop) {
+          width: 137px;
+          height: 116px;
+          left: 90%;
+        }
+
+        @media (max-width: $forTablet) {
+          left: 100%;
+        }
+
+        @media (max-width: $forMobile) {
+          display: none;
+        }
 
         background-image: url("../images/intro-arrow.png");
         background-size: contain;
@@ -60,6 +97,15 @@
     display: flex;
     align-items: center;
     gap: 60px;
+
+    @media (max-width: $forDesktop) {
+      gap: 40px;
+    }
+
+    @media (max-width: $forTablet) {
+      flex-direction: column;
+      gap: 60px;
+    }
   }
 
   &__chooser {
@@ -69,10 +115,26 @@
 
   &__left {
     flex: 0 1 780px;
+
+    @media (max-width: $forDesktop) {
+      flex: 0 1 650px;
+    }
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
   }
 
   &__right {
     flex: 0 1 820px;
+
+    @media (max-width: $forDesktop) {
+      flex: 1;
+    }
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
   }
 
   .chooser__select {

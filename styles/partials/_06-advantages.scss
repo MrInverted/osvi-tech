@@ -5,21 +5,41 @@
 
     h2 {
       margin-bottom: 80px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 40px;
+      }
     }
 
     h3 {
       margin-bottom: 16px;
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 12px;
+      }
     }
 
     img {
       display: block;
       margin: 0 auto;
       margin-bottom: 40px;
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 24px;
+      }
     }
 
     advantages-item {
       display: block;
       padding: 0 40px;
+
+      @media (max-width: $forDesktop) {
+        padding: 0;
+      }
     }
   }
 
@@ -27,5 +47,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: 1fr;
+      gap: 60px;
+
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $forMobile) {
+      gap: 40px;
+    }
   }
 }

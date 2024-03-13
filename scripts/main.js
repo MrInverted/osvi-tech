@@ -166,3 +166,17 @@ potentialTab.forEach((item, index) => {
     addActiveClass(potentialAccordion[index], "shown", "hidden");
   }
 })
+
+
+
+// ---------------------------------------------------------------------
+
+
+
+const burgerTrigger = document.querySelector(".header__burger");
+const burgerMenu = document.querySelector(".header__right");
+
+burgerTrigger.onclick = () => {
+  burgerTrigger.classList.toggle("opened")
+  burgerMenu.classList.toggle("menu-is-opened")
+}

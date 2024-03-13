@@ -2,23 +2,61 @@
   --font-family: "Raleway", sans-serif;
 }
 
+$forDesktop : 1740px; // 1660 + 40 + 40
+$forTablet : 1260px; // 1180 + 40 + 40
+$forMobile : 768px;
+$minimum : 400px;
+
 body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
   color: #000;
+  min-width: $minimum;
+
+  @media (max-width: $forDesktop) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 14px;
+  }
 }
 
 my-container {
   display: block;
-  max-width: 1660px + 40px;
-  padding: 0 20px;
+  max-width: $forDesktop;
+  padding: 0 40px;
   margin: 0 auto;
+
+  @media (max-width: $forDesktop) {
+    max-width: $forTablet;
+  }
+
+  @media (max-width: $forTablet) {
+    max-width: $forMobile;
+  }
+
+  @media (max-width: $forMobile) {
+    max-width: $minimum;
+  }
 }
 
 section {
   padding: 80px 0;
+
+  @media (max-width: $forDesktop) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: $forTablet) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $forMobile) {
+    padding: 50px 0;
+  }
 }
 
 h1 {
@@ -27,6 +65,14 @@ h1 {
   font-size: 68px;
   line-height: 120%;
   color: #000;
+
+  @media (max-width: $forDesktop) {
+    font-size: 52px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 42px;
+  }
 }
 
 h2 {
@@ -35,6 +81,14 @@ h2 {
   font-size: 48px;
   line-height: 120%;
   color: #000;
+
+  @media (max-width: $forDesktop) {
+    font-size: 38px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 32px;
+  }
 }
 
 h3 {
@@ -43,6 +97,14 @@ h3 {
   font-size: 28px;
   line-height: 130%;
   color: #000;
+
+  @media (max-width: $forDesktop) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 22px;
+  }
 }
 
 .btn {
@@ -57,6 +119,14 @@ h3 {
   line-height: 1.5;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (max-width: $forDesktop) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 14px;
+  }
 
   &:hover {
     background-color: #8c62d3;
@@ -74,6 +144,10 @@ h3 {
   transition: 0.3s;
   cursor: pointer;
   text-align: center;
+
+  @media (max-width: $forMobile) {
+    padding: 18px 24px;
+  }
 }
 
 .item-size {
@@ -82,7 +156,10 @@ h3 {
   position: relative;
   transition: 0.3s;
   cursor: pointer;
-  text-align: center;
+
+  @media (max-width: $forMobile) {
+    padding: 10px 24px;
+  }
 }
 
 .bg-blue {

@@ -4,14 +4,30 @@
     h2 {
       text-align: center;
       margin-bottom: 80px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 40px;
+      }
     }
 
     h3 {
       margin-bottom: 16px;
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 12px;
+      }
     }
 
     p {
       margin-bottom: 24px;
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -19,17 +35,37 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
+
+    @media (max-width: $forTablet) {
+      gap: 60px;
+    }
   }
 
   &__row {
     display: flex;
-    align-items: center;
     gap: 80px;
     width: 100%;
     position: relative;
 
+    @media (max-width: $forDesktop) {
+      gap: 40px;
+    }
+
+    @media (max-width: $forTablet) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $forMobile) {
+      gap: 24px;
+    }
+
     &:nth-child(2n) {
       flex-direction: row-reverse;
+
+      @media (max-width: $forTablet) {
+        flex-direction: column;
+      }
+
     }
   }
 
@@ -39,6 +75,18 @@
     width: 100%;
     aspect-ratio: 760/300;
     overflow: hidden;
+
+    @media (max-width: $forDesktop) {
+      aspect-ratio: 560/415;
+    }
+
+    @media (max-width: $forTablet) {
+      aspect-ratio: 760/300;
+    }
+
+    @media (max-width: $forMobile) {
+      border-radius: 40px;
+    }
 
     img {
       width: 100%;
@@ -57,6 +105,14 @@
     flex-wrap: wrap;
     gap: 20px;
 
+    @media (max-width: $forDesktop) {
+      gap: 16px;
+    }
+
+    @media (max-width: $forMobile) {
+      gap: 12px;
+    }
+
     span {
       display: inline-block;
     }
@@ -69,11 +125,33 @@
     position: absolute;
     bottom: 100%;
     left: 347px;
+
+    @media (max-width: $forDesktop) {
+      left: 200px;
+    }
+
+    @media (max-width: $forTablet) {
+      width: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: $forMobile) {
+      width: 50px;
+    }
   }
 
   &__ducks {
     position: absolute;
     bottom: 100%;
     right: 44px;
+
+    @media (max-width: $forTablet) {
+      width: 100px;
+    }
+
+    @media (max-width: $forMobile) {
+      width: 66px;
+    }
   }
 }

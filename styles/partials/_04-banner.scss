@@ -6,12 +6,29 @@
     border-radius: 60px;
     position: relative;
 
+    @media (max-width: $forDesktop) {
+      padding: 100px;
+    }
+
+    @media (max-width: $forTablet) {
+      padding: 200px 60px 80px 60px;
+    }
+
+    @media (max-width: $forMobile) {
+      padding: 170px 60px 60px 60px;
+      margin: 0 -60px;
+    }
+
     h2 {
       max-width: 540px;
       margin: 0 auto;
       margin-bottom: 24px;
 
       text-align: center;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 12px;
+      }
     }
 
     p {
@@ -26,6 +43,14 @@
       b {
         font-weight: 500;
         text-transform: uppercase;
+      }
+
+      @media (max-width: $forDesktop) {
+        font-size: 22px;
+      }
+
+      @media (max-width: $forMobile) {
+        font-size: 18px;
       }
     }
 
@@ -56,6 +81,14 @@
     height: 90px;
     position: absolute;
     top: 88px;
+
+    @media (max-width: $forTablet) {
+      top: 30px;
+    }
+
+    @media (max-width: $forMobile) {
+      display: none;
+    }
   }
 
   &__star-2,
@@ -64,6 +97,14 @@
     height: 74px;
     position: absolute;
     top: 265px;
+
+    @media (max-width: $forDesktop) {
+      top: 220px;
+    }
+
+    @media (max-width: $forTablet) {
+      display: none;
+    }
   }
 
   &__pc-1,
@@ -71,29 +112,84 @@
     width: 86px;
     position: absolute;
     bottom: 80px;
+
+    @media (max-width: $forDesktop) {
+      bottom: 40px;
+    }
+
+    @media (max-width: $forTablet) {
+      bottom: unset;
+      top: 60px;
+    }
+
+    @media (max-width: $forMobile) {
+      top: 40px;
+    }
   }
 
   &__star-1 {
     left: 232px;
+
+    @media (max-width: $forDesktop) {
+      left: 110px;
+    }
+
+    @media (max-width: $forTablet) {
+      left: 90px;
+    }
   }
 
   &__star-11 {
     right: 232px;
+
+    @media (max-width: $forDesktop) {
+      right: 110px;
+    }
+
+    @media (max-width: $forTablet) {
+      right: 90px;
+    }
   }
 
   &__star-2 {
     left: 375px;
+
+    @media (max-width: $forDesktop) {
+      left: 200px;
+    }
   }
 
   &__star-12 {
     right: 375px;
+
+    @media (max-width: $forDesktop) {
+      right: 220px;
+    }
   }
 
   &__pc-1 {
     left: 130px;
+
+    @media (max-width: $forDesktop) {
+      left: 80px;
+    }
+
+    @media (max-width: $forTablet) {
+      display: none;
+    }
   }
 
   &__pc-11 {
     right: 130px;
+    transform: scaleX(-1);
+
+    @media (max-width: $forDesktop) {
+      right: 80px;
+    }
+
+    @media (max-width: $forTablet) {
+      right: 50%;
+      transform: scaleX(-1) translateX(-50%);
+    }
   }
 }

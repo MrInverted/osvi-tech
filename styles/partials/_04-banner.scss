@@ -1,5 +1,10 @@
 .banner {
 
+  @media (max-width: $forMobile) {
+    padding: 0;
+    background-color: #ffd66c;
+  }
+
   &__content {
     background-color: #ffd66c;
     padding: 100px 140px;
@@ -15,8 +20,10 @@
     }
 
     @media (max-width: $forMobile) {
-      padding: 170px 60px 60px 60px;
-      margin: 0 -60px;
+      padding: 170px 0 60px 0;
+      margin: 0 auto;
+      max-width: 320px;
+      border-radius: unset;
     }
 
     h2 {

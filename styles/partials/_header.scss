@@ -41,8 +41,12 @@
   &__left img {
     max-width: 100%;
 
-    @media (max-width: $forTablet) {
+    @media (max-width: $forDesktop) {
       max-width: 195px;
+    }
+
+    @media (max-width: $forTablet) {
+      max-width: 162px;
     }
 
     @media (max-width: $forMobile) {

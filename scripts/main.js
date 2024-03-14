@@ -11,95 +11,94 @@
       item.classList.add(disabledClass);
     }
 
-    // -----------------------------------
+    const openAndCloseChooser = (chooserNodeList) => {
+      chooserNodeList.forEach(item => {
+        const title = item.querySelector(".chooser__title");
 
-    const introAccordion = document.querySelectorAll(".intro .chooser__select");
-    const introTab = document.querySelectorAll(".intro chooser-tab");
-
-    introAccordion.forEach(item => {
-      const title = item.querySelector("chooser-main-select");
-
-      title.onclick = () => {
-        if (item.classList.contains("closed")) {
-          for (let item of introAccordion) {
-            addActiveClass(item, "opened", "closed");
+        title.onclick = () => {
+          if (item.classList.contains("closed")) {
+            for (let item of chooserNodeList) {
+              addActiveClass(item, "opened", "closed");
+            }
+          } else {
+            for (let item of chooserNodeList) {
+              removeActiveClass(item, "opened", "closed");
+            }
           }
-        } else {
-          for (let item of introAccordion) {
+        }
+      })
+    }
+
+    const switchTabs = (tabsNodeList, chooserNodeList) => {
+      tabsNodeList.forEach((item, index) => {
+        item.onclick = () => {
+          for (let i = 0; i < tabsNodeList.length; i++) {
+            removeActiveClass(tabsNodeList[i], "active", "disabled");
+            removeActiveClass(chooserNodeList[i], "shown", "hidden");
+          }
+
+          addActiveClass(item, "active", "disabled");
+          addActiveClass(chooserNodeList[index], "shown", "hidden");
+        }
+      })
+    }
+
+    const setMainTitle = (titleNodeList, badgeNodeList, chooserNodeList) => {
+      badgeNodeList.forEach(badge => {
+        badge.onclick = () => {
+          for (let title of titleNodeList) {
+            title.textContent = badge.textContent;
+          }
+
+          for (let item of chooserNodeList) {
             removeActiveClass(item, "opened", "closed");
           }
         }
-      }
+      })
+    }
 
-      // title.onclick = () => {
-      //   if (item.classList.contains("closed")) {
-      //     addActiveClass(item, "opened", "closed");
-      //   } else {
-      //     removeActiveClass(item, "opened", "closed");
-      //   }
-      // }
-    })
 
-    introTab.forEach((item, index) => {
-      item.onclick = () => {
-        for (let i = 0; i < introTab.length; i++) {
-          removeActiveClass(introTab[i], "active", "disabled");
-          removeActiveClass(introAccordion[i], "shown", "hidden");
-          // if (i === index) continue;
-          // removeActiveClass(introAccordion[i], "opened", "closed");
-        }
-
-        addActiveClass(item, "active", "disabled");
-        addActiveClass(introAccordion[index], "shown", "hidden");
-      }
-    })
 
     // ---------------------------------------------------------------------
 
-    const aboutTab = document.querySelectorAll(".about about-tab");
+    const introTabs = document.querySelectorAll(".intro .chooser__tab");
+    const introChooser = document.querySelectorAll(".intro .chooser__select");
+    const introTitle = document.querySelectorAll(".intro .chooser__title");
+    const introBadge = document.querySelectorAll(".intro chooser-course");
 
-    aboutTab.forEach(item => {
-      item.onclick = () => {
-        for (let loopItem of aboutTab) {
-          removeActiveClass(loopItem, "opened", "closed");
+    switchTabs(introTabs, introChooser);
+    openAndCloseChooser(introChooser);
+    setMainTitle(introTitle, introBadge, introChooser);
+
+    // --------
+
+    const aboutTabs = document.querySelectorAll(".about about-tab");
+
+    aboutTabs.forEach((tab, index) => {
+      tab.onclick = () => {
+        for (let i = 0; i < aboutTabs.length; i++) {
+          if (i === index) continue;
+          removeActiveClass(aboutTabs[i], "opened", "closed");
         }
 
-        addActiveClass(item, "opened", "closed");
-      }
-    })
-
-    // ---------------------------------------------------------------------
-
-    const potentialAccordion = document.querySelectorAll(".potential .chooser__select");
-    const potentialTab = document.querySelectorAll(".potential .chooser__tab");
-
-    potentialAccordion.forEach(item => {
-      const title = item.querySelector("chooser-main-select");
-
-      title.onclick = () => {
-        if (item.classList.contains("closed")) {
-          for (let item of potentialAccordion) {
-            addActiveClass(item, "opened", "closed");
-          }
+        if (tab.classList.contains("opened")) {
+          removeActiveClass(tab, "opened", "closed");
         } else {
-          for (let item of potentialAccordion) {
-            removeActiveClass(item, "opened", "closed");
-          }
+          addActiveClass(tab, "opened", "closed");
         }
       }
     })
 
-    potentialTab.forEach((item, index) => {
-      item.onclick = () => {
-        for (let i = 0; i < potentialTab.length; i++) {
-          removeActiveClass(potentialTab[i], "active", "disabled");
-          removeActiveClass(potentialAccordion[i], "shown", "hidden");
-        }
+    // --------
 
-        addActiveClass(item, "active", "disabled");
-        addActiveClass(potentialAccordion[index], "shown", "hidden");
-      }
-    })
+    const potentialTabs = document.querySelectorAll(".potential .chooser__tab");
+    const potentialChooser = document.querySelectorAll(".potential .chooser__select");
+    const potentialTitle = document.querySelectorAll(".potential .chooser__title");
+    const potentialBadge = document.querySelectorAll(".potential chooser-course");
+
+    switchTabs(potentialTabs, potentialChooser);
+    openAndCloseChooser(potentialChooser);
+    setMainTitle(potentialTitle, potentialBadge, potentialChooser);
 
   } catch (error) {
     console.warn("Switchers' catch")
@@ -113,8 +112,9 @@
     const burgerMenu = document.querySelector(".header__right");
 
     burgerTrigger.onclick = () => {
-      burgerTrigger.classList.toggle("opened")
-      burgerMenu.classList.toggle("menu-is-opened")
+      burgerTrigger.classList.toggle("opened");
+      burgerMenu.classList.toggle("menu-is-opened");
+      document.body.classList.toggle("burger-is-opened");
     }
   } catch {
     console.warn("burger's catch")
@@ -158,7 +158,7 @@
   try {
     const swiper = new Swiper('.reviews .swiper', {
       loop: false,
-      speed: 400,
+      speed: 800,
       spaceBetween: 200,
       grabCursor: true,
       loopPreventsSliding: false,

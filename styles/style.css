@@ -149,6 +149,9 @@ body {
     font-size: 14px;
   }
 }
+body.burger-is-opened {
+  overflow: hidden;
+}
 
 my-container {
   display: block;
@@ -301,7 +304,7 @@ h3 {
 }
 
 .bg-blue {
-  background-color: #7ec0f1;
+  background-color: #aa80f1;
 }
 
 .bg-yellow {
@@ -313,7 +316,7 @@ h3 {
 }
 
 .ol-blue {
-  border: 2px solid #7ec0f1;
+  border: 2px solid #aa80f1;
 }
 
 .ol-yellow {
@@ -444,9 +447,14 @@ h3 {
 .header__left img {
   max-width: 100%;
 }
-@media (max-width: 1260px) {
+@media (max-width: 1740px) {
   .header__left img {
     max-width: 195px;
+  }
+}
+@media (max-width: 1260px) {
+  .header__left img {
+    max-width: 162px;
   }
 }
 @media (max-width: 768px) {
@@ -598,7 +606,6 @@ h3 {
 }
 .intro__content chooser-content {
   padding: 0 20px;
-  position: absolute;
   background-color: white;
   z-index: 2;
 }
@@ -610,7 +617,6 @@ h3 {
 }
 .intro__row {
   display: flex;
-  align-items: center;
   gap: 60px;
 }
 @media (max-width: 1740px) {
@@ -626,13 +632,14 @@ h3 {
 }
 .intro__chooser {
   max-width: 680px;
-  margin-bottom: 24px;
 }
 .intro__left {
   flex: 0 1 780px;
+  padding-top: 60px;
 }
 @media (max-width: 1740px) {
   .intro__left {
+    padding-top: 0;
     flex: 0 1 650px;
   }
 }
@@ -654,8 +661,8 @@ h3 {
     flex: unset;
   }
 }
-.intro .chooser__select {
-  position: relative;
+.intro .chooser__courses-flex {
+  padding-bottom: 24px;
 }
 
 .about__content h2 {
@@ -1137,6 +1144,12 @@ h3 {
   opacity: 0.4;
 }
 
+@media (max-width: 768px) {
+  .banner {
+    padding: 0;
+    background-color: #ffd66c;
+  }
+}
 .banner__content {
   background-color: #ffd66c;
   padding: 100px 140px;
@@ -1155,8 +1168,10 @@ h3 {
 }
 @media (max-width: 768px) {
   .banner__content {
-    padding: 170px 60px 60px 60px;
-    margin: 0 -60px;
+    padding: 170px 0 60px 0;
+    margin: 0 auto;
+    max-width: 320px;
+    border-radius: unset;
   }
 }
 .banner__content h2 {
@@ -1722,6 +1737,13 @@ h3 {
 .potential {
   margin-bottom: 80px;
 }
+@media (max-width: 768px) {
+  .potential {
+    background: #aa80f1;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
 .potential__content {
   border-radius: 60px;
   padding: 120px 140px;
@@ -1735,12 +1757,15 @@ h3 {
 @media (max-width: 1260px) {
   .potential__content {
     padding: 210px 60px 80px 60px;
-    margin: 0 -40px 80px -40px;
+    margin: 0 -30px;
   }
 }
 @media (max-width: 768px) {
   .potential__content {
-    padding: 170px 40px 80px 40px;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 170px 0 80px 0;
+    border-radius: unset;
   }
 }
 .potential__content h2 {
@@ -1902,12 +1927,16 @@ h3 {
   flex: 0 1 540px;
   color: white;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  padding-top: 180px;
+}
+@media (max-width: 1740px) {
+  .potential__left {
+    padding-top: 140px;
+  }
 }
 @media (max-width: 1260px) {
   .potential__left {
+    padding-top: 0;
     flex: unset;
     text-align: center;
     max-width: 480px;

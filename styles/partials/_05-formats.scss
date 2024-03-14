@@ -92,7 +92,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: top;
     }
   }
 
@@ -116,6 +116,10 @@
     span {
       display: inline-block;
     }
+  }
+
+  .item-size {
+    cursor: unset;
   }
 }
 
@@ -143,7 +147,7 @@
 
   &__ducks {
     position: absolute;
-    bottom: 100%;
+    bottom: 99%;
     right: 44px;
 
     @media (max-width: $forTablet) {

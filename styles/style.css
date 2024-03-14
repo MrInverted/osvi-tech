@@ -304,7 +304,7 @@ h3 {
 }
 
 .bg-blue {
-  background-color: #aa80f1;
+  background-color: #7ec0f1;
 }
 
 .bg-yellow {
@@ -316,7 +316,7 @@ h3 {
 }
 
 .ol-blue {
-  border: 2px solid #aa80f1;
+  border: 2px solid #7ec0f1;
 }
 
 .ol-yellow {
@@ -325,6 +325,10 @@ h3 {
 
 .ol-red {
   border: 2px solid #f1807e;
+}
+
+.ol-purple {
+  border: 2px solid #aa80f1;
 }
 
 .hover-blue:hover {
@@ -1440,8 +1444,8 @@ h3 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
 .formats__text {
   flex: 1;
@@ -1463,6 +1467,9 @@ h3 {
 }
 .formats__badges span {
   display: inline-block;
+}
+.formats .item-size {
+  cursor: unset;
 }
 
 .formats__cat {
@@ -1489,7 +1496,7 @@ h3 {
 }
 .formats__ducks {
   position: absolute;
-  bottom: 100%;
+  bottom: 99%;
   right: 44px;
 }
 @media (max-width: 1260px) {
@@ -1886,7 +1893,7 @@ h3 {
   opacity: 1;
 }
 .potential__content input[type=checkbox] {
-  accent-color: white;
+  accent-color: unset;
 }
 .potential__content label {
   display: flex;

@@ -622,6 +622,7 @@ h3 {
 }
 .intro__row {
   display: flex;
+  justify-content: space-between;
   gap: 60px;
 }
 @media (max-width: 1740px) {
@@ -668,6 +669,24 @@ h3 {
 }
 .intro .chooser__courses-flex {
   padding-bottom: 24px;
+}
+
+.intro-404 .intro__row {
+  align-items: center;
+}
+.intro-404 .intro__left {
+  flex: 0 1 620px;
+  padding: 0;
+}
+@media (max-width: 1260px) {
+  .intro-404 .intro__left {
+    flex: unset;
+  }
+}
+.intro-404 a.btn {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .about__content h2 {

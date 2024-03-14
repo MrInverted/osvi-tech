@@ -94,6 +94,7 @@
 
   &__row {
     display: flex;
+    justify-content: space-between;
     gap: 60px;
 
     @media (max-width: $forDesktop) {
@@ -139,5 +140,27 @@
 
   .chooser__courses-flex {
     padding-bottom: 24px;
+  }
+}
+
+
+.intro-404 {
+  .intro__row {
+    align-items: center;
+  }
+
+  .intro__left {
+    flex: 0 1 620px;
+    padding: 0;
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+  }
+
+  a.btn {
+    display: block;
+    text-align: center;
+    width: 100%;
   }
 }

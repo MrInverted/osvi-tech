@@ -740,7 +740,7 @@ h3 {
   .about__content dl {
     display: grid;
     grid-template-columns: 120px 1fr;
-    gap: 40px;
+    gap: 20px;
   }
 }
 .about__content dt {
@@ -825,6 +825,7 @@ h3 {
 @media (max-width: 768px) {
   .about__figures {
     flex-direction: column;
+    gap: 40px;
   }
 }
 .about__left {

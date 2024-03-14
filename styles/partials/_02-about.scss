@@ -21,7 +21,7 @@
       @media (max-width: $forMobile) {
         display: grid;
         grid-template-columns: 120px 1fr;
-        gap: 40px;
+        gap: 20px;
       }
     }
 
@@ -110,6 +110,7 @@
 
     @media (max-width: $forMobile) {
       flex-direction: column;
+      gap: 40px;
     }
   }
 

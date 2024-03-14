@@ -162,5 +162,14 @@
     display: block;
     text-align: center;
     width: 100%;
+    margin-top: 120px;
+
+    @media (max-width: $forDesktop) {
+      margin-top: 100px;
+    }
+
+    @media (max-width: $forTablet) {
+      margin-top: 40px;
+    }
   }
 }

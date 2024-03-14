@@ -291,6 +291,16 @@ h3 {
   }
 }
 
+.tab-size-small {
+  border-radius: 100px;
+  padding: 10px 24px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
 .item-size {
   border-radius: 100px;
   padding: 10px 32px;
@@ -345,14 +355,10 @@ h3 {
 }
 
 .chooser__tabs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-bottom: 24px;
-}
-@media (max-width: 768px) {
-  .chooser__tabs {
-    grid-template-columns: 1fr;
-  }
 }
 .chooser__tab {
   display: block;
@@ -687,6 +693,17 @@ h3 {
   display: block;
   text-align: center;
   width: 100%;
+  margin-top: 120px;
+}
+@media (max-width: 1740px) {
+  .intro-404 a.btn {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 1260px) {
+  .intro-404 a.btn {
+    margin-top: 40px;
+  }
 }
 
 .about__content h2 {

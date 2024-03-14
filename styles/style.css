@@ -152,6 +152,9 @@ body {
 body.burger-is-opened {
   overflow: hidden;
 }
+body.popup-is-opened {
+  overflow: hidden;
+}
 
 my-container {
   display: block;
@@ -298,7 +301,17 @@ h3 {
   transition: 0.3s;
   cursor: pointer;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+}
+@media (max-width: 1740px) {
+  .tab-size-small {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .tab-size-small {
+    font-size: 14px;
+  }
 }
 
 .item-size {
@@ -726,7 +739,7 @@ h3 {
 @media (max-width: 768px) {
   .about__content dl {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 120px 1fr;
     gap: 20px;
   }
 }

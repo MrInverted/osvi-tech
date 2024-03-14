@@ -71,6 +71,7 @@ import {
     popupTriggers.forEach(item => {
       item.onclick = () => {
         popup.classList.add("opened");
+        document.body.classList.add("popup-is-opened");
 
         if (!userInfo.course) return;
 
@@ -91,6 +92,7 @@ import {
     popupQuestionTrigger.forEach(item => {
       item.onclick = () => {
         popupQuestion.classList.add("opened");
+        document.body.classList.add("popup-is-opened");
       }
     })
 
@@ -135,6 +137,7 @@ import {
         popup.classList.remove("opened");
         popupQuestion.classList.remove("opened");
         afterForm.classList.add("opened");
+        document.body.classList.add("popup-is-opened");
 
         return false;
       }

@@ -67,10 +67,12 @@ export const closePopup = (popupBlock, popupContent, popupCloseButton) => {
   popupBlock.onclick = (e) => {
     if (!e.composedPath().includes(popupContent)) {
       popupBlock.classList.remove("opened");
+      document.body.classList.remove("popup-is-opened");
     }
   }
 
   popupCloseButton.onclick = () => {
     popupBlock.classList.remove("opened");
+    document.body.classList.remove("popup-is-opened");
   }
 }

@@ -10,6 +10,8 @@
 
   display: none;
 
+  overflow: auto;
+
   &.opened {
     display: flex;
     flex-direction: column;

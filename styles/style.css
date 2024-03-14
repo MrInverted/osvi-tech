@@ -2264,6 +2264,7 @@ h3 {
   background: rgba(0, 0, 0, 0.5);
   padding: 40px 0;
   display: none;
+  overflow: auto;
 }
 .popup.opened {
   display: block;
@@ -2399,6 +2400,7 @@ h3 {
   background: rgba(0, 0, 0, 0.5);
   padding: 40px 0;
   display: none;
+  overflow: auto;
 }
 .after-form.opened {
   display: flex;
@@ -2471,6 +2473,7 @@ h3 {
   background: rgba(0, 0, 0, 0.5);
   padding: 40px 0;
   display: none;
+  overflow: auto;
 }
 .popup-question.opened {
   display: block;

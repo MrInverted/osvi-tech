@@ -1,0 +1,74 @@
+.after-form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 0;
+
+  display: none;
+
+  &.opened {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__content {
+    max-width: 840px;
+    margin: 0 auto;
+    border-radius: 60px;
+    padding: 80px;
+    background: #fff;
+    position: relative;
+
+    @media (max-width: $forTablet) {
+      margin: 0 -30px;
+      padding: 60px 40px;
+      border-radius: 40px;
+    }
+
+    @media (max-width: $forMobile) {
+      padding: 60px 30px;
+    }
+
+    h3 {
+      max-width: 420px;
+      margin: 0 auto;
+      text-align: center;
+
+      margin-bottom: 18px;
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 12px;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 40px;
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+
+    @media (max-width: $forMobile) {
+      top: 20px;
+      right: 20px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

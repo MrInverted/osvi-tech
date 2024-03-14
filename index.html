@@ -118,7 +118,7 @@
                       </chooser-content>
                     </div>
                   </div>
-                  <button class="btn">Отримати безкоштовний урок</button>
+                  <button class="btn popup-trigger">Отримати безкоштовний урок</button>
                 </div>
                 <div class="intro__right">
                   <img src="./images/intro-image.jpg" alt="">
@@ -287,7 +287,7 @@
             <div class="banner__content">
               <h2>Разблокуй потенціал своєї дитини</h2>
               <p>Заповни форму та отримай <b>безкоштовний вводний урок</b></p>
-              <button class="btn">Отримати безкоштовний урок</button>
+              <button class="btn popup-trigger">Отримати безкоштовний урок</button>
 
               <div class="banner__images">
                 <img class="banner__star-1" src="./images/banner-star.png" alt="">
@@ -456,7 +456,7 @@
                     <img src="./images/about-dog.png" alt="">
                   </div>
 
-                  <button class="btn">Задати питання</button>
+                  <button class="btn popup-question-trigger">Задати питання</button>
                 </div>
               </div>
             </div>
@@ -531,10 +531,12 @@
                       </chooser-content>
                     </div>
                   </div>
-                  <form action="/" method="post">
+
+                  <form action="./telegram.php" method="post">
                     <div class="potential__form-flex">
                       <input type="text" name="name" placeholder="Ім’я" required>
                       <input type="tel" name="tel" placeholder="Номер телефону" required>
+                      <input type="hidden" name="course" value="">
                     </div>
                     <button class="btn">Отримати безкоштовний урок</button>
                     <label>
@@ -636,6 +638,123 @@
           </div>
         </my-container>
       </footer>
+
+      <div class="popup" id="popup-main">
+        <my-container>
+          <div class="popup__content">
+            <h3>Заповни форму та отримай безкоштовний вводний урок</h3>
+
+            <div class="popup__form">
+              <div class="chooser">
+                <div class="chooser__tabs">
+                  <chooser-tab class="chooser__tab tab-size bg-blue ol-blue active">Програмування</chooser-tab>
+                  <chooser-tab class="chooser__tab tab-size bg-yellow ol-yellow disabled">Шкільна програма</chooser-tab>
+                  <chooser-tab class="chooser__tab tab-size bg-red ol-red disabled">Іноземні мови</chooser-tab>
+                </div>
+
+                <div class="chooser__select closed shown">
+                  <chooser-main-select class="chooser__title tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
+                  <chooser-content class="chooser__content">
+                    <div class="min-h-0">
+                      <div class="chooser__courses-flex">
+                        <chooser-course class="item-size ol-blue hover-blue">Основи програмування</chooser-course>
+                        <chooser-course class="item-size ol-blue hover-blue">Алгоритми та структури даних</chooser-course>
+                        <chooser-course class="item-size ol-blue hover-blue">Інтернет-безпека та етика програмування</chooser-course>
+                        <chooser-course class="item-size ol-blue hover-blue">Ігрова розробка</chooser-course>
+                      </div>
+                    </div>
+                  </chooser-content>
+                </div>
+
+                <div class="chooser__select closed hidden">
+                  <chooser-main-select class="chooser__title tab-size bg-yellow ol-yellow">Обрати предмет</chooser-main-select>
+                  <chooser-content class="chooser__content">
+                    <div class="min-h-0">
+                      <div class="chooser__courses-flex">
+                        <chooser-course class="item-size ol-yellow hover-yellow">Математика</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Історія</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Хімія</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Інформатика</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Алгебра</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Географія</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Фізика</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Біологія</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Економіка</chooser-course>
+                        <chooser-course class="item-size ol-yellow hover-yellow">Геометрія</chooser-course>
+                      </div>
+                    </div>
+                  </chooser-content>
+                </div>
+
+                <div class="chooser__select closed hidden">
+                  <chooser-main-select class="chooser__title tab-size bg-red ol-red">Обрати предмет</chooser-main-select>
+                  <chooser-content class="chooser__content">
+                    <div class="min-h-0">
+                      <div class="chooser__courses-flex">
+                        <chooser-course class="item-size ol-red hover-red">Англійська мова</chooser-course>
+                        <chooser-course class="item-size ol-red hover-red">Німецька мова</chooser-course>
+                        <chooser-course class="item-size ol-red hover-red">Французька мова</chooser-course>
+                        <chooser-course class="item-size ol-red hover-red">Іспанська мова</chooser-course>
+                        <chooser-course class="item-size ol-red hover-red">Китайська мова</chooser-course>
+                      </div>
+                    </div>
+                  </chooser-content>
+                </div>
+              </div>
+              <form action="./telegram.php" method="post">
+                <div class="popup__form-flex">
+                  <input type="text" name="name" placeholder="Ім’я" required>
+                  <input type="tel" name="tel" placeholder="Номер телефону" required>
+                  <input type="hidden" name="course" value="">
+                </div>
+                <button class="btn">Отримати безкоштовний урок</button>
+                <label>
+                  <input type="checkbox" checked required>
+                  <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+                </label>
+              </form>
+            </div>
+
+            <img src="./images/popup-close.svg" alt="" class="popup__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="popup-question" id="popup-question">
+        <my-container>
+          <div class="popup-question__content">
+            <h3>Залишились питання?</h3>
+            <p>Ми з радістю відповімо!</p>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-question__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Отримати безкоштовний урок</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="./images/popup-close.svg" alt="" class="popup-question__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="after-form" id="after-from">
+        <my-container>
+          <div class="after-form__content">
+            <h3>Ваша заявка відправлена</h3>
+            <p>Наш менеджер зв’яжеться з вами найближчим часом</p>
+            <button class="btn">На головну</button>
+            <img src="./images/popup-close.svg" alt="" class="after-form__close">
+          </div>
+        </my-container>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

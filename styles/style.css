@@ -1553,6 +1553,7 @@ h3 {
 @media (max-width: 1260px) {
   .formats__ducks {
     width: 100px;
+    bottom: 99.5%;
   }
 }
 @media (max-width: 768px) {

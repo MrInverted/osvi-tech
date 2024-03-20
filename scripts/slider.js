@@ -6,6 +6,7 @@
       spaceBetween: 200,
       grabCursor: true,
       loopPreventsSliding: false,
+      autoHeight: true,
 
       pagination: {
         el: '.reviews .swiper-pagination',

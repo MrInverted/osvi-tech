@@ -2617,3 +2617,37 @@ h3 {
 .popup-question__close:hover {
   opacity: 0.6;
 }
+
+.politics__content h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+@media (max-width: 1740px) {
+  .politics__content h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .politics__content h2 {
+    font-size: 22px;
+  }
+}
+.politics__content p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.politics__content a {
+  color: blue;
+  text-decoration: underline;
+}
+.politics__head {
+  margin-bottom: 40px;
+}
+.politics__attention {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 40px;
+  text-align: justify;
+}

@@ -1137,6 +1137,9 @@ h3 {
   }
 }
 
+.reviews .swiper-wrapper {
+  align-items: flex-start;
+}
 .reviews .swiper-pagination {
   display: flex;
   align-items: center;

@@ -161,3 +161,29 @@
     }
   }
 }
+
+
+.about {
+  &__questions {
+    padding: 20px 0;
+    padding-left: 40px;
+    margin-top: -20px;
+    border-left: 2px solid #aa80f1;
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+
+    button {
+      width: unset;
+    }
+
+    .direction__form-flex {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+.banner-question {
+  margin-bottom: 80px;
+
+  @media (max-width: $forMobile) {
+    background: #aa80f1;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  &__content {
+    position: relative;
+    padding: 100px 140px;
+    border-radius: 60px;
+    background-color: #aa80f1;
+
+    @media (max-width: $forDesktop) {
+      padding: 80px 100px;
+    }
+
+    @media (max-width: $forTablet) {
+      margin: 0 -30px;
+      padding: 80px 60px;
+    }
+
+    @media (max-width: $forMobile) {
+      padding: 60px 0px;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+      color: white;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 12px;
+      }
+
+      @media (max-width: $forTablet) {
+        text-align: center;
+      }
+    }
+
+    h2+p {
+      color: white;
+      font-size: 24px;
+      line-height: 140%;
+
+      @media (max-width: $forDesktop) {
+        font-size: 22px;
+      }
+
+      @media (max-width: $forTablet) {
+        text-align: center;
+      }
+
+      @media (max-width: $forMobile) {
+        font-size: 18px;
+      }
+    }
+
+    input:not([type="checkbox"]) {
+      width: 100%;
+      color: white;
+      margin-bottom: 24px;
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    input:hover::placeholder {
+      color: white;
+    }
+
+    button {
+      background-color: #fff;
+      color: #aa80f1;
+
+      &:hover {
+        background-color: white;
+        color: #aa80f1;
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media (max-width: $forTablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__left {
+    flex: 0 1 540px;
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+  }
+
+  &__right {
+    flex: 0 1 680px;
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+  }
+
+  &__dog {
+    width: 130px;
+    margin-bottom: 40px;
+
+    @media (max-width: $forTablet) {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 37%;
+    top: 50px;
+
+    transform: rotate(44deg);
+
+    @media (max-width: $forDesktop) {
+      left: 33%;
+      top: 20px;
+    }
+
+    @media (max-width: $forTablet) {
+      display: none;
+    }
+  }
+
+}

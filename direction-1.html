@@ -453,42 +453,21 @@
           </my-container>
         </section>
 
-        <section class="potential" id="potential">
+        <section class="potential banner-acquaintance" id="potential">
           <my-container>
             <div class="potential__content">
               <div class="potential__row">
                 <div class="potential__left">
-                  <img src="./images/potential-light-bulb.png" alt="" class="potential__bulb">
-                  <h2>Разблокуй потенціал своєї дитини</h2>
-                  <p>Заповни форму та отримай <span>безкоштовний вводний урок</span></p>
+                  <img src="./images/teachers.png" alt="" class="potential__teachers">
+                  <h2>Давайте познайомимося</h2>
+                  <p>Запишись на БЕЗКОШТОВНИЙ ВВОДНИЙ УРОК вже зараз</p>
                   <img src="./images/potential-arrow.svg" alt="" class="potential__arrow">
                 </div>
 
                 <div class="potential__right">
                   <div class="chooser">
-                    <div class="chooser__tabs">
-                      <chooser-tab class="chooser__tab tab-size-small active">Програмування</chooser-tab>
-                      <chooser-tab class="chooser__tab tab-size-small disabled">Шкільна програма</chooser-tab>
-                      <chooser-tab class="chooser__tab tab-size-small disabled">Іноземні мови</chooser-tab>
-                      <chooser-tab class="chooser__tab tab-size-small disabled">Дизайн</chooser-tab>
-                    </div>
-
-                    <div class="chooser__select closed shown">
-                      <chooser-main-select class="chooser__title tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
-                      <chooser-content class="chooser__content">
-                        <div class="min-h-0">
-                          <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Основи програмування</chooser-course>
-                            <chooser-course class="item-size">Алгоритми та структури даних</chooser-course>
-                            <chooser-course class="item-size">Інтернет-безпека та етика програмування</chooser-course>
-                            <chooser-course class="item-size">Ігрова розробка</chooser-course>
-                          </div>
-                        </div>
-                      </chooser-content>
-                    </div>
-
-                    <div class="chooser__select closed hidden">
-                      <chooser-main-select class="chooser__title tab-size bg-yellow ol-yellow">Обрати предмет</chooser-main-select>
+                    <div class="choose-your-course chooser__select closed shown">
+                      <chooser-main-select class="choose-your-course chooser__title tab-size bg-yellow ol-yellow">Обрати предмет</chooser-main-select>
                       <chooser-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="chooser__courses-flex">
@@ -506,50 +485,28 @@
                         </div>
                       </chooser-content>
                     </div>
+                  </div>
 
-                    <div class="chooser__select closed hidden">
-                      <chooser-main-select class="chooser__title tab-size bg-red ol-red">Обрати предмет</chooser-main-select>
+                  <div class="chooser">
+                    <div class="choose-your-plan chooser__select closed shown">
+                      <chooser-main-select class="choose-your-plan chooser__title tab-size bg-yellow ol-yellow">Формат навчання</chooser-main-select>
                       <chooser-content class="chooser__content">
                         <div class="min-h-0">
                           <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Англійська мова</chooser-course>
-                            <chooser-course class="item-size">Німецька мова</chooser-course>
-                            <chooser-course class="item-size">Французька мова</chooser-course>
-                            <chooser-course class="item-size">Іспанська мова</chooser-course>
-                            <chooser-course class="item-size">Китайська мова</chooser-course>
-                          </div>
-                        </div>
-                      </chooser-content>
-                    </div>
-
-                    <div class="chooser__select closed hidden">
-                      <chooser-main-select class="chooser__title tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
-                      <chooser-content class="chooser__content">
-                        <div class="min-h-0">
-                          <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
+                            <chooser-course class="item-size">Індивідуальні уроки</chooser-course>
+                            <chooser-course class="item-size">Групові уроки</chooser-course>
                           </div>
                         </div>
                       </chooser-content>
                     </div>
                   </div>
 
-                  <form action="./telegram.php" method="post">
-                    <div class="potential__form-flex">
-                      <input type="text" name="name" placeholder="Ім’я" required>
-                      <input type="tel" name="tel" placeholder="Номер телефону" required>
-                      <input type="hidden" name="course" value="">
-                    </div>
-                    <button class="btn">Отримати безкоштовний урок</button>
-                    <label>
-                      <input type="checkbox" checked required>
-                      <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
-                    </label>
-                  </form>
+                  <div class="potential__form-flex">
+                    <input type="text" name="date" placeholder="Дата" required>
+                    <input type="text" name="time" placeholder="Час" required>
+                    <input type="hidden" name="course" value="">
+                  </div>
+                  <button class="btn popup-time-trigger">Записатись на урок</button>
                 </div>
               </div>
             </div>
@@ -618,102 +575,20 @@
           </my-container>
         </section>
 
-        <section class="potential" id="potential">
+        <section class="banner-question">
           <my-container>
-            <div class="potential__content">
-              <div class="potential__row">
-                <div class="potential__left">
-                  <img src="./images/potential-light-bulb.png" alt="" class="potential__bulb">
-                  <h2>Разблокуй потенціал своєї дитини</h2>
-                  <p>Заповни форму та отримай <span>безкоштовний вводний урок</span></p>
-                  <img src="./images/potential-arrow.svg" alt="" class="potential__arrow">
+            <div class="banner-question__content">
+              <div class="banner-question__row">
+                <div class="banner-question__left">
+                  <img src="./images/about-dog.png" alt="" class="banner-question__dog">
+                  <h2>Є питання? Ми з радістю відповімо!</h2>
+                  <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</span></p>
+                  <img src="./images/potential-arrow.svg" alt="" class="banner-question__arrow">
                 </div>
-
-                <div class="potential__right">
-                  <div class="chooser">
-                    <div class="chooser__tabs">
-                      <chooser-tab class="chooser__tab tab-size-small active">Програмування</chooser-tab>
-                      <chooser-tab class="chooser__tab tab-size-small disabled">Шкільна програма</chooser-tab>
-                      <chooser-tab class="chooser__tab tab-size-small disabled">Іноземні мови</chooser-tab>
-                      <chooser-tab class="chooser__tab tab-size-small disabled">Дизайн</chooser-tab>
-                    </div>
-
-                    <div class="chooser__select closed shown">
-                      <chooser-main-select class="chooser__title tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
-                      <chooser-content class="chooser__content">
-                        <div class="min-h-0">
-                          <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Основи програмування</chooser-course>
-                            <chooser-course class="item-size">Алгоритми та структури даних</chooser-course>
-                            <chooser-course class="item-size">Інтернет-безпека та етика програмування</chooser-course>
-                            <chooser-course class="item-size">Ігрова розробка</chooser-course>
-                          </div>
-                        </div>
-                      </chooser-content>
-                    </div>
-
-                    <div class="chooser__select closed hidden">
-                      <chooser-main-select class="chooser__title tab-size bg-yellow ol-yellow">Обрати предмет</chooser-main-select>
-                      <chooser-content class="chooser__content">
-                        <div class="min-h-0">
-                          <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Математика</chooser-course>
-                            <chooser-course class="item-size">Історія</chooser-course>
-                            <chooser-course class="item-size">Хімія</chooser-course>
-                            <chooser-course class="item-size">Інформатика</chooser-course>
-                            <chooser-course class="item-size">Алгебра</chooser-course>
-                            <chooser-course class="item-size">Географія</chooser-course>
-                            <chooser-course class="item-size">Фізика</chooser-course>
-                            <chooser-course class="item-size">Біологія</chooser-course>
-                            <chooser-course class="item-size">Економіка</chooser-course>
-                            <chooser-course class="item-size">Геометрія</chooser-course>
-                          </div>
-                        </div>
-                      </chooser-content>
-                    </div>
-
-                    <div class="chooser__select closed hidden">
-                      <chooser-main-select class="chooser__title tab-size bg-red ol-red">Обрати предмет</chooser-main-select>
-                      <chooser-content class="chooser__content">
-                        <div class="min-h-0">
-                          <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Англійська мова</chooser-course>
-                            <chooser-course class="item-size">Німецька мова</chooser-course>
-                            <chooser-course class="item-size">Французька мова</chooser-course>
-                            <chooser-course class="item-size">Іспанська мова</chooser-course>
-                            <chooser-course class="item-size">Китайська мова</chooser-course>
-                          </div>
-                        </div>
-                      </chooser-content>
-                    </div>
-
-                    <div class="chooser__select closed hidden">
-                      <chooser-main-select class="chooser__title tab-size bg-blue ol-blue">Обрати предмет</chooser-main-select>
-                      <chooser-content class="chooser__content">
-                        <div class="min-h-0">
-                          <div class="chooser__courses-flex">
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                            <chooser-course class="item-size">Дизайн</chooser-course>
-                          </div>
-                        </div>
-                      </chooser-content>
-                    </div>
-                  </div>
-
-                  <form action="./telegram.php" method="post">
-                    <div class="potential__form-flex">
-                      <input type="text" name="name" placeholder="Ім’я" required>
-                      <input type="tel" name="tel" placeholder="Номер телефону" required>
-                      <input type="hidden" name="course" value="">
-                    </div>
-                    <button class="btn">Отримати безкоштовний урок</button>
-                    <label>
-                      <input type="checkbox" checked required>
-                      <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
-                    </label>
+                <div class="banner-question__right">
+                  <form action="/" method="post">
+                    <input type="tel" name="tel" placeholder="Номер телефону" required>
+                    <button class="btn">Передзвоніть мені</button>
                   </form>
                 </div>
               </div>
@@ -994,6 +869,67 @@
             </form>
 
             <img src="./images/popup-close.svg" alt="" class="popup-subscription__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="popup-time" id="popup-time">
+        <my-container>
+          <div class="popup-time__content">
+            <h3>Покупка абонементу</h3>
+
+            <div class="choose-your-course chooser__select closed shown ">
+              <chooser-main-select class="choose-your-course chooser__title tab-size ol-yellow">Обрати предмет</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-yellow hover-yellow">Математика</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Історія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Хімія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Інформатика</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Алгебра</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Географія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Фізика</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Біологія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Економіка</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Геометрія</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <div class="choose-your-plan chooser__select closed shown">
+              <chooser-main-select class="choose-your-plan chooser__title tab-size bg-yellow ol-yellow">Формат навчання</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size">Індивідуальні уроки</chooser-course>
+                    <chooser-course class="item-size">Групові уроки</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-time__form-flex">
+                <input type="text" name="date" placeholder="Дата" required>
+                <input type="text" name="time" placeholder="Час" required>
+              </div>
+              <div class="popup-time__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+                <input type="hidden" name="plan" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Записатись на урок</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="./images/popup-close.svg" alt="" class="popup-time__close">
           </div>
         </my-container>
       </div>

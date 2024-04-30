@@ -1,0 +1,70 @@
+.banner-acquaintance {
+
+  @media (max-width: $forMobile) {
+    padding: 0;
+    margin: 50px 0;
+  }
+
+  .potential__content {
+    padding: 120px 140px;
+
+    @media (max-width: $forDesktop) {
+      padding: 100px;
+    }
+
+    @media (max-width: $forTablet) {
+      padding: 80px 60px;
+    }
+
+    @media (max-width: $forMobile) {
+      padding: 60px 0px;
+    }
+  }
+
+  .potential__right {
+    @media (max-width: $forDesktop) {
+      flex: 0 0 580px;
+    }
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+  }
+
+  .potential__left {
+    padding-top: unset;
+  }
+
+  .potential__arrow {
+    top: -60px;
+    transform: rotate(18deg);
+
+    @media (max-width: $forDesktop) {
+      display: none;
+    }
+  }
+
+  .potential__content h2+p {
+    text-wrap: balance;
+  }
+
+  .potential__content button {
+    margin-bottom: 0;
+  }
+
+  input:not([type=checkbox]) {
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  input:hover::placeholder {
+    opacity: 1;
+  }
+
+  .tab-size {
+    text-align: left;
+  }
+}

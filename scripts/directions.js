@@ -13,7 +13,7 @@ try {
     dropDown.classList.toggle("active");
   }
 } catch (error) {
-
+  console.warn('burger dropdown catch')
 }
 
 
@@ -34,7 +34,7 @@ try {
     }
   })
 } catch (error) {
-
+  console.warn("formats slider catch")
 }
 
 
@@ -42,7 +42,6 @@ try {
 try {
   const introDirectionForm = document.querySelector(".direction .intro form");
   const introDirectionCourses = document.querySelectorAll(".direction .intro chooser-course");
-  const afterForm = document.querySelector(".after-form");
 
   introDirectionCourses.forEach(item => {
     item.addEventListener("click", () => {
@@ -52,6 +51,7 @@ try {
 
   introDirectionForm.onsubmit = (e) => {
     e.preventDefault()
+    const afterForm = document.querySelector(".after-form");
 
     const formData = new FormData(e.target);
     const { action } = e.target;
@@ -65,28 +65,31 @@ try {
       body: formData
     })
       .then(s => console.log("sendind form..."))
-      .then(() => afterForm.classList.add("opened"))
       .catch((err) => console.warn(err));
+
+    afterForm.classList.add("opened");
+    document.body.classList.add("popup-is-opened");
   }
 } catch (error) {
-
+  console.warn("intro direction catch")
 }
 
 
+
 try {
-  const popupChooser = document.querySelectorAll(".popup-subscription .choose-your-course.chooser__select");
-  const popupTitle = document.querySelectorAll(".popup-subscription .choose-your-course.chooser__title");
-  const popupBadge = document.querySelectorAll(".popup-subscription .choose-your-course chooser-course");
+  const popupCourseChooser = document.querySelectorAll(".popup-subscription .choose-your-course.chooser__select");
+  const popupCourseTitle = document.querySelectorAll(".popup-subscription .choose-your-course.chooser__title");
+  const popupCourseBadge = document.querySelectorAll(".popup-subscription .choose-your-course chooser-course");
 
-  openAndCloseChooser(popupChooser);
-  setMainTitle(popupTitle, popupBadge, popupChooser);
+  openAndCloseChooser(popupCourseChooser);
+  setMainTitle(popupCourseTitle, popupCourseBadge, popupCourseChooser);
 
-  const popupChooser2 = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__select");
-  const popupTitle2 = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__title");
-  const popupBadge2 = document.querySelectorAll(".popup-subscription .choose-your-plan chooser-course");
+  const popupPlanChooser2 = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__select");
+  const popupPlanTitle = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__title");
+  const popupPlanBadge = document.querySelectorAll(".popup-subscription .choose-your-plan chooser-course");
 
-  openAndCloseChooser(popupChooser2);
-  setMainTitle(popupTitle2, popupBadge2, popupChooser2);
+  openAndCloseChooser(popupPlanChooser2);
+  setMainTitle(popupPlanTitle, popupPlanBadge, popupPlanChooser2);
 
   const lessonsQuantity = document.querySelectorAll(".formats__slide");
   const form = document.querySelector(".popup-subscription form")
@@ -95,18 +98,18 @@ try {
     const h3 = item.querySelector("h3");
 
     item.addEventListener("click", () => {
-      popupTitle2[0].textContent = `Індивідуальні уроки, абонемент на ${h3.textContent}`;
+      popupPlanTitle[0].textContent = `Індивідуальні уроки, абонемент на ${h3.textContent}`;
       form.plan.value = h3.textContent;
     })
   })
 
-  popupBadge.forEach(item => {
+  popupCourseBadge.forEach(item => {
     item.addEventListener("click", () => {
       form.course.value = item.textContent;
     })
   })
 
-  popupBadge2.forEach(item => {
+  popupPlanBadge.forEach(item => {
     item.addEventListener("click", () => {
       form.plan.value = item.textContent;
     })
@@ -114,6 +117,7 @@ try {
 
   form.onsubmit = (e) => {
     e.preventDefault();
+    const afterForm = document.querySelector(".after-form");
 
     const formData = new FormData(e.target);
     const { action } = e.target;
@@ -128,6 +132,9 @@ try {
     })
       .then(s => console.log("sendind form..."))
       .catch((err) => console.warn(err));
+
+    afterForm.classList.add("opened");
+    document.body.classList.add("popup-is-opened");
   }
 
   const popup = document.querySelector(".popup-subscription");
@@ -145,7 +152,152 @@ try {
     }
   })
 } catch (error) {
-
+  console.warn('popup-subscription catch')
 }
 
 
+
+try {
+  const bannerCourseChooser = document.querySelectorAll(".banner-acquaintance .choose-your-course.chooser__select");
+  const bannerCourseTitle = document.querySelectorAll(".banner-acquaintance .choose-your-course.chooser__title");
+  const bannerCourseBadge = document.querySelectorAll(".banner-acquaintance .choose-your-course chooser-course");
+
+  openAndCloseChooser(bannerCourseChooser);
+  setMainTitle(bannerCourseTitle, bannerCourseBadge, bannerCourseChooser);
+
+  const bannerPlanChooser = document.querySelectorAll(".banner-acquaintance .choose-your-plan.chooser__select");
+  const bannerPlanTitle = document.querySelectorAll(".banner-acquaintance .choose-your-plan.chooser__title");
+  const bannerPlanBadge = document.querySelectorAll(".banner-acquaintance .choose-your-plan chooser-course");
+
+  openAndCloseChooser(bannerPlanChooser);
+  setMainTitle(bannerPlanTitle, bannerPlanBadge, bannerPlanChooser);
+
+  const popupCourseChooser = document.querySelectorAll(".popup-time .choose-your-course.chooser__select");
+  const popupCourseTitle = document.querySelectorAll(".popup-time .choose-your-course.chooser__title");
+  const popupCourseBadge = document.querySelectorAll(".popup-time .choose-your-course chooser-course");
+
+  openAndCloseChooser(popupCourseChooser);
+  setMainTitle(popupCourseTitle, popupCourseBadge, popupCourseChooser);
+
+  const popupPlanChooser = document.querySelectorAll(".popup-time .choose-your-plan.chooser__select");
+  const popupPlanTitle = document.querySelectorAll(".popup-time .choose-your-plan.chooser__title");
+  const popupPlanBadge = document.querySelectorAll(".popup-time .choose-your-plan chooser-course");
+
+  openAndCloseChooser(popupPlanChooser);
+  setMainTitle(popupPlanTitle, popupPlanBadge, popupPlanChooser);
+
+  const form = document.querySelector(".popup-time form");
+  const { date, time, name, tel, course, plan } = form;
+
+  popupCourseBadge.forEach(item => {
+    item.addEventListener("click", () => {
+      course.value = item.textContent;
+    })
+  })
+
+  popupPlanBadge.forEach(item => {
+    item.addEventListener("click", () => {
+      plan.value = item.textContent;
+    })
+  })
+
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const afterForm = document.querySelector(".after-form");
+
+    const formData = new FormData(e.target);
+    const { action } = e.target;
+
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`)
+    }
+
+    fetch(action, {
+      method: 'POST',
+      body: formData
+    })
+      .then(s => console.log("sendind form..."))
+      .catch((err) => console.warn(err));
+
+    afterForm.classList.add("opened");
+    document.body.classList.add("popup-is-opened");
+  }
+
+  const popup = document.querySelector(".popup-time");
+  const popupContent = document.querySelector(".popup-time .popup-time__content");
+  const popupClose = document.querySelector(".popup-time .popup-time__close");
+
+  const popupTriggers = document.querySelectorAll(".popup-time-trigger");
+
+  closePopup(popup, popupContent, popupClose);
+
+  popupTriggers.forEach(item => {
+    item.onclick = () => {
+      popup.classList.add("opened");
+      document.body.classList.add("popup-is-opened");
+
+      setInitPopupFormValue()
+    }
+  })
+
+  // -------------------------------
+
+  function setInitPopupFormValue() {
+    const bannerDateInput = document.querySelector(".banner-acquaintance input[name='date']");
+    const bannerTimeInput = document.querySelector(".banner-acquaintance input[name='time']");
+
+    bannerCourseBadge.forEach(item => {
+      item.addEventListener("click", () => {
+        course.value = item.textContent;
+        popupCourseTitle[0].textContent = item.textContent;
+      })
+    })
+
+    bannerPlanBadge.forEach(item => {
+      item.addEventListener("click", () => {
+        plan.value = item.textContent;
+        popupPlanTitle[0].textContent = item.textContent;
+      })
+    })
+
+    date.value = bannerDateInput.value;
+    time.value = bannerTimeInput.value;
+  }
+} catch (error) {
+  console.warn("popup-time catch")
+}
+
+
+
+try {
+  const afterForm = document.querySelector(".after-form");
+
+  const f1 = document.querySelector(".direction #about form");
+  const f2 = document.querySelector(".direction .banner-question form");
+
+  [f1, f2].forEach(item => {
+    item.onsubmit = (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(item);
+      const { action } = e.target;
+
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`)
+      }
+
+      fetch(action, {
+        method: "POST",
+        body: formData
+      }).then(s => console.log("sendind form..."))
+        .catch(e => console.log(e))
+
+      afterForm.classList.add("opened");
+      document.body.classList.add("popup-is-opened");
+
+      return false;
+    }
+  })
+} catch (error) {
+  console.warn("else form catch")
+}

@@ -105,8 +105,8 @@
 
                   <form action="./telegram.php" method="post">
                     <div class="direction__form-flex">
-                      <input type="text" name="name" placeholder="Ім’я" required="">
-                      <input type="tel" name="tel" placeholder="Номер телефону" required="">
+                      <input type="text" name="name" placeholder="Ім’я" required>
+                      <input type="tel" name="tel" placeholder="Номер телефону" required>
                       <input type="hidden" name="course" value="">
                     </div>
                     <button class="btn">Консультація зі старшим вчителем</button>
@@ -254,7 +254,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>2 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -270,7 +270,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>4 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -278,7 +278,7 @@
                       <div class="swiper-slide">
                         <div class="formats__slide">
                           <formats-plan>
-                            <h3>32 уроків</h3>
+                            <h3>32 урока</h3>
                             <ul>
                               <li>покращення знань</li>
                               <li>підготовка до контрольних</li>
@@ -286,7 +286,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>8 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -294,7 +294,7 @@
                       <div class="swiper-slide">
                         <div class="formats__slide">
                           <formats-plan>
-                            <h3>64 уроків</h3>
+                            <h3>64 урока</h3>
                             <ul>
                               <li>покращення знань</li>
                               <li>підготовка до контрольних</li>
@@ -302,7 +302,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>16 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -318,7 +318,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>30 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -370,7 +370,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>2 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -386,7 +386,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>4 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -402,7 +402,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>8 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -418,7 +418,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>16 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -434,7 +434,7 @@
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
                             <formats-price>30 000 грн</formats-price>
-                            <button class="btn">Купити</button>
+                            <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
@@ -938,6 +938,66 @@
         </my-container>
       </div>
 
+      <div class="popup-subscription" id="popup-subscription">
+        <my-container>
+          <div class="popup-subscription__content">
+            <h3>Покупка абонементу</h3>
+
+            <div class="choose-your-course chooser__select closed shown ">
+              <chooser-main-select class="choose-your-course chooser__title tab-size ol-yellow">Обрати предмет</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-yellow hover-yellow">Математика</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Історія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Хімія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Інформатика</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Алгебра</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Географія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Фізика</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Біологія</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Економіка</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">Геометрія</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <div class="choose-your-plan chooser__select closed shown ">
+              <chooser-main-select class="choose-your-plan chooser__title tab-size ol-yellow">Обрати абонемент</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-yellow hover-yellow">8 уроків</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">16 уроків</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">32 урока</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">64 урока</chooser-course>
+                    <chooser-course class="item-size ol-yellow hover-yellow">120 уроків</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-question__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+                <input type="hidden" name="plan" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Купити</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="./images/popup-close.svg" alt="" class="popup-subscription__close">
+          </div>
+        </my-container>
+      </div>
+
       <div class="after-form" id="after-from">
         <my-container>
           <div class="after-form__content">
@@ -945,6 +1005,23 @@
             <p>Наш менеджер зв’яжеться з вами найближчим часом</p>
             <button class="btn">На головну</button>
             <img src="./images/popup-close.svg" alt="" class="after-form__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="call-me">
+        <my-container>
+          <div class="call-me__trigger">
+            <img src="./images/call-me.svg" alt="">
+          </div>
+
+          <div class="call-me__popup" hidden>
+            <h3>Є питання? Ми з радістю відповімо!</h3>
+            <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+            <form action="/">
+              <input type="tel" name="tel" placeholder="Номер телефону" required="">
+              <button class="btn">Передзвоніть мені</button>
+            </form>
           </div>
         </my-container>
       </div>

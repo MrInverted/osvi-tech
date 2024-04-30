@@ -52,4 +52,15 @@
   } catch {
     console.warn("faq's catch")
   }
+
+  try {
+    const callMeTrigger = document.querySelector(".call-me__trigger");
+    const callMePopup = document.querySelector(".call-me__popup");
+
+    callMeTrigger.onclick = () => {
+      callMePopup.hidden = !callMePopup.hidden;
+    }
+  } catch (error) {
+    console.warn("call-me catch")
+  }
 })();

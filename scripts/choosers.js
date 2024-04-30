@@ -124,8 +124,8 @@ import {
         formData.append("course", userInfo.course);
         formData.append("question", userInfo.question);
 
-        for (let item of formData.entries()) {
-          console.log(item)
+        for (let [key, value] of formData.entries()) {
+          console.log(`${key}: ${value}`)
         }
 
         fetch(e.target.action, {

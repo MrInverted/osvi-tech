@@ -274,8 +274,9 @@ try {
 
   const f1 = document.querySelector(".direction #about form");
   const f2 = document.querySelector(".direction .banner-question form");
+  const f3 = document.querySelector(".call-me form")
 
-  [f1, f2].forEach(item => {
+  [f1, f2, f3].forEach(item => {
     item.onsubmit = (e) => {
       e.preventDefault();
 

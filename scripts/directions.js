@@ -85,20 +85,22 @@ try {
   setMainTitle(popupCourseTitle, popupCourseBadge, popupCourseChooser);
 
   const popupPlanChooser2 = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__select");
-  const popupPlanTitle = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__title");
+  const popupPlanTitleType = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__title plan-type");
+  const popupPlanTitleQuantity = document.querySelectorAll(".popup-subscription .choose-your-plan.chooser__title plan-quantity");
   const popupPlanBadge = document.querySelectorAll(".popup-subscription .choose-your-plan chooser-course");
 
   openAndCloseChooser(popupPlanChooser2);
-  setMainTitle(popupPlanTitle, popupPlanBadge, popupPlanChooser2);
+  setMainTitle(popupPlanTitleQuantity, popupPlanBadge, popupPlanChooser2);
 
-  const lessonsQuantity = document.querySelectorAll(".formats__slide");
-  const form = document.querySelector(".popup-subscription form")
+  const lessonsQuantity = document.querySelectorAll(".formats .swiper-slide");
+  const form = document.querySelector(".popup-subscription form");
 
   lessonsQuantity.forEach(item => {
     const h3 = item.querySelector("h3");
 
     item.addEventListener("click", () => {
-      popupPlanTitle[0].textContent = `Індивідуальні уроки, абонемент на ${h3.textContent}`;
+      popupPlanTitleQuantity[0].textContent = h3.textContent;
+      popupPlanTitleType[0].textContent = item.dataset.type;
       form.plan.value = h3.textContent;
     })
   })
@@ -189,6 +191,20 @@ try {
   const form = document.querySelector(".popup-time form");
   const { date, time, name, tel, course, plan } = form;
 
+  bannerCourseBadge.forEach(item => {
+    item.addEventListener("click", () => {
+      course.value = item.textContent;
+      popupCourseTitle[0].textContent = item.textContent;
+    })
+  })
+
+  bannerPlanBadge.forEach(item => {
+    item.addEventListener("click", () => {
+      plan.value = item.textContent;
+      popupPlanTitle[0].textContent = item.textContent;
+    })
+  })
+
   popupCourseBadge.forEach(item => {
     item.addEventListener("click", () => {
       course.value = item.textContent;
@@ -233,10 +249,10 @@ try {
 
   popupTriggers.forEach(item => {
     item.onclick = () => {
+      setInitPopupFormValue()
       popup.classList.add("opened");
       document.body.classList.add("popup-is-opened");
 
-      setInitPopupFormValue()
     }
   })
 
@@ -245,20 +261,6 @@ try {
   function setInitPopupFormValue() {
     const bannerDateInput = document.querySelector(".banner-acquaintance input[name='date']");
     const bannerTimeInput = document.querySelector(".banner-acquaintance input[name='time']");
-
-    bannerCourseBadge.forEach(item => {
-      item.addEventListener("click", () => {
-        course.value = item.textContent;
-        popupCourseTitle[0].textContent = item.textContent;
-      })
-    })
-
-    bannerPlanBadge.forEach(item => {
-      item.addEventListener("click", () => {
-        plan.value = item.textContent;
-        popupPlanTitle[0].textContent = item.textContent;
-      })
-    })
 
     date.value = bannerDateInput.value;
     time.value = bannerTimeInput.value;
@@ -274,7 +276,7 @@ try {
 
   const f1 = document.querySelector(".direction #about form");
   const f2 = document.querySelector(".direction .banner-question form");
-  const f3 = document.querySelector(".call-me form")
+  const f3 = document.querySelector(".call-me form");
 
   [f1, f2, f3].forEach(item => {
     item.onsubmit = (e) => {

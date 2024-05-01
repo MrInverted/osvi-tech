@@ -21,7 +21,7 @@
     <meta name="robots" content="noindex, nofollow">
   </head>
 
-  <body>
+  <body style="background-color: rgba(255, 250, 236, 1);">
     <div class="wrapper direction">
       <header class="header" id="header">
         <my-container>
@@ -185,7 +185,7 @@
               <h2>Наші переваги</h2>
               <div class="advantages__grid">
                 <advantages-item>
-                  <img src="./images/advantages-1.png" alt="">
+                  <img src="./images/advantages-school-1.png" alt="">
                   <h3>Гнучкий графік навчання</h3>
                   <p>
                     Наша школа пропонує гнучкі умови для навчання, де кожен учень може самостійно встановлювати графік занять, а також легко переносити їх у випадку потреби. Забудьте про стрес від пропущених уроків!
@@ -193,7 +193,7 @@
                 </advantages-item>
 
                 <advantages-item>
-                  <img src="./images/advantages-2.png" alt="">
+                  <img src="./images/advantages-school-2.png" alt="">
                   <h3>Індивідуальний підхід</h3>
                   <p>
                     Наші вчителі розуміють, що кожен учень унікальний. Вони створюють індивідуальні програми навчання, що дозволяють дітям зануритися в процес навчання з радістю та ентузіазмом.
@@ -201,7 +201,7 @@
                 </advantages-item>
 
                 <advantages-item>
-                  <img src="./images/advantages-3.png" alt="">
+                  <img src="./images/advantages-school-3.png" alt="">
                   <h3>Міжнародне охоплення</h3>
                   <p>
                     Ми пропонуємо навчання для учнів у всіх країнах світу. Наша широка географічна присутність дозволяє навчатися в будь-який зручний для вас час, навіть о 1-3 ночі або 5 ранку!
@@ -236,14 +236,13 @@
                       </div>
                     </div>
                   </div>
-                  <img src="./images/formats-cat.png" alt="" class="formats__cat">
+                  <img src="./images/formats-decoration-1.png" alt="" class="formats__cat pen">
                 </formats-row>
 
                 <div class="formats__slider fs-1">
                   <div class="swiper">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-
+                      <div class="swiper-slide" data-type="Індивідуальні уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>8 уроків</h3>
@@ -253,13 +252,13 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>2 000 грн</formats-price>
+                            <formats-price>2 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Індивідуальні уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>16 уроків</h3>
@@ -269,15 +268,15 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>4 000 грн</formats-price>
+                            <formats-price>4 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Індивідуальні уроки">
                         <div class="formats__slide">
-                          <formats-plan>
+                          <formats-plan class="with-crown">
                             <h3>32 урока</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -285,13 +284,13 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>8 000 грн</formats-price>
+                            <formats-price>8 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Індивідуальні уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>64 урока</h3>
@@ -301,13 +300,13 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>16 000 грн</formats-price>
+                            <formats-price>16 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Індивідуальні уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>120 уроків</h3>
@@ -317,7 +316,7 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>30 000 грн</formats-price>
+                            <formats-price>30 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
@@ -331,6 +330,7 @@
                   <div class="swiper-button-next">
                     <img src="./images/formats-slider-arrow.png" alt="">
                   </div>
+                  <div class="swiper-pagination"></div>
                 </div>
 
                 <formats-row class="formats__row">
@@ -352,15 +352,14 @@
                       </div>
                     </div>
                   </div>
-                  <img src="./images/formats-ducks.png" alt="" class="formats__ducks">
+                  <img src="./images/formats-decoration-2.png" alt="" class="formats__ducks cup">
                 </formats-row>
 
                 <div class="formats__slider fs-2">
                   <div class="swiper">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-
-                        <div class="formats__slide">
+                      <div class="swiper-slide" data-type="Групові уроки">
+                        <div class="formats__slide" data-type="Групові уроки">
                           <formats-plan>
                             <h3>8 уроків</h3>
                             <ul>
@@ -369,13 +368,13 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>2 000 грн</formats-price>
+                            <formats-price>2 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Групові уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>16 уроків</h3>
@@ -385,15 +384,15 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>4 000 грн</formats-price>
+                            <formats-price>4 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Групові уроки">
                         <div class="formats__slide">
-                          <formats-plan>
+                          <formats-plan class="with-crown">
                             <h3>32 уроків</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -401,13 +400,13 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>8 000 грн</formats-price>
+                            <formats-price>8 000 грн <span>440 грн/урок</span> </formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Групові уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>64 уроків</h3>
@@ -417,13 +416,13 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>16 000 грн</formats-price>
+                            <formats-price>16 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
                       </div>
 
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-type="Групові уроки">
                         <div class="formats__slide">
                           <formats-plan>
                             <h3>120 уроків</h3>
@@ -433,7 +432,7 @@
                               <li>повний курс за семестр</li>
                               <li class="purple">можлива помісячна оплата</li>
                             </ul>
-                            <formats-price>30 000 грн</formats-price>
+                            <formats-price>30 000 грн <span>440 грн/урок</span></formats-price>
                             <button class="btn popup-subscription-trigger">Купити</button>
                           </formats-plan>
                         </div>
@@ -447,6 +446,7 @@
                   <div class="swiper-button-next">
                     <img src="./images/formats-slider-arrow.png" alt="">
                   </div>
+                  <div class="swiper-pagination"></div>
                 </div>
               </div>
             </div>
@@ -502,8 +502,8 @@
                   </div>
 
                   <div class="potential__form-flex">
-                    <input type="text" name="date" placeholder="Дата" required>
-                    <input type="text" name="time" placeholder="Час" required>
+                    <input type="date" name="date" placeholder="Дата" min="2024-05-01" max="2024-05-12" required>
+                    <input type="time" name="time" placeholder="Час" min="09:00" max="18:00" required>
                     <input type="hidden" name="course" value="">
                   </div>
                   <button class="btn popup-time-trigger">Записатись на урок</button>
@@ -575,15 +575,15 @@
           </my-container>
         </section>
 
-        <section class="banner-question">
+        <section class="banner-question banner--yellow">
           <my-container>
             <div class="banner-question__content">
               <div class="banner-question__row">
                 <div class="banner-question__left">
-                  <img src="./images/about-dog.png" alt="" class="banner-question__dog">
+                  <img src="./images/banner-question-1.png" alt="" class="banner-question__dog">
                   <h2>Є питання? Ми з радістю відповімо!</h2>
                   <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</span></p>
-                  <img src="./images/potential-arrow.svg" alt="" class="banner-question__arrow">
+                  <img src="./images/black-arrow.svg" alt="" class="banner-question__arrow">
                 </div>
                 <div class="banner-question__right">
                   <form action="/" method="post">
@@ -619,12 +619,12 @@
                 </footer-links-block>
 
                 <footer-links-block>
-                  <footer-links-title>Ресурси</footer-links-title>
+                  <footer-links-title>Напрямки</footer-links-title>
                   <ul>
-                    <li><a href="#">Комюніті</a></li>
-                    <li><a href="#">Курси</a></li>
-                    <li><a href="#">Документація</a></li>
-                    <li><a href="#">Сертифікація</a></li>
+                    <li><a href="#">Програмування</a></li>
+                    <li><a href="#">Шкільна програма</a></li>
+                    <li><a href="#">Іноземні мови</a></li>
+                    <li><a href="#">Дизайн</a></li>
                   </ul>
                 </footer-links-block>
 
@@ -651,26 +651,29 @@
                         <use href="./images/footer-sprite.svg#footer-telegram"></use>
                       </svg>
                     </a>
-                    <a href="#">
-                      <svg>
-                        <use href="./images/footer-sprite.svg#footer-viber"></use>
-                      </svg>
-                    </a>
-                    <a href="#">
-                      <svg>
-                        <use href="./images/footer-sprite.svg#footer-instagram"></use>
-                      </svg>
-                    </a>
-                    <!-- <a href="#">
-                      <svg>
-                        <use href="./images/footer-sprite.svg#footer-youtube"></use>
-                      </svg>
-                    </a> -->
+
                     <a href="#">
                       <svg>
                         <use href="./images/footer-sprite.svg#footer-ticktock"></use>
                       </svg>
                     </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-instagram"></use>
+                      </svg>
+                    </a>
+
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-viber"></use>
+                      </svg>
+                    </a> -->
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-youtube"></use>
+                      </svg>
+                    </a> -->
                   </footer-messangers>
                 </footer-links-block>
               </div>
@@ -839,7 +842,7 @@
             </div>
 
             <div class="choose-your-plan chooser__select closed shown ">
-              <chooser-main-select class="choose-your-plan chooser__title tab-size ol-yellow">Обрати абонемент</chooser-main-select>
+              <chooser-main-select class="choose-your-plan chooser__title tab-size ol-yellow"><plan-type>Індивідуальні уроки</plan-type>, абонемент на <plan-quantity>32 урока</plan-quantity></chooser-main-select>
               <chooser-content class="chooser__content">
                 <div class="min-h-0">
                   <div class="chooser__courses-flex">
@@ -912,8 +915,10 @@
 
             <form action="./telegram.php" method="post">
               <div class="popup-time__form-flex">
-                <input type="text" name="date" placeholder="Дата" required>
-                <input type="text" name="time" placeholder="Час" required>
+                <!-- <input type="text" name="date" placeholder="Дата" required>
+                <input type="text" name="time" placeholder="Час" required> -->
+                <input type="date" name="date" placeholder="Дата" min="2024-05-01" max="2024-05-12" required>
+                <input type="time" name="time" placeholder="Час" min="09:00" max="18:00" required>
               </div>
               <div class="popup-time__form-flex">
                 <input type="text" name="name" placeholder="Ім’я" required>

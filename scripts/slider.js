@@ -50,6 +50,11 @@
         nextEl: '.fs-1 .swiper-button-next',
         prevEl: '.fs-1 .swiper-button-prev',
       },
+
+      pagination: {
+        el: '.fs-1 .swiper-pagination',
+        type: 'bullets',
+      },
     });
 
     new Swiper('.fs-2 .swiper', {
@@ -75,6 +80,11 @@
       navigation: {
         nextEl: '.fs-2 .swiper-button-next',
         prevEl: '.fs-2 .swiper-button-prev',
+      },
+
+      pagination: {
+        el: '.fs-2 .swiper-pagination',
+        type: 'bullets',
       },
     });
 

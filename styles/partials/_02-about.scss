@@ -170,8 +170,23 @@
     margin-top: -20px;
     border-left: 2px solid #aa80f1;
 
+    @media (max-width: $forTablet) {
+      margin-top: 0;
+      padding-right: 40px;
+    }
+
+    @media (max-width: $forMobile) {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 8px;
+    }
+
     h3 {
       margin-bottom: 8px;
+
+      @media (max-width: $forTablet) {
+        text-wrap: balance;
+      }
     }
 
     p {

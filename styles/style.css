@@ -704,7 +704,6 @@ h3 {
 }
 .intro__content chooser-content {
   padding: 0 20px;
-  background-color: white;
   z-index: 2;
 }
 .intro__content chooser-course {
@@ -1691,6 +1690,9 @@ h3 {
     bottom: 95%;
   }
 }
+.formats .cup {
+  bottom: 95%;
+}
 @media (max-width: 1260px) {
   .formats .cup {
     width: 50px;
@@ -1816,11 +1818,14 @@ h3 {
   background-color: white;
   color: #aa80f1;
 }
+.formats formats-plan.with-crown {
+  border-color: rgb(255, 214, 108);
+}
 .formats formats-plan.with-crown::before {
   content: "";
   width: 40px;
   height: 40px;
-  background-image: url("../../images/formats-crown.png");
+  background-image: url("../images/formats-crown.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

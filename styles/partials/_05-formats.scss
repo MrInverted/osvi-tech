@@ -176,6 +176,8 @@
   }
 
   .cup {
+    bottom: 95%;
+
     @media (max-width: $forTablet) {
       width: 50px;
       bottom: 99.5%;
@@ -324,11 +326,15 @@
       }
     }
 
+    &.with-crown {
+      border-color: rgba(255, 214, 108, 1);
+    }
+
     &.with-crown::before {
       content: "";
       width: 40px;
       height: 40px;
-      background-image: url("../../images/formats-crown.png");
+      background-image: url("../images/formats-crown.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;

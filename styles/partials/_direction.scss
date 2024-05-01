@@ -1,3 +1,15 @@
+body.yellow {
+  background-color: rgba(255, 250, 236, 1);
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: rgba(255, 250, 236, 1);
+    }
+  }
+}
+
+
+
 .direction {
 
   .intro__content h1+p {

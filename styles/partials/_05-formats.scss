@@ -209,6 +209,11 @@
         background-color: #aa80f1;
         color: white;
       }
+
+      @media (max-width: $forMobile) {
+        display: block;
+        width: 100%;
+      }
     }
 
     @media (max-width: $forMobile) {
@@ -241,6 +246,11 @@
 
   &__price-right {
     flex: 1;
+
+    @media (max-width: $forMobile) {
+      display: block;
+      width: 100%;
+    }
   }
 
   formats-plan {

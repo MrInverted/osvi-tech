@@ -1721,6 +1721,12 @@ h3 {
   color: white;
 }
 @media (max-width: 768px) {
+  .formats__price button {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
   .formats__price {
     flex-direction: column;
   }
@@ -1749,6 +1755,12 @@ h3 {
 }
 .formats__price-right {
   flex: 1;
+}
+@media (max-width: 768px) {
+  .formats__price-right {
+    display: block;
+    width: 100%;
+  }
 }
 .formats formats-plan {
   display: block;
@@ -3292,8 +3304,8 @@ h3 {
 }
 @media (max-width: 768px) {
   .call-me__trigger {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   .call-me__trigger img {
     width: 20px;
@@ -3380,6 +3392,15 @@ h3 {
   padding: 20px;
   margin-bottom: 40px;
   text-align: justify;
+}
+
+body.yellow {
+  background-color: rgb(255, 250, 236);
+}
+@media (max-width: 1260px) {
+  body.yellow .header__right {
+    background-color: rgb(255, 250, 236);
+  }
 }
 
 .direction .intro__content h1 + p {

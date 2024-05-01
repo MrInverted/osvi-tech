@@ -1,13 +1,6 @@
 .chooser {
 
   &__tabs {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-
-    // @media (max-width: $forMobile) {
-    //   grid-template-columns: 1fr;
-    // }
-
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -52,6 +45,10 @@
 
   &__title {
     display: block;
+
+    @media (max-width: $forMobile) {
+      padding-right: 40px;
+    }
   }
 
   &__title::after {
@@ -68,6 +65,10 @@
     right: 32px;
     top: 50%;
     transform: translateY(-50%);
+
+    @media (max-width: $forMobile) {
+      right: 20px;
+    }
   }
 
   &__content {

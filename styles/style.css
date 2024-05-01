@@ -404,6 +404,11 @@ h3 {
 .chooser__title {
   display: block;
 }
+@media (max-width: 768px) {
+  .chooser__title {
+    padding-right: 40px;
+  }
+}
 .chooser__title::after {
   content: "";
   display: block;
@@ -417,6 +422,11 @@ h3 {
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .chooser__title::after {
+    right: 20px;
+  }
 }
 .chooser__content {
   display: grid;
@@ -3521,6 +3531,7 @@ body.yellow {
 @media (max-width: 768px) {
   .banner-question__content {
     padding: 60px 0px;
+    margin: 0;
   }
 }
 .banner-question__content h2 {

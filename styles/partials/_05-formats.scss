@@ -445,4 +445,25 @@
   .swiper-pagination-bullet-active {
     background: rgba(170, 128, 241, 1);
   }
+
+  .swiper-scrollbar {
+    height: 3px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: rgb(229, 229, 229);
+
+    @media (max-width: $forMobile) {
+      display: none;
+    }
+  }
+
+  .swiper-scrollbar-lock {
+    display: none;
+  }
+
+  .swiper-scrollbar-drag {
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(170, 128, 241);
+  }
 }

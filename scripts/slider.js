@@ -55,6 +55,11 @@
         el: '.fs-1 .swiper-pagination',
         type: 'bullets',
       },
+
+      scrollbar: {
+        el: '.fs-1 .swiper-scrollbar',
+        draggable: true,
+      },
     });
 
     new Swiper('.fs-2 .swiper', {
@@ -85,6 +90,11 @@
       pagination: {
         el: '.fs-2 .swiper-pagination',
         type: 'bullets',
+      },
+
+      scrollbar: {
+        el: '.fs-2 .swiper-scrollbar',
+        draggable: true,
       },
     });
 

@@ -71,4 +71,15 @@
   } catch (error) {
     console.warn("call-me catch")
   }
+
+  try {
+    const dropDownTrigger = document.querySelector(".header .dropdown-trigger");
+    const dropDown = document.querySelector(".header .dropdown");
+
+    dropDownTrigger.onclick = (e) => {
+      dropDown.classList.toggle("active");
+    }
+  } catch (error) {
+    console.warn('burger dropdown catch')
+  }
 })();

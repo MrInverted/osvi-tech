@@ -100,4 +100,16 @@ body.yellow {
       aspect-ratio: 760 / 300;
     }
   }
+
+  about-tab-title.chooser__title {
+    margin-bottom: 20px;
+  }
+
+  about-tab-title.chooser__title::after {
+    display: none;
+  }
+
+  about-tab-content.chooser__content {
+    grid-template-rows: 1fr;
+  }
 }

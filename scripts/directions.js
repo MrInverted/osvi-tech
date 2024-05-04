@@ -4,17 +4,7 @@ import {
   closePopup
 } from "./helpers.js"
 
-
-try {
-  const dropDownTrigger = document.querySelector(".header .dropdown-trigger");
-  const dropDown = document.querySelector(".header .dropdown");
-
-  dropDownTrigger.onclick = (e) => {
-    dropDown.classList.toggle("active");
-  }
-} catch (error) {
-  console.warn('burger dropdown catch')
-}
+import { db } from "./subjects-db.js";
 
 
 
@@ -50,7 +40,8 @@ try {
   })
 
   introDirectionForm.onsubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+
     const afterForm = document.querySelector(".after-form");
 
     const formData = new FormData(e.target);
@@ -303,4 +294,37 @@ try {
   })
 } catch (error) {
   console.warn("else form catch")
+}
+
+
+
+try {
+  const popup = document.querySelector(".popup-subject");
+  const popupContent = document.querySelector(".popup-subject .popup-subject__content");
+  const popupClose = document.querySelector(".popup-subject .popup-subject__close");
+
+  const popupTriggers = document.querySelectorAll(".popup-subject-trigger");
+
+  closePopup(popup, popupContent, popupClose);
+
+  const title = popup.querySelector(".popup-subject__title");
+  const text = popup.querySelector(".popup-subject__text");
+  const listTitle = popup.querySelector(".popup-subject__list-title");
+  const list = popup.querySelector(".popup-subject__list");
+
+  popupTriggers.forEach(item => {
+    item.onclick = () => {
+      const subject = item.dataset.subject.toLowerCase();
+
+      title.innerHTML = db[subject].title;
+      text.innerHTML = db[subject].text.map(item => `<p>${item}</p>`).join(" ");
+      listTitle.innerHTML = db[subject].listTitle;
+      list.innerHTML = db[subject].listItems.map(item => `<li>${item}</li>`).join(" ");
+
+      popup.classList.add("opened");
+      document.body.classList.add("popup-is-opened");
+    }
+  })
+} catch (error) {
+  console.warn("popup-subject catch")
 }

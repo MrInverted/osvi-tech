@@ -1705,8 +1705,8 @@ h3 {
 }
 @media (max-width: 1260px) {
   .formats .cup {
-    width: 50px;
-    bottom: 99.5%;
+    width: 40px;
+    bottom: 96%;
   }
 }
 @media (max-width: 768px) {

@@ -207,6 +207,15 @@
       bottom: 96%;
     }
   }
+
+  .rocket {
+    bottom: 90%;
+
+    @media (max-width: $forTablet) {
+      width: 40px;
+      bottom: 94%;
+    }
+  }
 }
 
 

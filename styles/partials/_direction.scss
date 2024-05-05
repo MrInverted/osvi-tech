@@ -107,6 +107,18 @@ body.red {
     text-underline-offset: 4px;
   }
 
+  .about .chooser__title {
+    text-align: center;
+  }
+
+  .about__row {
+    justify-content: stretch;
+  }
+
+  .about__right {
+    width: 100%;
+  }
+
   .about__dog-row {
     gap: 20px;
   }

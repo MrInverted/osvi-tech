@@ -151,9 +151,6 @@
 
   @media (max-width: $forMobile) {
     background-color: rgba(255, 214, 108, 1);
-    padding: 0;
-    margin-top: 50px;
-    margin-bottom: 0;
   }
 
   .banner-question__content {
@@ -181,12 +178,20 @@
 }
 
 .banner-question.banner--blue {
+  @media (max-width: $forMobile) {
+    background-color: rgba(126, 192, 241, 1);
+  }
+
   .banner-question__content {
     background-color: rgba(126, 192, 241, 1);
   }
 }
 
 .banner-question.banner--red {
+  @media (max-width: $forMobile) {
+    background-color: rgba(241, 128, 126, 1);
+  }
+
   .banner-question__content {
     background-color: rgba(241, 128, 126, 1);
   }

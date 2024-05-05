@@ -3326,7 +3326,6 @@ h3 {
   background: #fff;
   position: relative;
   max-height: calc(100vh - 80px);
-  overflow: hidden;
 }
 @media (max-width: 1260px) {
   .popup-subject__content {

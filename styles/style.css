@@ -3402,7 +3402,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .popup-subject__content subject-info-wrapper {
-    max-height: calc(90vh - 80px - 120px);
+    max-height: calc(93vh - 80px - 120px);
   }
 }
 .popup-subject__content subject-info-wrapper::-webkit-scrollbar {

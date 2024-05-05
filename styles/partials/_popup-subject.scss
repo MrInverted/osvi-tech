@@ -65,6 +65,10 @@
         max-height: calc(100vh - 80px - 120px);
       }
 
+      @media (max-width: $forMobile) {
+        max-height: calc(90vh - 80px - 120px);
+      }
+
       &::-webkit-scrollbar {
         width: 3px;
       }

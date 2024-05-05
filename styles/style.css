@@ -3400,6 +3400,11 @@ h3 {
     max-height: calc(100vh - 80px - 120px);
   }
 }
+@media (max-width: 768px) {
+  .popup-subject__content subject-info-wrapper {
+    max-height: calc(90vh - 80px - 120px);
+  }
+}
 .popup-subject__content subject-info-wrapper::-webkit-scrollbar {
   width: 3px;
 }

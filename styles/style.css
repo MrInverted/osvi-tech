@@ -1714,6 +1714,25 @@ h3 {
     width: 30px;
   }
 }
+@media (max-width: 1260px) {
+  .formats .dino {
+    width: 60px;
+  }
+}
+@media (max-width: 1260px) {
+  .formats .dino {
+    width: 50px;
+  }
+}
+.formats .python {
+  bottom: 90%;
+}
+@media (max-width: 1260px) {
+  .formats .python {
+    width: 50px;
+    bottom: 96%;
+  }
+}
 
 .formats__price {
   display: flex;
@@ -1774,11 +1793,13 @@ h3 {
 }
 .formats formats-plan {
   display: block;
-  border: 2px solid #e5e5e5;
   border-radius: 60px;
   padding: 40px 30px;
   position: relative;
   transition: 0.5s;
+}
+.formats formats-plan:not(.with-crown) {
+  border: 2px solid #e5e5e5;
 }
 .formats formats-plan h3 {
   margin-bottom: 16px;
@@ -1839,9 +1860,6 @@ h3 {
 .formats formats-plan:hover button:hover {
   background-color: white;
   color: #aa80f1;
-}
-.formats formats-plan.with-crown {
-  border-color: rgb(255, 214, 108);
 }
 .formats formats-plan.with-crown::before {
   content: "";
@@ -1949,6 +1967,13 @@ h3 {
   height: 100%;
   border-radius: 10px;
   background: rgb(170, 128, 241);
+}
+
+.formats .formats__slider chooser-main-select {
+  margin-bottom: 20px;
+}
+.formats .formats__slider .chooser__select.opened chooser-content {
+  margin-bottom: 20px;
 }
 
 .advantages__content {
@@ -3537,6 +3562,24 @@ body.yellow {
   }
 }
 
+body.blue {
+  background-color: rgb(236, 247, 255);
+}
+@media (max-width: 1260px) {
+  body.blue .header__right {
+    background-color: rgb(236, 247, 255);
+  }
+}
+
+body.red {
+  background-color: rgb(255, 243, 243);
+}
+@media (max-width: 1260px) {
+  body.red .header__right {
+    background-color: rgb(255, 243, 243);
+  }
+}
+
 .direction .intro__content h1 + p {
   max-width: 680px;
 }
@@ -3815,6 +3858,14 @@ body.yellow {
 .banner-question.banner--yellow button {
   background-color: #f1807e;
   color: white;
+}
+
+.banner-question.banner--blue .banner-question__content {
+  background-color: rgb(126, 192, 241);
+}
+
+.banner-question.banner--red .banner-question__content {
+  background-color: rgb(241, 128, 126);
 }
 
 @media (max-width: 768px) {

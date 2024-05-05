@@ -179,3 +179,15 @@
     color: white;
   }
 }
+
+.banner-question.banner--blue {
+  .banner-question__content {
+    background-color: rgba(126, 192, 241, 1);
+  }
+}
+
+.banner-question.banner--red {
+  .banner-question__content {
+    background-color: rgba(241, 128, 126, 1);
+  }
+}

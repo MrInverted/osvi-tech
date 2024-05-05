@@ -328,3 +328,52 @@ try {
 } catch (error) {
   console.warn("popup-subject catch")
 }
+
+
+
+try {
+  const formatsChoosers = document.querySelectorAll(".formats .formats__slider .chooser__select");
+
+  formatsChoosers.forEach((chooser, index) => {
+    const title = chooser.querySelector(".chooser__title");
+    const badges = chooser.querySelectorAll("chooser-course");
+
+    title.onclick = () => {
+      if (chooser.classList.contains("closed")) {
+        chooser.classList.remove("closed");
+        chooser.classList.add("opened");
+      } else {
+        chooser.classList.add("closed");
+        chooser.classList.remove("opened");
+      }
+    }
+
+    badges.forEach((badge) => {
+      badge.onclick = () => {
+        title.textContent = badge.textContent;
+
+        chooser.classList.remove("opened");
+        chooser.classList.add("closed");
+
+        const prices = badge.dataset.prices.split(";").map(e => e.split("-"));
+
+        changeSliderItems(prices, index);
+      }
+    })
+  })
+
+  function changeSliderItems(prices, index) {
+    const formatsSlider = document.querySelectorAll(".formats .swiper");
+    const slides = formatsSlider[index].querySelectorAll(".formats__slide");
+
+    prices.forEach(([a, b], index) => {
+      const totalPrice = slides[index].querySelector("p-t");
+      const perLessonPrice = slides[index].querySelector("p-l");
+
+      totalPrice.textContent = a;
+      perLessonPrice.textContent = b;
+    })
+  }
+} catch (error) {
+  console.warn("format's slides from badge click")
+}

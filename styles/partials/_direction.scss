@@ -8,6 +8,26 @@ body.yellow {
   }
 }
 
+body.blue {
+  background-color: rgba(236, 247, 255, 1);
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: rgba(236, 247, 255, 1);
+    }
+  }
+}
+
+body.red {
+  background-color: rgba(255, 243, 243, 1);
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: rgba(255, 243, 243, 1);
+    }
+  }
+}
+
 
 
 .direction {

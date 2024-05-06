@@ -33,6 +33,8 @@
       grabCursor: true,
       loopPreventsSliding: false,
       slidesPerView: 1,
+      mousewheel: true,
+      freeMode: true,
 
       breakpoints: {
         768: {
@@ -69,6 +71,8 @@
       grabCursor: true,
       loopPreventsSliding: false,
       slidesPerView: 1,
+      mousewheel: true,
+      freeMode: true,
 
       breakpoints: {
         768: {

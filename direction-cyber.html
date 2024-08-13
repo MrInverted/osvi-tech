@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>OsviTech</title>
+    <meta name="description" content="OsviTech">
+    <meta name="keywords" content="OsviTech">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css?v=3">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <script>
+      const linkCanonical = document.createElement("link");
+      const linkHref = window.location.href.replace(/[?#].*/gi, "");
+
+      linkCanonical.setAttribute("rel", "canonical");
+      linkCanonical.setAttribute("href", linkHref)
+
+      document.head.append(linkCanonical);
+    </script>
+
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+
+  <body class="color-cyber">
+    <div class="wrapper direction">
+      <header class="header" id="header">
+        <my-container>
+          <div class="header__content">
+            <div class="header__row">
+              <div class="header__left">
+                <a href="/">
+                  <img src="./images/header-logo.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header__right">
+                <nav class="min-h-0">
+                  <ul>
+                    <li class="dropdown">
+                      <div class="dropdown-trigger">
+                        <span>Напрямки</span>
+                        <img src="./images/header-dropdown-chevron.svg" alt="">
+                      </div>
+
+                      <div class="dropdown-content">
+                        <div class="min-h-0">
+                          <ul>
+                            <li><a href="#">Програмування</a></li>
+                            <li><a href="#">Шкільна програма</a></li>
+                            <li><a href="#">Іноземні мови</a></li>
+                            <li><a href="#">Дизайн</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                    <li><a href="#footer">Контакти</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="header__burger">
+                <img src="./images/burger-closed.svg" alt="" class="burger-closed">
+                <img src="./images/burger-opened.svg" alt="" class="burger-opened">
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </header>
+
+      <main>
+        <section class="intro" id="intro">
+          <my-container>
+            <div class="intro__content">
+              <div class="intro__row">
+                <div class="intro__left">
+                  <h1>Кіберспорт</h1>
+                  <p>Кіберспорт - це інтелектуальний і командний вид спорту, що має змагальний характер. Наші досвідчені викладачі з OsviTech знайдуть підхід до кожного учня та розвинуть навички командної роботи і дисципліни, що допоможуть покращити свої skills в улюбленій грі та в майбутньому досягти висот в кіберспорті.</p>
+                  <div class="intro__chooser chooser">
+
+                    <div class="chooser__select closed shown">
+                      <chooser-main-select class="chooser__title tab-size ol-cyber">Обрати предмет</chooser-main-select>
+                      <chooser-content class="chooser__content">
+                        <div class="min-h-0">
+                          <div class="chooser__courses-flex">
+                            <chooser-course class="item-size ol-cyber hover-cyber">Кіберспорт</chooser-course>
+                          </div>
+                        </div>
+                      </chooser-content>
+                    </div>
+
+                  </div>
+
+                  <form action="./telegram.php" method="post">
+                    <div class="direction__form-flex">
+                      <input type="text" name="name" placeholder="Ім’я" required>
+                      <input type="tel" name="tel" placeholder="Номер телефону" required>
+                      <input type="hidden" name="course" value="">
+                    </div>
+                    <button class="btn">Консультація зі старшим вчителем</button>
+                    <label>
+                      <input type="checkbox" checked="" required="">
+                      <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+                    </label>
+                  </form>
+
+                </div>
+                <div class="intro__right">
+                  <img src="./images/direction-cyber.png" alt="">
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="about" id="about">
+          <my-container>
+            <div class="about__content">
+              <h2>Про нас</h2>
+              <div class="about__row">
+                <div class="about__left">
+                  <div class="about__text">
+                    <div class="about__dog-row">
+                      <img src="./images/about-laptop.png" alt="">
+                      <p>
+                        Кіберспорт - це шлях вашої дитини до успіху та розвитку!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="about__questions">
+                    <h3>Є питання? Ми з радістю відповімо!</h3>
+                    <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+
+                    <form action="./telegram.php" method="post">
+                      <div class="direction__form-flex">
+                        <input type="tel" name="tel" placeholder="Номер телефону" required="">
+                        <button class="btn">Передзвоніть мені</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="about__right about__right--text">
+                  <p>Завдяки курсам Кіберспорту діти зможуть:</p>
+                  <br>
+                  <ul>
+                    <li>Розвивати стратегічне мислення</li>
+                    <li>Вивчити основи гри</li>
+                    <li>Покращити пам'ять та концентрацію уваги</li>
+                  </ul>
+                  <br>
+                  <p>OsviTech пропонує навчання для учнів у всіх країнах світу. Наша широка географічна присутність дозволяє навчатися в будь-який зручний для вас час, навіть о 1-3 ночі або 5 ранку!</p>
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="advantages" id="advantages">
+          <my-container>
+            <div class="advantages__content">
+              <h2>Наші переваги</h2>
+              <div class="advantages__grid">
+                <advantages-item>
+                  <img src="./images/advantages-cyber-1.png" alt="">
+                  <h3>Гнучкий графік навчання</h3>
+                  <p>
+                    Наша школа пропонує гнучкі умови для навчання, де кожен учень може самостійно встановлювати графік занять, а також легко переносити їх у випадку потреби. Забудьте про стрес від пропущених уроків!
+                  </p>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="./images/advantages-cyber-2.png" alt="">
+                  <h3>Індивідуальний підхід</h3>
+                  <p>
+                    Наші вчителі розуміють, що кожен учень унікальний. Вони створюють індивідуальні програми навчання, що дозволяють дітям зануритися в процес навчання з радістю та ентузіазмом.
+                  </p>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="./images/advantages-cyber-3.png" alt="">
+                  <h3>Міжнародне охоплення</h3>
+                  <p>
+                    Ми пропонуємо навчання для учнів у всіх країнах світу. Наша широка географічна присутність дозволяє навчатися в будь-який зручний для вас час, навіть о 1-3 ночі або 5 ранку!
+                  </p>
+                </advantages-item>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="formats" id="formats">
+          <my-container>
+            <div class="formats__content">
+              <h2>Формати навчання</h2>
+              <div class="formats__blocks">
+                <formats-row class="formats__row">
+                  <div class="formats__image">
+                    <img src="./images/formats-1.jpg" alt="">
+                  </div>
+                  <div class="formats__text">
+                    <h3>Індивідуальний</h3>
+                    <p>
+                      Наш індивідуальний підхід до навчання дозволяє учням розкрити свій повний потенціал. Вчителі спілкуються з кожним учнем окремо, враховуючи його потреби та індивідуальні особливості. Це персоналізований підхід допомагає кожному учневі досягти високих результатів та відчути себе підтриманим у своєму навчанні.
+                    </p>
+                    <div class="formats__price">
+                      <div class="formats__price-left">
+                        <formats-main-price>від 310 грн</formats-main-price>
+                        <span>*ціна залежить від кількості занять</span>
+                      </div>
+                      <div class="formats__price-right">
+                        <button class="btn open-slider">Обрати абонемент</button>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="./images/formats-gamer.png" alt="" class="formats__gamer">
+                </formats-row>
+
+                <div class="formats__slider fs-1">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" data-type="Індивідуальні">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>8 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>2 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Індивідуальні">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>16 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>4 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Індивідуальні">
+                        <div class="formats__slide">
+                          <formats-plan class="with-crown ol-cyber">
+                            <h3>32 урока</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>8 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Індивідуальні">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>64 урока</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>16 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Індивідуальні">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>120 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>30 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <img src="./images/formats-slider-arrow.png" alt="">
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="./images/formats-slider-arrow.png" alt="">
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-scrollbar"></div>
+                </div>
+
+                <formats-row class="formats__row">
+                  <div class="formats__image">
+                    <img src="./images/formats-2.jpg" alt="">
+                  </div>
+                  <div class="formats__text">
+                    <h3>Груповий</h3>
+                    <p>
+                      В нашій школі групові заняття - це не просто навчання, це справжнє спільнота розвитку! Учасники груп взаємодіють між собою, обмінюються думками та ідеями, спільно розв'язують завдання. Це відмінна можливість для дітей вивчати нові концепції у сприятливій атмосфері та підтримці однодумців.
+                    </p>
+                    <div class="formats__price">
+                      <div class="formats__price-left">
+                        <formats-main-price>від 90 грн</formats-main-price>
+                        <span>*ціна залежить від кількості занять</span>
+                      </div>
+                      <div class="formats__price-right">
+                        <button class="btn open-slider">Обрати абонемент</button>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="./images/formats-gamepad.png" alt="" class="formats__gamepad">
+                </formats-row>
+
+                <div class="formats__slider fs-2">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" data-type="Групові уроки">
+                        <div class="formats__slide" data-type="Групові уроки">
+                          <formats-plan>
+                            <h3>8 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>2 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Групові уроки">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>16 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>4 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Групові уроки">
+                        <div class="formats__slide">
+                          <formats-plan class="with-crown ol-cyber">
+                            <h3>32 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>8 000 грн <span>440 грн/урок</span> </formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Групові уроки">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>64 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>16 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide" data-type="Групові уроки">
+                        <div class="formats__slide">
+                          <formats-plan>
+                            <h3>120 уроків</h3>
+                            <ul>
+                              <li>покращення знань</li>
+                              <li>підготовка до контрольних</li>
+                              <li>повний курс за семестр</li>
+                              <li class="purple">можлива помісячна оплата</li>
+                            </ul>
+                            <formats-price>30 000 грн <span>440 грн/урок</span></formats-price>
+                            <button class="btn popup-subscription-trigger">Купити</button>
+                          </formats-plan>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <img src="./images/formats-slider-arrow.png" alt="">
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="./images/formats-slider-arrow.png" alt="">
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-scrollbar"></div>
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="potential banner-acquaintance" id="potential">
+          <my-container>
+            <div class="potential__content">
+              <div class="potential__row">
+                <div class="potential__left">
+                  <img src="./images/teachers.png" alt="" class="potential__teachers">
+                  <h2>Давайте познайомимося</h2>
+                  <p>Запишись на БЕЗКОШТОВНИЙ ВВОДНИЙ УРОК вже зараз</p>
+                  <img src="./images/potential-arrow.svg" alt="" class="potential__arrow">
+                </div>
+
+                <div class="potential__right">
+                  <div class="chooser">
+                    <div class="choose-your-course chooser__select closed shown">
+                      <chooser-main-select class="choose-your-course chooser__title tab-size">Обрати предмет</chooser-main-select>
+                      <chooser-content class="chooser__content">
+                        <div class="min-h-0">
+                          <div class="chooser__courses-flex">
+                            <chooser-course class="item-size">Кіберспорт</chooser-course>
+                          </div>
+                        </div>
+                      </chooser-content>
+                    </div>
+                  </div>
+
+                  <div class="chooser">
+                    <div class="choose-your-plan chooser__select closed shown">
+                      <chooser-main-select class="choose-your-plan chooser__title tab-size">Формат навчання</chooser-main-select>
+                      <chooser-content class="chooser__content">
+                        <div class="min-h-0">
+                          <div class="chooser__courses-flex">
+                            <chooser-course class="item-size">Індивідуальні уроки</chooser-course>
+                            <chooser-course class="item-size">Групові уроки</chooser-course>
+                          </div>
+                        </div>
+                      </chooser-content>
+                    </div>
+                  </div>
+
+                  <div class="potential__form-flex">
+                    <!-- <input type="date" name="date" placeholder="Дата" min="2024-05-01" max="2024-05-12" required> -->
+                    <!-- <input type="time" name="time" placeholder="Час" min="09:00" max="18:00" required> -->
+                    <input type="text" name="date" placeholder="Дата">
+                    <input type="text" name="time" placeholder="Час">
+                    <input type="hidden" name="course" value="">
+                  </div>
+                  <button class="btn popup-time-trigger">Записатись на урок</button>
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="reviews" id="reviews">
+          <my-container>
+            <div class="reviews__content">
+              <h2>Відгуки</h2>
+              <div class="reviews__slider">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <reviews-slide class="swiper-slide">
+                      <div class="reviews__slide">
+                        <div class="reviews__video" data-video="JEy0C586KeI?si=6m70FApX4pMdqTFn">
+                          <img src="./images/reviews-video.jpg" alt="">
+                        </div>
+                        <div class="reviews__text">
+                          <span class="reviews__category item-size ol-red hover-red">Німецька мова</span>
+                          <blockquote>
+                            <span>“Займаюсь відносно нещодавно, вивчаю німецьку мову. Я дуже рада, що потрапила в цю школу, тому що тут працюють неймовірні викладачі. Наші заняття проходять весело та цікаво, і я завжди засвоюю матеріал. Пояснюють все зрозумілою для мене мовою. Я задоволена цією школою. Величезне дякую!”</span>
+                            <cite>— Настя, 15 років</cite>
+                          </blockquote>
+                        </div>
+
+                        <img class="reviews__book" src="./images/reviews-book.png" alt="">
+                      </div>
+                    </reviews-slide>
+
+                    <reviews-slide class="swiper-slide">
+                      <div class="reviews__slide">
+                        <div class="reviews__video" data-video="JEy0C586KeI?si=6m70FApX4pMdqTFn">
+                          <img src="./images/reviews-video.jpg" alt="">
+                        </div>
+                        <div class="reviews__text">
+                          <span class="reviews__category item-size ol-red hover-red">Німецька мова</span>
+                          <blockquote>
+                            <span>“Займаюсь відносно нещодавно, вивчаю німецьку мову. Я дуже рада, що потрапила в цю школу, тому що тут працюють неймовірні викладачі. Наші заняття проходять весело та цікаво, і я завжди засвоюю матеріал. Пояснюють все зрозумілою для мене мовою. Я задоволена цією школою. Величезне дякую!”</span>
+                            <cite>— Настя, 15 років</cite>
+                          </blockquote>
+                        </div>
+
+                        <img class="reviews__book" src="./images/reviews-book.png" alt="">
+                      </div>
+                    </reviews-slide>
+                  </div>
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-buttons">
+                    <div class="swiper-button-prev">
+                      <img src="./images/reviews-slider-arrow.svg" alt="">
+                    </div>
+
+                    <div class="swiper-button-next">
+                      <img src="./images/reviews-slider-arrow.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <img class="reviews__star-1" src="./images/reviews-star.png" alt="">
+              <img class="reviews__star-2" src="./images/reviews-star.png" alt="">
+              <img class="reviews__star-3" src="./images/reviews-star.png" alt="">
+            </div>
+          </my-container>
+        </section>
+
+        <section class="banner-question banner--cyber">
+          <my-container>
+            <div class="banner-question__content">
+              <div class="banner-question__row">
+                <div class="banner-question__left">
+                  <img src="./images/banner-question-6.png" alt="" class="banner-question__dog">
+                  <h2>Є питання? Ми з радістю відповімо!</h2>
+                  <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+                  <img src="./images/black-arrow.svg" alt="" class="banner-question__arrow">
+                </div>
+                <div class="banner-question__right">
+                  <form action="/" method="post">
+                    <input type="tel" name="tel" placeholder="Номер телефону" required>
+                    <button class="btn">Передзвоніть мені</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+      </main>
+
+      <footer class="footer" id="footer">
+        <my-container>
+          <div class="footer__content">
+            <div class="footer__row">
+              <div class="footer__left">
+                <a href="/">
+                  <img src="./images/footer-logo.svg" alt="">
+                </a>
+                <p>Онлайн школа для дітей від 5 до 17 років</p>
+              </div>
+              <div class="footer__right">
+                <footer-links-block>
+                  <footer-links-title>Меню</footer-links-title>
+                  <ul>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                  </ul>
+                </footer-links-block>
+
+                <footer-links-block>
+                  <footer-links-title>Напрямки</footer-links-title>
+                  <ul>
+                    <li><a href="#">Програмування</a></li>
+                    <li><a href="#">Шкільна програма</a></li>
+                    <li><a href="#">Іноземні мови</a></li>
+                    <li><a href="#">Дизайн</a></li>
+                  </ul>
+                </footer-links-block>
+
+                <footer-links-block>
+                  <footer-links-title>Контакти</footer-links-title>
+                  <ul>
+                    <li>
+                      <a href="tel:+3800998887766">
+                        <img src="./images/footer-phone.svg" alt="">
+                        <span>+380 (099) 888 77 66</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:info@osvitech.com">
+                        <img src="./images/footer-mail.svg" alt="">
+                        <span>info@osvitech.com</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <footer-messangers>
+                    <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-telegram"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-ticktock"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-instagram"></use>
+                      </svg>
+                    </a>
+
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-viber"></use>
+                      </svg>
+                    </a> -->
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-youtube"></use>
+                      </svg>
+                    </a> -->
+                  </footer-messangers>
+                </footer-links-block>
+              </div>
+            </div>
+
+            <div class="footer__sub footer__row">
+              <div class="footer__left">
+                <p>© 2023 OsviTech. All rights reserved.</p>
+              </div>
+              <div class="footer__right">
+                <a href="#">Політика конфідеційності</a>
+                <a href="#">Умови надання послуг</a>
+                <a href="#">Налаштування Cookies</a>
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </footer>
+
+      <!-- popups -->
+
+      <div class="popup-question" id="popup-question">
+        <my-container>
+          <div class="popup-question__content">
+            <h3>Залишились питання?</h3>
+            <p>Ми з радістю відповімо!</p>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-question__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Отримати безкоштовний урок</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="./images/popup-close.svg" alt="" class="popup-question__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="popup-subscription" id="popup-subscription">
+        <my-container>
+          <div class="popup-subscription__content">
+            <h3>Покупка абонементу</h3>
+
+            <div class="choose-your-course chooser__select closed shown ">
+              <chooser-main-select class="choose-your-course chooser__title tab-size ol-cyber">Обрати предмет</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-cyber hover-cyber">Кіберспорт</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <div class="choose-your-plan chooser__select closed shown ">
+              <chooser-main-select class="choose-your-plan chooser__title tab-size ol-cyber"><plan-type>Індивідуальні уроки</plan-type>, <plan-quantity>32 урока</plan-quantity></chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-cyber hover-cyber">8 уроків</chooser-course>
+                    <chooser-course class="item-size ol-cyber hover-cyber">16 уроків</chooser-course>
+                    <chooser-course class="item-size ol-cyber hover-cyber">32 урока</chooser-course>
+                    <chooser-course class="item-size ol-cyber hover-cyber">64 урока</chooser-course>
+                    <chooser-course class="item-size ol-cyber hover-cyber">120 уроків</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-question__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+                <input type="hidden" name="plan" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Купити</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="./images/popup-close.svg" alt="" class="popup-subscription__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="popup-time" id="popup-time">
+        <my-container>
+          <div class="popup-time__content">
+            <h3>Покупка абонементу</h3>
+
+            <div class="choose-your-course chooser__select closed shown ">
+              <chooser-main-select class="choose-your-course chooser__title tab-size ol-cyber">Обрати предмет</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-cyber hover-cyber">Кіберспорт</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <div class="choose-your-plan chooser__select closed shown">
+              <chooser-main-select class="choose-your-plan chooser__title tab-size bg-cyber ol-cyber">Формат навчання</chooser-main-select>
+              <chooser-content class="chooser__content">
+                <div class="min-h-0">
+                  <div class="chooser__courses-flex">
+                    <chooser-course class="item-size ol-cyber hover-cyber">Індивідуальні уроки</chooser-course>
+                    <chooser-course class="item-size ol-cyber hover-cyber">Групові уроки</chooser-course>
+                  </div>
+                </div>
+              </chooser-content>
+            </div>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-time__form-flex">
+                <input type="text" name="date" placeholder="Дата" required>
+                <input type="text" name="time" placeholder="Час" required>
+                <!-- <input type="date" name="date" placeholder="Дата" min="2024-05-01" max="2024-05-12" required> -->
+                <!-- <input type="time" name="time" placeholder="Час" min="09:00" max="18:00" required> -->
+              </div>
+              <div class="popup-time__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+                <input type="hidden" name="plan" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Записатись на урок</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="./images/popup-close.svg" alt="" class="popup-time__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="after-form" id="after-from">
+        <my-container>
+          <div class="after-form__content">
+            <h3>Ваша заявка відправлена</h3>
+            <p>Наш менеджер зв’яжеться з вами найближчим часом</p>
+            <button class="btn">На головну</button>
+            <img src="./images/popup-close.svg" alt="" class="after-form__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="call-me">
+        <my-container>
+          <div class="call-me__trigger">
+            <img src="./images/call-me.svg" alt="">
+          </div>
+
+          <div class="call-me__popup" hidden>
+            <h3>Є питання? Ми з радістю відповімо!</h3>
+            <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+            <form action="/">
+              <input type="tel" name="tel" placeholder="Номер телефону" required="">
+              <button class="btn">Передзвоніть мені</button>
+            </form>
+          </div>
+        </my-container>
+      </div>
+    </div>
+
+    <script>
+      const headerLogo = document.querySelector(".header__left img");
+      const headerDropDownChevron = document.querySelector(".dropdown-trigger img");
+
+      if (headerLogo) headerLogo.src = "/images/header-logo-white.svg";
+      if (headerDropDownChevron) headerDropDownChevron.src = "/images/header-dropdown-chevron-white.svg";
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+
+</html>

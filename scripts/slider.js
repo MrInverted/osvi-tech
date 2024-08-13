@@ -25,7 +25,6 @@
   }
 
   try {
-
     new Swiper('.fs-1 .swiper', {
       loop: false,
       speed: 800,
@@ -63,7 +62,11 @@
         draggable: true,
       },
     });
+  } catch (error) {
+    console.warn("swiper's catch")
+  }
 
+  try {
     new Swiper('.fs-2 .swiper', {
       loop: false,
       speed: 800,
@@ -101,8 +104,7 @@
         draggable: true,
       },
     });
-
-  } catch {
+  } catch (error) {
     console.warn("swiper's catch")
   }
 })();

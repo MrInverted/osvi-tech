@@ -13,6 +13,7 @@
 
   &__tab:not(.active):not(:hover) {
     background-color: unset;
+    // color: #000;
   }
 
   &__select {
@@ -41,6 +42,7 @@
 
   &__select.closed .chooser__title:not(:hover) {
     background-color: unset;
+    // color: #000;
   }
 
   &__title {

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>OsviTech</title>
+    <meta name="description" content="OsviTech">
+    <meta name="keywords" content="OsviTech">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css?v=4">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <script>
+      const linkCanonical = document.createElement("link");
+      const linkHref = window.location.href.replace(/[?#].*/gi, "");
+
+      linkCanonical.setAttribute("rel", "canonical");
+      linkCanonical.setAttribute("href", linkHref)
+
+      document.head.append(linkCanonical);
+    </script>
+
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+
+  <body class="color-quiz">
+    <div class="wrapper">
+      <header class="header" id="header">
+        <my-container>
+          <div class="header__content">
+            <div class="header__row">
+              <div class="header__left">
+                <a href="/">
+                  <img src="./images/header-logo.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header__right">
+                <nav class="min-h-0">
+                  <ul>
+                    <li class="dropdown">
+                      <div class="dropdown-trigger">
+                        <span>Напрямки</span>
+                        <img src="./images/header-dropdown-chevron.svg" alt="">
+                      </div>
+
+                      <div class="dropdown-content">
+                        <div class="min-h-0">
+                          <ul>
+                            <li><a href="#">Програмування</a></li>
+                            <li><a href="#">Шкільна програма</a></li>
+                            <li><a href="#">Іноземні мови</a></li>
+                            <li><a href="#">Дизайн</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                    <li><a href="#footer">Контакти</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="header__burger">
+                <img src="./images/burger-closed.svg" alt="" class="burger-closed">
+                <img src="./images/burger-opened.svg" alt="" class="burger-opened">
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </header>
+
+      <main>
+        <section class="quiz">
+          <my-container>
+            <div class="quiz__content">
+              <div class="quiz__inner">
+                <header class="quiz__title">
+                  <h1>Какой ты программист?</h1>
+                  <p>Небольшое описание теста</p>
+                  <dfn>*Обязательный вопрос</dfn>
+                </header>
+
+                <quiz-step>
+                  <div class="quiz__question">
+                    <p class="--required">Ваше имя</p>
+                    <span>Введите ваше имя в поле ниже</span>
+                    <input type="text" placeholder="Мой ответ" name="name">
+                  </div>
+
+                  <div class="quiz__question">
+                    <p>Електронная почта</p>
+                    <input type="text" placeholder="Мой ответ" name="email">
+                  </div>
+
+                  <!-- 
+
+                  <div class="quiz__question">
+                    <p>Что вам нравится?</p>
+                    <label>
+                      <input type="checkbox" name="developing" value="developing">
+                      <span>Программирование</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" name="plumbing" value="plumbing">
+                      <span>Сантехника</span>
+                    </label>
+                  </div>
+
+                  <div class="quiz__question">
+                    <p>Какой чай пьёте?</p>
+                    <label>
+                      <input type="radio" name="email" value="developing">
+                      <span>Обычный</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="email" value="plumbing">
+                      <span>С магазина</span>
+                    </label>
+                  </div>
+
+                  <div class="quiz__question">
+                    <p>Вопрос с развернутым ответом</p>
+                    <textarea name="" placeholder="Мой ответ"></textarea>
+                  </div>
+
+                  -->
+                </quiz-step>
+
+                <footer class="quiz__footer">
+                  <span quiz-pagination>Страница 1 из 10</span>
+                  <div class="quiz__buttons">
+                    <button quiz-pagination-back type="button" disabled>Назад</button>
+                    <button quiz-pagination-forward type="button">Далее</button>
+                  </div>
+                </footer>
+
+                <footer class="quiz__footer --mobile">
+                  <button quiz-pagination-back type="button" disabled>←</button>
+                  <span quiz-pagination>Страница 1 из 10</span>
+                  <button quiz-pagination-forward type="button">→</button>
+                </footer>
+              </div>
+            </div>
+    </div>
+    </my-container>
+    </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <my-container>
+        <div class="footer__content">
+          <div class="footer__row">
+            <div class="footer__left">
+              <a href="/">
+                <img src="./images/footer-logo.svg" alt="">
+              </a>
+              <p>Онлайн школа для дітей від 5 до 17 років</p>
+            </div>
+            <div class="footer__right">
+              <footer-links-block>
+                <footer-links-title>Меню</footer-links-title>
+                <ul>
+                  <li><a href="#about">Про нас</a></li>
+                  <li><a href="#reviews">Відгуки</a></li>
+                  <li><a href="#formats">Формати</a></li>
+                </ul>
+              </footer-links-block>
+
+              <footer-links-block>
+                <footer-links-title>Напрямки</footer-links-title>
+                <ul>
+                  <li><a href="#">Програмування</a></li>
+                  <li><a href="#">Шкільна програма</a></li>
+                  <li><a href="#">Іноземні мови</a></li>
+                  <li><a href="#">Дизайн</a></li>
+                </ul>
+              </footer-links-block>
+
+              <footer-links-block>
+                <footer-links-title>Контакти</footer-links-title>
+                <ul>
+                  <li>
+                    <a href="tel:+3800998887766">
+                      <img src="./images/footer-phone.svg" alt="">
+                      <span>+380 (099) 888 77 66</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:info@osvitech.com">
+                      <img src="./images/footer-mail.svg" alt="">
+                      <span>info@osvitech.com</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <footer-messangers>
+                  <a href="#">
+                    <svg>
+                      <use href="./images/footer-sprite.svg#footer-telegram"></use>
+                    </svg>
+                  </a>
+
+                  <a href="#">
+                    <svg>
+                      <use href="./images/footer-sprite.svg#footer-ticktock"></use>
+                    </svg>
+                  </a>
+
+                  <a href="#">
+                    <svg>
+                      <use href="./images/footer-sprite.svg#footer-instagram"></use>
+                    </svg>
+                  </a>
+
+                  <!-- <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-viber"></use>
+                      </svg>
+                    </a> -->
+                  <!-- <a href="#">
+                      <svg>
+                        <use href="./images/footer-sprite.svg#footer-youtube"></use>
+                      </svg>
+                    </a> -->
+                </footer-messangers>
+              </footer-links-block>
+            </div>
+          </div>
+
+          <div class="footer__sub footer__row">
+            <div class="footer__left">
+              <p>© 2023 OsviTech. All rights reserved.</p>
+            </div>
+            <div class="footer__right">
+              <a href="#">Політика конфідеційності</a>
+              <a href="#">Умови надання послуг</a>
+              <a href="#">Налаштування Cookies</a>
+            </div>
+          </div>
+        </div>
+      </my-container>
+    </footer>
+
+    <div class="call-me">
+      <my-container>
+        <div class="call-me__trigger">
+          <img src="./images/call-me.svg" alt="">
+        </div>
+
+        <div class="call-me__popup" hidden>
+          <h3>Є питання? Ми з радістю відповімо!</h3>
+          <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+          <form action="/">
+            <input type="tel" name="tel" placeholder="Номер телефону" required="">
+            <button class="btn">Передзвоніть мені</button>
+          </form>
+        </div>
+      </my-container>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+
+</html>

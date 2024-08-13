@@ -172,3 +172,12 @@
     }
   }
 }
+
+.intro {
+
+  .chooser__tab:not(.active):not(:hover),
+  .chooser__select.closed .chooser__title:not(:hover) {
+    color: #000;
+  }
+
+}

@@ -160,6 +160,63 @@
     }
   }
 
+  &__goose {
+    position: absolute;
+    bottom: 100%;
+    left: 347px;
+
+    @media (max-width: $forDesktop) {
+      left: 200px;
+    }
+
+    @media (max-width: $forTablet) {
+      height: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: $forMobile) {
+      height: 30px;
+    }
+  }
+
+  &__gamer {
+    position: absolute;
+    bottom: 100%;
+    left: 347px;
+
+    @media (max-width: $forDesktop) {
+      left: 200px;
+    }
+
+    @media (max-width: $forTablet) {
+      height: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: $forMobile) {
+      height: 30px;
+    }
+  }
+
+  &__gamepad {
+    position: absolute;
+    top: 0;
+    right: 194px;
+
+    @media (max-width: $forDesktop) {
+      right: 100px;
+    }
+
+    @media (max-width: $forTablet) {}
+
+    @media (max-width: $forMobile) {
+      right: 50px;
+      width: 40px;
+    }
+  }
+
   .pen {
     bottom: 90%;
     left: 700px;
@@ -222,6 +279,18 @@
 
 
 .formats {
+
+  formats-main-price {
+    display: block;
+    font-family: "Handjet", sans-serif;
+    font-size: 58px;
+    line-height: 1.2;
+    color: #AA80F1;
+
+    @media (max-width: $forMobile) {
+      font-size: 48px;
+    }
+  }
 
   &__price {
     display: flex;
@@ -324,7 +393,8 @@
       }
     }
 
-    formats-price {
+    formats-price,
+    formats-price span {
       transition: 0.5s;
     }
 
@@ -353,7 +423,8 @@
         color: white;
       }
 
-      formats-price {
+      formats-price,
+      formats-price span {
         color: white;
       }
 

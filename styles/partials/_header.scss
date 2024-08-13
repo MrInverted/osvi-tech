@@ -150,7 +150,7 @@
     margin: 0 auto;
 
     img {
-      margin-top: 4px;
+      // margin-top: 4px;
     }
 
     &:hover {
@@ -213,7 +213,7 @@
       color: #aa80f1;
 
       img {
-        transform: rotate(-180deg);
+        transform: rotate(-180deg) translateY(-2px);
         margin-top: 2px;
       }
     }

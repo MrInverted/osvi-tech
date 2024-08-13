@@ -139,12 +139,34 @@
     @media (max-width: $forTablet) {
       flex: unset;
     }
+
+    &--text {
+      font-size: 24px;
+      line-height: 140%;
+
+      li {
+        list-style-position: inside;
+        list-style-type: disc;
+      }
+
+      @media (max-width: $forDesktop) {
+        font-size: 22px;
+      }
+
+      @media (max-width: $forTablet) {
+        flex: unset;
+      }
+
+      @media (max-width: $forMobile) {
+        font-size: 18px;
+      }
+    }
   }
 
   &__tabs {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 
     @media (max-width: $forMobile) {
       gap: 24px;
@@ -200,5 +222,9 @@
     .direction__form-flex {
       margin-bottom: 0;
     }
+  }
+
+  .tab-size {
+    text-align: left;
   }
 }

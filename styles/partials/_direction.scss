@@ -1,29 +1,169 @@
-body.yellow {
-  background-color: rgba(255, 250, 236, 1);
+body.color-school {
+  background-color: #fffaec;
 
   @media (max-width: $forTablet) {
     .header__right {
-      background-color: rgba(255, 250, 236, 1);
+      background-color: #fffaec;
     }
   }
 }
 
-body.blue {
-  background-color: rgba(236, 247, 255, 1);
+body.color-it {
+  background-color: #ecf7ff;
 
   @media (max-width: $forTablet) {
     .header__right {
-      background-color: rgba(236, 247, 255, 1);
+      background-color: #ecf7ff;
     }
   }
 }
 
-body.red {
-  background-color: rgba(255, 243, 243, 1);
+body.color-language {
+  background-color: #fff3f3;
 
   @media (max-width: $forTablet) {
     .header__right {
-      background-color: rgba(255, 243, 243, 1);
+      background-color: #fff3f3;
+    }
+  }
+}
+
+body.color-design {
+  background-color: #FFF5FF;
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: #FFF5FF;
+    }
+  }
+}
+
+body.color-chess {
+  background-color: #FFF2E4;
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: #FFF2E4;
+    }
+  }
+}
+
+body.color-soft {
+  background-color: #EFFFFE;
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: #EFFFFE;
+    }
+  }
+}
+
+body.color-cyber {
+  background-color: #1E0065;
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: #1E0065;
+    }
+  }
+
+  color: white;
+
+  h1,
+  h2,
+  h3 {
+    color: white;
+  }
+
+  input:not([type=checkbox]) {
+    color: white;
+  }
+
+  input:not([type=checkbox])::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  input:not([type=checkbox]):hover::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .chooser__title {
+    color: white !important;
+    background-color: unset !important;
+  }
+
+  .chooser__title::after {
+    background-image: url("../images/chevron-white.svg");
+  }
+
+  .ol-cyber {
+    border: 2px solid white;
+  }
+
+  .header .dropdown-content {
+    color: black;
+  }
+
+  .header .menu-is-opened .dropdown-content {
+    color: white;
+  }
+
+  .popup-subscription__content,
+  .popup-time__content,
+  .after-form__content {
+    color: black;
+
+    h3 {
+      color: black;
+    }
+
+    .chooser__title {
+      color: black !important;
+    }
+
+    .chooser__title::after {
+      background-image: url("../images/chevron.svg");
+    }
+
+    .ol-cyber {
+      border: 2px solid #1E0065;
+    }
+
+    input:not([type=checkbox]) {
+      color: black;
+    }
+
+    input:not([type=checkbox])::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    input:not([type=checkbox]):hover::placeholder {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .call-me h3,
+  .call-me p {
+    color: black;
+  }
+}
+
+body.color-speech {
+  background-color: #FDFFEA;
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: #FDFFEA;
+    }
+  }
+}
+
+body.color-quiz {
+  background-color: #F5F5F5;
+
+  @media (max-width: $forTablet) {
+    .header__right {
+      background-color: #F5F5F5;
     }
   }
 }

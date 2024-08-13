@@ -80,6 +80,38 @@
       }
     }
 
+    input:not([type="checkbox"]) {
+      flex: 1;
+
+      display: block;
+      border: 2px solid #e5e5e5;
+      background-color: unset;
+      border-radius: 100px;
+      padding: 20px 32px;
+
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+
+      &::placeholder {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #959595;
+      }
+
+      @media (max-width: $forMobile) {
+        padding: 18px 24px;
+      }
+    }
+
+    input:hover::placeholder {
+      color: #000;
+    }
+
     input {
       margin-bottom: 24px;
       width: 100%;

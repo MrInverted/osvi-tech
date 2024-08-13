@@ -9,7 +9,7 @@ import { db } from "./subjects-db.js";
 
 
 try {
-  const formatsSliderTrigger = document.querySelectorAll(".formats__price-right button");
+  const formatsSliderTrigger = document.querySelectorAll(".formats__price-right button.open-slider");
   const formatsSlider = document.querySelectorAll(".formats__slider");
 
   formatsSliderTrigger.forEach((item, index) => {
@@ -22,6 +22,15 @@ try {
         item.textContent = "Обрати абонемент";
       }
     }
+  })
+
+  const popupPlanTitleType = document.querySelector(".popup-subscription .choose-your-plan.chooser__title plan-type");
+  const popupPlanTitleQuantity = document.querySelector(".popup-subscription .choose-your-plan.chooser__title plan-quantity");
+  const formatsSliderTriggerSecond = document.querySelector(".formats__price-right button.popup-subscription-trigger");
+
+  formatsSliderTriggerSecond.addEventListener("click", () => {
+    popupPlanTitleType.textContent = "Групові уроки";
+    popupPlanTitleQuantity.textContent = "";
   })
 } catch (error) {
   console.warn("formats slider catch")

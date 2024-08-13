@@ -179,20 +179,89 @@
 
 .banner-question.banner--blue {
   @media (max-width: $forMobile) {
-    background-color: rgba(126, 192, 241, 1);
+    background-color: #7ec0f1;
   }
 
   .banner-question__content {
-    background-color: rgba(126, 192, 241, 1);
+    background-color: #7ec0f1;
   }
 }
 
 .banner-question.banner--red {
   @media (max-width: $forMobile) {
-    background-color: rgba(241, 128, 126, 1);
+    background-color: #f1807e;
   }
 
   .banner-question__content {
-    background-color: rgba(241, 128, 126, 1);
+    background-color: #f1807e;
+  }
+}
+
+.banner-question.banner--design {
+  @media (max-width: $forMobile) {
+    background-color: #F17EEC;
+  }
+
+  .banner-question__content {
+    background-color: #F17EEC;
+  }
+}
+
+.banner-question.banner--chess {
+  @media (max-width: $forMobile) {
+    background-color: #F1BC7E;
+  }
+
+  .banner-question__content {
+    background-color: #F1BC7E;
+  }
+}
+
+.banner-question.banner--soft {
+  @media (max-width: $forMobile) {
+    background-color: #74E7E0;
+  }
+
+  .banner-question__content {
+    background-color: #74E7E0;
+  }
+}
+
+.banner-question.banner--cyber {
+  @media (max-width: $forMobile) {
+    background-color: #AA80F1;
+  }
+
+  .banner-question__content {
+    background-color: #AA80F1;
+  }
+}
+
+.banner-question.banner--speech {
+  @media (max-width: $forMobile) {
+    background-color: #E8F17E;
+  }
+
+  .banner-question__content {
+    background-color: #E8F17E;
+  }
+
+  h2,
+  h2+p {
+    color: black;
+  }
+
+  input {
+    color: black;
+    border-color: black;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  button {
+    background-color: #f1807e;
+    color: white;
   }
 }

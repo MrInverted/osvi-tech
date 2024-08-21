@@ -5,6 +5,8 @@
 @import "./partials/chooser";
 
 @import "./partials/header";
+@import "./partials/footer";
+
 @import "./partials/01-intro";
 @import "./partials/02-about";
 @import "./partials/03-reviews";
@@ -13,7 +15,6 @@
 @import "./partials/06-advantages";
 @import "./partials/07-faq";
 @import "./partials/08-potential";
-@import "./partials/footer";
 
 @import "./partials/popup";
 @import "./partials/popup-after-form";
@@ -24,8 +25,15 @@
 
 @import "./partials/call-me";
 @import "./partials/politics";
+
 @import "./partials/direction";
+@import "./partials/subject";
+
 @import "./partials/101-banner-question";
 @import "./partials/102-banner-acquaintance";
 
-// @import "./partials/quiz";
+@import "./partials/201-studying";
+@import "./partials/202-program";
+@import "./partials/203-teachers";
+@import "./partials/204-student";
+@import "./partials/205-also";

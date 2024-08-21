@@ -1,0 +1,136 @@
+.teachers {
+
+  &__content {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 80px;
+
+      @media (max-width: $forTablet) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
+
+    @media (max-width: $forTablet) {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+  &__image {
+    flex: 0 1 540px;
+    position: relative;
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+
+    img {
+      border-radius: 60px;
+
+      @media (max-width: $forDesktop) {
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &__text {
+    flex: 0 1 680px;
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .teachers--book {
+    border-radius: 0;
+    width: 80px;
+
+    transform: rotate(-16deg) translateX(50%) translateY(50%);
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    @media (max-width: $forMobile) {
+      transform: rotate(-16deg) translateX(50%) translateY(50%) scale(0.8);
+    }
+  }
+
+  .teachers--star-1 {
+    top: 40%;
+    left: -24px;
+    transform: rotate(-90deg);
+
+    @media (max-width: $forTablet) {
+      top: 180px;
+      left: 44px;
+    }
+
+    @media (max-width: $forMobile) {
+      top: 180px;
+      left: -24px;
+      transform: scale(0.6);
+    }
+  }
+
+  .teachers--star-2 {
+    top: 20%;
+    right: -24px;
+
+    @media (max-width: $forTablet) {
+      top: 80px;
+      right: 140px;
+    }
+
+    @media (max-width: $forMobile) {
+      top: 100px;
+      right: 20px;
+      transform: scale(0.6);
+    }
+  }
+
+  .teachers--star-3 {
+    top: 30%;
+    right: -80px;
+    transform: rotate(45deg) scale(1.2);
+
+    @media (max-width: $forTablet) {
+      top: 120px;
+      right: 50px;
+    }
+
+    @media (max-width: $forMobile) {
+      top: 120px;
+      right: -24px;
+      transform: rotate(45deg) scale(0.8);
+    }
+  }
+
+  .teachers--star-1,
+  .teachers--star-2,
+  .teachers--star-3 {
+    width: 48px;
+    position: absolute;
+  }
+}

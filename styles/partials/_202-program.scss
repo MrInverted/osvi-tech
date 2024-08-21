@@ -1,0 +1,102 @@
+.program {
+
+  &__content {
+    h2 {
+      text-align: center;
+      margin-bottom: 80px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 40px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    article {
+      padding: 40px;
+      padding-bottom: 0;
+      border-radius: 60px;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: $forMobile) {
+        padding: 20px;
+        padding-bottom: 0;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-top: auto;
+
+        @media (max-width: $forMobile) {
+          height: 80px;
+        }
+      }
+    }
+
+    article:nth-child(1) {
+      border: 2px solid #F1807E;
+    }
+
+    article:nth-child(2) {
+      border: 2px solid #FFD66C;
+    }
+
+    article:nth-child(3) {
+      border: 2px solid #7EC0F1;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      margin-bottom: 40px;
+
+      @media (max-width: $forTablet) {
+        margin-bottom: 20px;
+      }
+    }
+
+    li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  .btn-outline {
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    width: fit-content;
+
+    @media (max-width: $forDesktop) {
+      margin-top: 60px;
+    }
+
+    @media (max-width: $forMobile) {
+      margin-top: 40px;
+    }
+  }
+}

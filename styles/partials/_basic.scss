@@ -11,7 +11,7 @@ body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 1.5;
   color: #000;
   min-width: $minimum;
 
@@ -146,6 +146,38 @@ h3 {
   }
 }
 
+.btn-outline {
+  width: 100%;
+
+  border-radius: 100px;
+  padding: 20px 32px;
+  border: 2px solid #AA80F1;
+
+  color: #AA80F1;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (max-width: $forDesktop) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: #8c62d3;
+    color: white;
+  }
+
+  &:active {
+    background-color: #c89eff;
+    color: white;
+  }
+}
+
 .tab-size {
   border-radius: 100px;
   padding: 20px 32px;
@@ -189,5 +221,17 @@ h3 {
 
   @media (max-width: $forMobile) {
     padding: 10px 24px;
+  }
+}
+
+.fz24 {
+  font-size: 24px;
+
+  @media (max-width: $forDesktop) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $forMobile) {
+    font-size: 18px;
   }
 }

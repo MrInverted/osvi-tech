@@ -212,6 +212,53 @@
           </my-container>
         </section>
 
+        <script>
+          const linksDB = {
+            "english": {
+              "8": "123",
+              "16": "123",
+              "32": "123",
+              "64": "123",
+              "120": "123"
+            },
+            "czech": {
+              "8": "123",
+              "16": "123",
+              "32": "123",
+              "64": "123",
+              "120": "123"
+            },
+            "german": {
+              "8": "123",
+              "16": "123",
+              "32": "123",
+              "64": "123",
+              "120": "123"
+            },
+            "french": {
+              "8": "123",
+              "16": "123",
+              "32": "123",
+              "64": "123",
+              "120": "123"
+            },
+            "spanish": {
+              "8": "123",
+              "16": "123",
+              "32": "123",
+              "64": "123",
+              "120": "123"
+            },
+            "polish": {
+              "8": "123",
+              "16": "123",
+              "32": "123",
+              "64": "123",
+              "120": "123"
+            },
+          }
+        </script>
+
         <section class="formats" id="formats">
           <my-container>
             <div class="formats__content">
@@ -245,10 +292,10 @@
                     <chooser-content class="chooser__content">
                       <div class="min-h-0">
                         <div class="chooser__courses-flex">
-                          <chooser-course class="item-size ol-red hover-red" data-prices="3 760 - 470 ; 42 000 - 440 ; 13 120 - 410 ; 24 320 - 380 ; 42 000 - 350">Англійська мова</chooser-course>
-                          <chooser-course class="item-size ol-red hover-red" data-prices="3 761 - 471 ; 42 001 - 441 ; 13 121 - 411 ; 24 321 - 381 ; 42 001 - 351">Німецька мова</chooser-course>
-                          <chooser-course class="item-size ol-red hover-red" data-prices="3 762 - 472 ; 42 002 - 442 ; 13 122 - 412 ; 24 322 - 382 ; 42 002 - 352">Французька мова</chooser-course>
-                          <chooser-course class="item-size ol-red hover-red" data-prices="3 763 - 473 ; 42 003 - 443 ; 13 123 - 413 ; 24 323 - 383 ; 42 003 - 353">Іспанська мова</chooser-course>
+                          <chooser-course class="item-size ol-red hover-red" data-direction="english" data-prices="3 760 - 470 ; 42 000 - 440 ; 13 120 - 410 ; 24 320 - 380 ; 42 000 - 350">Англійська мова</chooser-course>
+                          <chooser-course class="item-size ol-red hover-red" data-direction="german" data-prices="3 761 - 471 ; 42 001 - 441 ; 13 121 - 411 ; 24 321 - 381 ; 42 001 - 351">Німецька мова</chooser-course>
+                          <chooser-course class="item-size ol-red hover-red" data-direction="french" data-prices="3 762 - 472 ; 42 002 - 442 ; 13 122 - 412 ; 24 322 - 382 ; 42 002 - 352">Французька мова</chooser-course>
+                          <chooser-course class="item-size ol-red hover-red" data-direction="french" data-prices="3 763 - 473 ; 42 003 - 443 ; 13 123 - 413 ; 24 323 - 383 ; 42 003 - 353">Іспанська мова</chooser-course>
                         </div>
                       </div>
                     </chooser-content>
@@ -258,7 +305,7 @@
                     <div class="swiper-wrapper">
                       <div class="swiper-slide" data-type="Індивідуальні">
                         <div class="formats__slide">
-                          <formats-plan>
+                          <formats-plan data-quantity="8">
                             <h3>8 уроків</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -277,7 +324,7 @@
 
                       <div class="swiper-slide" data-type="Індивідуальні">
                         <div class="formats__slide">
-                          <formats-plan>
+                          <formats-plan data-quantity="16">
                             <h3>16 уроків</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -296,7 +343,7 @@
 
                       <div class="swiper-slide" data-type="Індивідуальні">
                         <div class="formats__slide">
-                          <formats-plan class="with-crown ol-red">
+                          <formats-plan data-quantity="32" class="with-crown ol-red">
                             <h3>32 урока</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -312,7 +359,7 @@
 
                       <div class="swiper-slide" data-type="Індивідуальні">
                         <div class="formats__slide">
-                          <formats-plan>
+                          <formats-plan data-quantity="64">
                             <h3>64 урока</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -331,7 +378,7 @@
 
                       <div class="swiper-slide" data-type="Індивідуальні">
                         <div class="formats__slide">
-                          <formats-plan>
+                          <formats-plan data-quantity="120">
                             <h3>120 уроків</h3>
                             <ul>
                               <li>покращення знань</li>
@@ -515,6 +562,28 @@
             </div>
           </my-container>
         </section>
+
+        <script>
+          try {
+            let directionToLink = Object.keys(linksDB)[0];
+            const _badges = document.querySelectorAll(".formats__slider chooser-course");
+            const _buttons = document.querySelectorAll(".formats__slider formats-plan button");
+
+            _badges?.forEach(item => item.addEventListener("click", () => {
+              directionToLink = item.dataset.direction;
+            }))
+
+            _buttons.forEach(item => item.addEventListener("click", (e) => {
+              const quantity = item.dataset.quantity;
+              const link = linksDB[directionToLink][quantity];
+              if (link) window.location.assign(link);
+
+              console.log({ directionToLink, quantity, link });
+            }))
+          } catch (error) {
+            console.warn(error)
+          }
+        </script>
 
         <section class="potential banner-acquaintance" id="potential">
           <my-container>

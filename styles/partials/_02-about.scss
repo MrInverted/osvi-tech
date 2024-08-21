@@ -161,6 +161,16 @@
         font-size: 18px;
       }
     }
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      line-height: 140%;
+
+      @media (max-width: $forMobile) {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   &__tabs {

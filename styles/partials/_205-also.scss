@@ -1,0 +1,62 @@
+.see-also {
+
+  &__content {
+    h2 {
+      text-align: center;
+      margin-bottom: 80px;
+
+      @media (max-width: $forDesktop) {
+        margin-bottom: 60px;
+      }
+
+      @media (max-width: $forMobile) {
+        margin-bottom: 40px;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 40px;
+      border-radius: 60px;
+      border: 2px solid #7EC0F1;
+
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+
+      &:hover {
+        background-color: #7EC0F1;
+        color: white;
+      }
+
+      @media (max-width: $forDesktop) {
+        font-size: 24px;
+      }
+
+      @media (max-width: $forTablet) {
+        padding: 20px;
+      }
+
+      @media (max-width: $forMobile) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $forMobile) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 200px;
+    }
+  }
+}

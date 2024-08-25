@@ -15,50 +15,56 @@ import {
     const introTitle = document.querySelectorAll(".intro .chooser__title");
     const introBadge = document.querySelectorAll(".intro chooser-course");
 
-    switchTabs(introTabs, introChooser);
-    openAndCloseChooser(introChooser);
-    setMainTitle(introTitle, introBadge, introChooser);
+    try {
+      switchTabs(introTabs, introChooser);
+      openAndCloseChooser(introChooser);
+      setMainTitle(introTitle, introBadge, introChooser);
 
-    // --------
+      const aboutTabs = document.querySelectorAll(".about about-tab");
 
-    const aboutTabs = document.querySelectorAll(".about about-tab");
+      aboutTabs.forEach((tab, index) => {
+        tab.onclick = () => {
+          for (let i = 0; i < aboutTabs.length; i++) {
+            if (i === index) continue;
+            removeActiveClass(aboutTabs[i], "opened", "closed");
+          }
 
-    aboutTabs.forEach((tab, index) => {
-      tab.onclick = () => {
-        for (let i = 0; i < aboutTabs.length; i++) {
-          if (i === index) continue;
-          removeActiveClass(aboutTabs[i], "opened", "closed");
+          if (tab.classList.contains("opened")) {
+            removeActiveClass(tab, "opened", "closed");
+          } else {
+            addActiveClass(tab, "opened", "closed");
+          }
         }
-
-        if (tab.classList.contains("opened")) {
-          removeActiveClass(tab, "opened", "closed");
-        } else {
-          addActiveClass(tab, "opened", "closed");
-        }
-      }
-    })
-
-    // --------
+      })
+    } catch (error) {
+      console.warn("IntroTabs catch")
+    }
 
     const potentialTabs = document.querySelectorAll(".potential .chooser__tab");
     const potentialChooser = document.querySelectorAll(".potential .chooser__select");
     const potentialTitle = document.querySelectorAll(".potential .chooser__title");
     const potentialBadge = document.querySelectorAll(".potential chooser-course");
 
-    switchTabs(potentialTabs, potentialChooser);
-    openAndCloseChooser(potentialChooser);
-    setMainTitle(potentialTitle, potentialBadge, potentialChooser);
-
-    // --------
+    try {
+      switchTabs(potentialTabs, potentialChooser);
+      openAndCloseChooser(potentialChooser);
+      setMainTitle(potentialTitle, potentialBadge, potentialChooser);
+    } catch (error) {
+      console.warn("PotentialTabs catch")
+    }
 
     const popupTabs = document.querySelectorAll(".popup .chooser__tab");
     const popupChooser = document.querySelectorAll(".popup .chooser__select");
     const popupTitle = document.querySelectorAll(".popup .chooser__title");
     const popupBadge = document.querySelectorAll(".popup chooser-course");
 
-    switchTabs(popupTabs, popupChooser);
-    openAndCloseChooser(popupChooser);
-    setMainTitle(popupTitle, popupBadge, popupChooser);
+    try {
+      switchTabs(popupTabs, popupChooser);
+      openAndCloseChooser(popupChooser);
+      setMainTitle(popupTitle, popupBadge, popupChooser);
+    } catch (error) {
+      console.warn("MainPopupTabs catch")
+    }
 
     const popup = document.querySelector(".popup");
     const popupContent = document.querySelector(".popup .popup__content");
@@ -66,22 +72,24 @@ import {
 
     const popupTriggers = document.querySelectorAll(".popup-trigger");
 
-    closePopup(popup, popupContent, popupClose);
+    try {
+      closePopup(popup, popupContent, popupClose);
 
-    popupTriggers.forEach(item => {
-      item.onclick = () => {
-        popup.classList.add("opened");
-        document.body.classList.add("popup-is-opened");
+      popupTriggers.forEach(item => {
+        item.onclick = () => {
+          popup.classList.add("opened");
+          document.body.classList.add("popup-is-opened");
 
-        if (!userInfo.course) return;
+          if (!userInfo.course) return;
 
-        for (let title of popupTitle) {
-          title.textContent = userInfo.course;
+          for (let title of popupTitle) {
+            title.textContent = userInfo.course;
+          }
         }
-      }
-    })
-
-    // --------
+      })
+    } catch (error) {
+      console.warn("MainPopup closing catch")
+    }
 
     const popupQuestion = document.querySelector(".popup-question");
     const popupQuestionContent = document.querySelector(".popup-question__content");
@@ -89,26 +97,30 @@ import {
 
     const popupQuestionTrigger = document.querySelectorAll(".popup-question-trigger");
 
-    popupQuestionTrigger.forEach(item => {
-      item.onclick = () => {
-        popupQuestion.classList.add("opened");
-        document.body.classList.add("popup-is-opened");
-      }
-    })
+    try {
+      popupQuestionTrigger.forEach(item => {
+        item.onclick = () => {
+          popupQuestion.classList.add("opened");
+          document.body.classList.add("popup-is-opened");
+        }
+      })
 
-    closePopup(popupQuestion, popupQuestionContent, popupQuestionCloseCross);
-
-    // --------
+      closePopup(popupQuestion, popupQuestionContent, popupQuestionCloseCross);
+    } catch (error) {
+      console.warn("QuestionPopup closing catch")
+    }
 
     const afterForm = document.querySelector(".after-form");
     const afterFormContent = document.querySelector(".after-form__content");
     const afterFormCloseCross = document.querySelector(".after-form__close");
     const afterFormCloseButton = document.querySelector(".after-form button");
 
-    closePopup(afterForm, afterFormContent, afterFormCloseCross);
-    closePopup(afterForm, afterFormContent, afterFormCloseButton);
-
-    // --------
+    try {
+      closePopup(afterForm, afterFormContent, afterFormCloseCross);
+      closePopup(afterForm, afterFormContent, afterFormCloseButton);
+    } catch (error) {
+      console.warn("AfterFormPopup catch")
+    }
 
     for (let form of document.forms) {
       form.onsubmit = (e) => {
@@ -117,6 +129,7 @@ import {
         if (e.target?.name?.value) userInfo.name = e.target.name.value;
         if (e.target?.tel?.value) userInfo.tel = e.target.tel.value;
         if (e.target?.question?.value) userInfo.question = e.target.question.value;
+        if (e.target?.course?.value) userInfo.course = e.target.course.value;
 
         const formData = new FormData()
         formData.append("name", userInfo.name);
@@ -134,9 +147,9 @@ import {
         }).then(s => console.log("sendind form..."))
           .catch(e => console.log(e))
 
-        popup.classList.remove("opened");
-        popupQuestion.classList.remove("opened");
-        afterForm.classList.add("opened");
+        if (popup) popup.classList.remove("opened");
+        if (popupQuestion) popupQuestion.classList.remove("opened");
+        if (afterForm) afterForm.classList.add("opened");
         document.body.classList.add("popup-is-opened");
 
         return false;
@@ -144,6 +157,6 @@ import {
     }
 
   } catch (error) {
-    console.warn("Switchers' catch")
+    console.warn("Switchers' catch, ", error)
   }
 })();

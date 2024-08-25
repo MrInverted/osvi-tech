@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>OsviTech</title>
+    <meta name="description" content="OsviTech">
+    <meta name="keywords" content="OsviTech">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css?v=3">
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <script>
+      const linkCanonical = document.createElement("link");
+      const linkHref = window.location.href.replace(/[?#].*/gi, "");
+
+      linkCanonical.setAttribute("rel", "canonical");
+      linkCanonical.setAttribute("href", linkHref)
+
+      document.head.append(linkCanonical);
+    </script>
+
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+
+  <body class="">
+    <div class="wrapper subject">
+      <header class="header" id="header">
+        <my-container>
+          <div class="header__content">
+            <div class="header__row">
+              <div class="header__left">
+                <a href="/">
+                  <img src="/images/header-logo.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header__right">
+                <nav class="min-h-0">
+                  <ul>
+                    <li class="dropdown">
+                      <div class="dropdown-trigger">
+                        <span>Напрямки</span>
+                        <img src="/images/header-dropdown-chevron.svg" alt="">
+                      </div>
+
+                      <div class="dropdown-content">
+                        <div class="min-h-0">
+                          <ul>
+                            <li><a href="#">Програмування</a></li>
+                            <li><a href="#">Шкільна програма</a></li>
+                            <li><a href="#">Іноземні мови</a></li>
+                            <li><a href="#">Дизайн</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                    <li><a href="#footer">Контакти</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="header__burger">
+                <img src="/images/burger-closed.svg" alt="" class="burger-closed">
+                <img src="/images/burger-opened.svg" alt="" class="burger-opened">
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </header>
+
+      <main>
+        <section class="intro" id="intro">
+          <my-container>
+            <div class="intro__content">
+              <div class="intro__row --center">
+                <div class="intro__left">
+                  <intro-sub>Навчіться програмувати, розважаючись з minecraft education!</intro-sub>
+                  <h1>Курс програмування Майнкрафт для дітей</h1>
+                  <p style="max-width: 760px;">Школа Майнкрафт від OsviTech відчиняє двері на курси програмування для дітей. Запрошуємо всіх віком від 8 років. Вивчи ази програмування, побудуй  нові світи та оживи їх.</p>
+                  <button class="btn popup-question-trigger">Записатися на курс</button>
+                </div>
+                <div class="intro__right">
+                  <img src="/images/subjects/subject-minecraft.png" alt="">
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="advantages" id="advantages">
+          <my-container>
+            <div class="advantages__content">
+              <hgroup>
+                <h2>Переваги курсу Minecraft</h2>
+                <p class="fz24">Minecraft – це популярна гра для створення власних світів. Ми навчимо вас використовувати її можливості для створення унікальних ігрових просторів.</p>
+              </hgroup>
+
+              <div class="advantages__grid">
+                <advantages-item>
+                  <img src="/images/subjects/advantages-minecraft-1.png" alt="">
+                  <p>Наші уроки включають</p>
+                  <h3>інтерактивні матеріали та захопливі проєкти</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-minecraft-2.png" alt="">
+                  <p>Адаптивні навчальні програми забезпечують</p>
+                  <h3>індивідуальний підхід залежно від рівня учня</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-minecraft-3.png" alt="">
+                  <p>Талановиті та досвідченні  викладачі, що мають</p>
+                  <h3>практичний досвід в програмуванні</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-minecraft-4.png" alt="">
+                  <p>Можливість обрати формат:</p>
+                  <h3>індивідуальні та групові заняття (мінігрупи до 6 учнів)</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-minecraft-5.png" alt="">
+                  <p>Ігрова методика навчання -</p>
+                  <h3>учні із радістю пізнають світ програмування</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-minecraft-6.png" alt="">
+                  <p>Не потрібно хвилюватися, що ви не встигнете -</p>
+                  <h3>заняття в будь-який час</h3>
+                </advantages-item>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="program" id="program">
+          <my-container>
+            <div class="program__content">
+              <hgroup>
+                <h2>Програма курсу</h2>
+                <p class="fz24">Наші курси програмування для дітей, включають програму, яка поділена на блоки та містять 70% практики, інтерактивний формат, вивчення азів програмування.</p>
+              </hgroup>
+
+              <div class="program__grid">
+                <article>
+                  <h3>Учень вивчить</h3>
+                  <ul class="fz24">
+                    <li>Створення 3D-моделей та ігрового світу зі своїм сюжетом</li>
+                    <li>Використання основ гейм– і левел– дизайну</li>
+                    <li>Ігрову логіку</li>
+                    <li>Роботу з анімацією</li>
+                  </ul>
+                  <img src="/images/subjects/program-1.png" alt="">
+                </article>
+
+                <article>
+                  <h3>Учень розвине</h3>
+                  <ul class="fz24">
+                    <li>Просторове і логічне мислення</li>
+                    <li>Вміння працювати в команді</li>
+                    <li>Вміння працювати над проєктом та самостійно приймати рішення</li>
+                    <li>Фантазію і креативність</li>
+                  </ul>
+                  <img src="/images/subjects/program-2.png" alt="">
+                </article>
+
+                <article>
+                  <h3>Учень матиме</h3>
+                  <ul class="fz24">
+                    <li>Власну гру квест</li>
+                    <li>Сертифікат від OsviTech</li>
+                    <li>Навички програмування</li>
+                    <li>Навички роботи в команді</li>
+                    <li>Ситуацію успіху пов'язану із програмуванням</li>
+                  </ul>
+                  <img src="/images/subjects/program-3.png" alt="">
+                </article>
+              </div>
+
+              <a class="btn-outline" href="#">Подивиться детальну програму курсу</a>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="studying" id="studying">
+          <my-container>
+            <div class="studying__content fz24">
+              <hgroup>
+                <h2>Як проходить навчання?</h2>
+              </hgroup>
+
+              <div class="studying__grid">
+                <dl>
+                  <dt>
+                    <img src="/images/subjects/how-1.png" alt="">
+                    <span>Середовище MineCraft</span>
+                  </dt>
+                  <dd>Навчання проходить в середовищі MineCraft</dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <img src="/images/subjects/how-2.png" alt="">
+                    <span>Поєднання форм занять</span>
+                  </dt>
+                  <dd>За допомогою поєднань індивідуальних та групових занять</dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <img src="/images/subjects/how-7.png" alt="">
+                    <span>Гнучкий графік</span>
+                  </dt>
+                  <dd>Гнучкий графік занять дозволяє вчитися в зручний час</dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <img src="/images/subjects/how-8.png" alt="">
+                    <span>Групи до 6 учнів</span>
+                  </dt>
+                  <dd>Не великі групи до 6 учнів дозволяють викладачу краще взаємодіяти з кожним учнем та розвивати навички командної роботи та співпраці</dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <img src="/images/subjects/how-3.png" alt="">
+                    <span>Самостійна робота</span>
+                  </dt>
+                  <dd>Пропущені заняття учень може пройти самостійно на платформі</dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <img src="/images/subjects/how-4.png" alt="">
+                    <span>Сертифікат</span>
+                  </dt>
+                  <dd>Отримання сертифіката по успішному закінченню навчання </dd>
+                </dl>
+              </div>
+
+              <div class="studying__button-trigger">
+                <button class="btn popup-question-trigger">Записатися на пробний безкоштовний урок</button>
+              </div>
+
+              <div class="studying__grid">
+                <article class="--blue">
+                  <h3>Що необхідно для навчання?</h3>
+                  <p>
+                    Для програмування в майнкрафт вам потрібен ноутбук або ПК, стабільне підключення до Інтернету, вільні 2 години на тиждень для навчання та бажання пізнати світ програмування.
+                  </p>
+                  <img src="/images/subjects/how-big-1.png" alt="">
+                </article>
+
+                <article class="--white">
+                  <h3>Мета курсу навчити дітей:</h3>
+                  <ul>
+                    <li>програмувати  в середовищі Minecraft Education та створювати ігри у формати квестів та головоломок </li>
+                    <li>працювати з 3-D об'єктами та персонажами гри </li>
+                    <li>закласти навички програмування</li>
+                  </ul>
+                </article>
+              </div>
+
+
+            </div>
+          </my-container>
+        </section>
+
+        <section class="teachers" id="teachers">
+          <my-container>
+            <div class="teachers__content">
+              <hgroup>
+                <h2>Викладачі курсу Minecraft</h2>
+              </hgroup>
+
+              <div class="teachers__row">
+                <div class="teachers__image">
+                  <img src="/images/subjects/teachers-2.jpg" alt="">
+                  <img class="teachers--book" src="/images/reviews-book.png" alt="">
+                </div>
+                <div class="teachers__text fz24">
+                  <p>Наші викладачі мають практичний досвід у програмуванні, вміють якісно подати матеріал. </p>
+                  <p>Вони знають про створення ігор все і поділяться досвідом та знаннями, допоможуть створити світи, героїв, пояснять простими словами ази програмування та надихнуть на подальші звершення. Дитина навчиться програмування з нуля. </p>
+                  <p>Світ Майнкрафт для дітей відтепер ніколи не буде просто грою. Ти сам здатний творити світи! А з нашими викладачами це буде легко і весело.</p>
+                </div>
+              </div>
+
+              <img class="teachers--star-1" src="/images/reviews-star.png" alt="">
+              <img class="teachers--star-2" src="/images/reviews-star.png" alt="">
+              <img class="teachers--star-3" src="/images/reviews-star.png" alt="">
+            </div>
+          </my-container>
+        </section>
+
+        <section class="student" id="student">
+          <my-container>
+            <div class="student__content">
+              <hgroup>
+                <h2>Як стати студентом?</h2>
+              </hgroup>
+
+              <div class="student__row">
+                <div class="student__row-left fz24">
+                  <ul>
+                    <li>
+                      <student-step>1</student-step>
+                      <span>Зареєструйтесь на курс за посиланням</span>
+                    </li>
+
+                    <li>
+                      <student-step>2</student-step>
+                      <span>Очікуйте дзвінка нашого менеджера</span>
+                    </li>
+
+                    <li>
+                      <student-step>3</student-step>
+                      <span>Домовляйтеся про пробне безкоштовне заняття</span>
+                    </li>
+
+                    <li>
+                      <student-step>4</student-step>
+                      <span>Пройдіть пробне заняття отримайте зворотний зв'язок</span>
+                    </li>
+
+                    <li>
+                      <student-step>5</student-step>
+                      <span>Отримайте консультацію щодо пакетів навчання та форм оплати</span>
+                    </li>
+
+                    <li>
+                      <student-step>6</student-step>
+                      <span>Оберіть відповідний пакет навчання та внесіть оплату</span>
+                    </li>
+
+                    <li>
+                      <student-step>7</student-step>
+                      <span>Отримайте доступ до курсу і починайте навчання</span>
+                    </li>
+
+                    <li>
+                      <student-step>8</student-step>
+                      <span>Успіхів:)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="student__row-right fz24">
+                  <h3>Вашій дитині підійде курс програмування у Minecraft, якщо</h3>
+                  <p>Вона щиро захоплюється цією грою та проводить з нею багато часу. Дитина має бажання дізнаватися як влаштована гра та прагне змінювати її. Дитина має вміти читати, писати, є впевненим користувач ПК. Вона бажає піти на свої перші курси програміста. </p>
+                  <p>Як дізнатися, чи зацікавить вашу дитину програмування в Minecraft?</p>
+                  <button class="btn popup-question-trigger">Записатися на безоплатний урок</button>
+                  <img class="student--chicken" src="/images/subjects/student-chicken-gamer.png" alt="">
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="faq" id="faq">
+          <my-container>
+            <div class="faq__content">
+              <h2>FAQ</h2>
+
+              <div class="faq__questions">
+                <dl>
+                  <dt>
+                    <span>Якої потужності потрібен комп'ютер? Яка операційна система підходить?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Наші курси програмування для дітей проходить онлайн тому потужність комп'ютера не має переважного значення. Для легкої роботи підходять сучасні операційні системи: Android 8 або вище, IOS 11, Windows 10 або 11. Не підтримуються такі операційні системи як Linux та Windows 7.</span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Де знайти потрібні програми для навчання та як їх завантажити? </span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Програмування майнкрафт для дітей не потребує багато підготовки. Перед початком навчання ми надішлемо всі необхідні посилання. Всі програми безкоштовні. Більшість з них не потребує завантаження, оскільки вони працюють в онлайн режимі. Якщо будуть проблеми з активацією або встановленням програм ми допоможемо. </span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Чи дитині буде цікаво проходити навчання? </span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Програмування для дітей має інші підходи до викладання. В нашій школі ми пропонуємо цікаві короткі уроки та всебічну підтримку учня для створення ситуації успіху, яка закріпить бажання навчатись програмування. </span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Які курси айті онлайн підійдуть дитині якщо вона не вміє програмувати? </span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Тут потрібно відштовхуватись від інтересів дитини. В які ігри вона любить грати? Курси IT в Києві від OsviTech пропонують навчання програмування дитини на базі різних популярних ігор таких як Майнкрафт, Роблокс. Заповніть форму зворотного зв'язку і наш менеджер проконсультує вас. </span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Чи потрібна попередня підготовка для початку навчання на курсі програмування? </span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Курс розрахований на те, що дитина не має навичок програмування та протягом перших модулів навчання вона навчиться азів. В рамках цього курсу закладаються знання азів мови кодування для дітей. </span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Чому дитина навчиться на курсі? </span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Інформатика для дітей тепер не буду нудною. Наші уроки побудовані так, щоби навчання проходило весело та легко. В ігровій формі учень опонує базовими поняття та базові навички програмування блоками. На курсі також приділяється увага розвитку критичного мислення, фантазії та творчості. По успішному закінченню навчання учень отримає сертифікат. </span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Скільки коштують курси програмування? </span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Вартість залежить від обраного вами пакету навчання. Доступна розстрочка. Також ви можете поставити всі питання нашому менеджеру після заповнення форми зворотного зв'язку він перетелефонує вам і допоможе обрати найвигідніші умови. </span>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="see-also" id="see-also">
+          <my-container>
+            <div class="see-also__content">
+              <hgroup>
+                <h2>Дивиться також</h2>
+              </hgroup>
+
+              <div class="see-also__grid">
+                <a href="#">Python</a>
+                <a href="#">Scratch</a>
+                <a href="#">Minecraft</a>
+                <a href="#">Unity</a>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="banner-question banner--blue" id="banner-question">
+          <my-container>
+            <div class="banner-question__content">
+              <div class="banner-question__row">
+                <div class="banner-question__left">
+                  <img src="/images/banner-question-2.png" alt="" class="banner-question__dog">
+                  <h2>Є питання? Ми з радістю відповімо!</h2>
+                  <p>Залишай свій номер і ми перетелефонуємо</p>
+                  <img src="/images/black-arrow.svg" alt="" class="banner-question__arrow">
+                </div>
+                <div class="banner-question__right">
+                  <form action="" method="post" render-form="banner-question-form">
+                    <input type="tel" name="tel" placeholder="Номер телефону" required>
+                    <button class="btn">Передзвоніть мені</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+      </main>
+
+      <footer class="footer" id="footer">
+        <my-container>
+          <div class="footer__content">
+            <div class="footer__row">
+              <div class="footer__left">
+                <a href="/">
+                  <img src="/images/footer-logo.svg" alt="">
+                </a>
+                <p>Онлайн школа для дітей від 5 до 17 років</p>
+              </div>
+              <div class="footer__right">
+                <footer-links-block>
+                  <footer-links-title>Меню</footer-links-title>
+                  <ul>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                  </ul>
+                </footer-links-block>
+
+                <footer-links-block>
+                  <footer-links-title>Напрямки</footer-links-title>
+                  <ul>
+                    <li><a href="#">Програмування</a></li>
+                    <li><a href="#">Шкільна програма</a></li>
+                    <li><a href="#">Іноземні мови</a></li>
+                    <li><a href="#">Дизайн</a></li>
+                  </ul>
+                </footer-links-block>
+
+                <footer-links-block>
+                  <footer-links-title>Контакти</footer-links-title>
+                  <ul>
+                    <li>
+                      <a href="tel:+3800998887766">
+                        <img src="/images/footer-phone.svg" alt="">
+                        <span>+380 (099) 888 77 66</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:info@osvitech.com">
+                        <img src="/images/footer-mail.svg" alt="">
+                        <span>info@osvitech.com</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <footer-messangers>
+                    <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-telegram"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-ticktock"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-instagram"></use>
+                      </svg>
+                    </a>
+
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-viber"></use>
+                      </svg>
+                    </a> -->
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-youtube"></use>
+                      </svg>
+                    </a> -->
+                  </footer-messangers>
+                </footer-links-block>
+              </div>
+            </div>
+
+            <div class="footer__sub footer__row">
+              <div class="footer__left">
+                <p>© 2023 OsviTech. All rights reserved.</p>
+              </div>
+              <div class="footer__right">
+                <a href="#">Політика конфідеційності</a>
+                <a href="#">Умови надання послуг</a>
+                <a href="#">Налаштування Cookies</a>
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </footer>
+
+      <!-- popups -->
+
+      <div class="popup-question" id="popup-question">
+        <my-container>
+          <div class="popup-question__content">
+            <h3>Записатися на курс</h3>
+            <p>Заповніть форму і ми зв'яжемось з вами найближчим часом</p>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-question__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Отримати безкоштовний урок</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="/images/popup-close.svg" alt="" class="popup-question__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="after-form" id="after-from">
+        <my-container>
+          <div class="after-form__content">
+            <h3>Ваша заявка відправлена</h3>
+            <p>Наш менеджер зв’яжеться з вами найближчим часом</p>
+            <button class="btn">На головну</button>
+            <img src="/images/popup-close.svg" alt="" class="after-form__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="call-me">
+        <my-container>
+          <div class="call-me__trigger">
+            <img src="/images/call-me.svg" alt="">
+          </div>
+
+          <div class="call-me__popup" hidden>
+            <h3>Є питання? Ми з радістю відповімо!</h3>
+            <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+            <form action="/">
+              <input type="tel" name="tel" placeholder="Номер телефону" required="">
+              <button class="btn">Передзвоніть мені</button>
+            </form>
+          </div>
+        </my-container>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+
+</html>
+
+
+
+<script>
+  const _form = document.querySelector(".popup-question form");
+  if (_form?.course) _form.course.value = "Minecraft";
+</script>

@@ -36,7 +36,26 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 60px 20px;
+
+    &.--four-items {
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: $forTablet) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: 1fr;
+
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $forMobile) {
+      gap: 40px;
+    }
 
     img {
       display: block;
@@ -46,18 +65,6 @@
       @media (max-width: $forMobile) {
         margin-bottom: 24px;
       }
-    }
-
-    @media (max-width: $forTablet) {
-      grid-template-columns: 1fr;
-      gap: 60px;
-
-      max-width: 550px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: $forMobile) {
-      gap: 40px;
     }
   }
 

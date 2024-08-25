@@ -4,19 +4,6 @@
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
-
-    h2 {
-      text-align: center;
-      margin-bottom: 80px;
-
-      @media (max-width: $forTablet) {
-        margin-bottom: 60px;
-      }
-
-      @media (max-width: $forMobile) {
-        margin-bottom: 40px;
-      }
-    }
   }
 
   &__row {
@@ -39,7 +26,7 @@
       flex: unset;
     }
 
-    img {
+    img:not(.teachers--book) {
       border-radius: 60px;
 
       @media (max-width: $forDesktop) {
@@ -63,7 +50,6 @@
   }
 
   .teachers--book {
-    border-radius: 0;
     width: 80px;
 
     transform: rotate(-16deg) translateX(50%) translateY(50%);

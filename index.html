@@ -18,6 +18,16 @@
 
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
+    <script>
+      const linkCanonical = document.createElement("link");
+      const linkHref = window.location.href.replace(/[?#].*/gi, "");
+
+      linkCanonical.setAttribute("rel", "canonical");
+      linkCanonical.setAttribute("href", linkHref)
+
+      document.head.append(linkCanonical);
+    </script>
+
     <meta name="robots" content="noindex, nofollow">
   </head>
 

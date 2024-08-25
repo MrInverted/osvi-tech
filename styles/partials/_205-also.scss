@@ -1,19 +1,6 @@
 .see-also {
 
   &__content {
-    h2 {
-      text-align: center;
-      margin-bottom: 80px;
-
-      @media (max-width: $forDesktop) {
-        margin-bottom: 60px;
-      }
-
-      @media (max-width: $forMobile) {
-        margin-bottom: 40px;
-      }
-    }
-
     a {
       display: block;
       padding: 40px;

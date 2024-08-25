@@ -12,26 +12,35 @@ try {
   const formatsSliderTrigger = document.querySelectorAll(".formats__price-right button.open-slider");
   const formatsSlider = document.querySelectorAll(".formats__slider");
 
-  formatsSliderTrigger.forEach((item, index) => {
-    item.onclick = () => {
-      formatsSlider[index].classList.toggle("active");
+  try {
+    formatsSliderTrigger.forEach((item, index) => {
+      item.onclick = () => {
+        formatsSlider[index].classList.toggle("active");
 
-      if (formatsSlider[index].classList.contains("active")) {
-        item.textContent = "Закрити";
-      } else {
-        item.textContent = "Обрати абонемент";
+        if (formatsSlider[index].classList.contains("active")) {
+          item.textContent = "Закрити";
+        } else {
+          item.textContent = "Обрати абонемент";
+        }
       }
-    }
-  })
+    })
+  } catch (error) {
+    console.warn("FormatsSliderOpening catch")
+  }
 
   const popupPlanTitleType = document.querySelector(".popup-subscription .choose-your-plan.chooser__title plan-type");
   const popupPlanTitleQuantity = document.querySelector(".popup-subscription .choose-your-plan.chooser__title plan-quantity");
   const formatsSliderTriggerSecond = document.querySelector(".formats__price-right button.popup-subscription-trigger");
 
-  formatsSliderTriggerSecond.addEventListener("click", () => {
-    popupPlanTitleType.textContent = "Групові уроки";
-    popupPlanTitleQuantity.textContent = "";
-  })
+  try {
+    formatsSliderTriggerSecond.addEventListener("click", () => {
+      popupPlanTitleType.textContent = "Групові уроки";
+      popupPlanTitleQuantity.textContent = "";
+    })
+  } catch (error) {
+    console.warn("FormatSlider group lessons catch")
+  }
+
 } catch (error) {
   console.warn("formats slider catch")
 }
@@ -42,11 +51,15 @@ try {
   const introDirectionForm = document.querySelector(".direction .intro form");
   const introDirectionCourses = document.querySelectorAll(".direction .intro chooser-course");
 
-  introDirectionCourses.forEach(item => {
-    item.addEventListener("click", () => {
-      introDirectionForm.course.value = item.textContent;
+  try {
+    introDirectionCourses.forEach(item => {
+      item.addEventListener("click", () => {
+        introDirectionForm.course.value = item.textContent;
+      })
     })
-  })
+  } catch (error) {
+    console.warn("IntroDirection form catch")
+  }
 
   introDirectionForm.onsubmit = (e) => {
     e.preventDefault();

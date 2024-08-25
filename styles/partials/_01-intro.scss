@@ -104,6 +104,14 @@
       flex-direction: column;
       gap: 60px;
     }
+
+    &.--center {
+      align-items: center;
+
+      .intro__left {
+        padding-top: 0;
+      }
+    }
   }
 
   &__chooser {

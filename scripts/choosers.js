@@ -19,11 +19,16 @@ import {
       switchTabs(introTabs, introChooser);
       openAndCloseChooser(introChooser);
       setMainTitle(introTitle, introBadge, introChooser);
+    } catch (error) {
+      console.warn("IntroTabs catch")
+    }
 
-      const aboutTabs = document.querySelectorAll(".about about-tab");
+    const aboutTabs = document.querySelectorAll(".about about-tab");
+    const aboutTabsTitle = document.querySelectorAll(".about about-tab-title");
 
+    try {
       aboutTabs.forEach((tab, index) => {
-        tab.onclick = () => {
+        aboutTabsTitle[index].onclick = () => {
           for (let i = 0; i < aboutTabs.length; i++) {
             if (i === index) continue;
             removeActiveClass(aboutTabs[i], "opened", "closed");
@@ -37,7 +42,7 @@ import {
         }
       })
     } catch (error) {
-      console.warn("IntroTabs catch")
+      console.warn("AboutAccordion catch")
     }
 
     const potentialTabs = document.querySelectorAll(".potential .chooser__tab");

@@ -4,23 +4,6 @@
     max-width: 1400px;
     margin: 0 auto;
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    li {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      font-weight: 500;
-
-      @media (max-width: $forMobile) {
-        gap: 20px;
-      }
-    }
-
     student-step {
       font-size: 78px;
       line-height: 1.2;
@@ -45,6 +28,7 @@
   &__row {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 120px;
 
     @media (max-width: $forTablet) {
@@ -55,6 +39,23 @@
 
   &__row-left {
     flex: 0 1 680px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      font-weight: 500;
+
+      @media (max-width: $forMobile) {
+        gap: 20px;
+      }
+    }
 
     @media (max-width: $forTablet) {
       flex: unset;
@@ -105,6 +106,20 @@
       }
     }
 
+    ul {
+      padding: 0 40px;
+
+      @media (max-width: $forTablet) {
+        padding: 0 30px;
+        padding-bottom: 40px - 16px;
+      }
+    }
+
+    li {
+      list-style: disc;
+      list-style-position: inside;
+    }
+
     position: relative;
 
     @media (max-width: $forTablet) {
@@ -122,5 +137,37 @@
     @media (max-width: $forTablet) {
       display: none;
     }
+  }
+}
+
+
+
+.student-banner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 40px 60px;
+  border-radius: 60px;
+  background-color: #AA80F1;
+
+  margin-top: 80px;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    color: white;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  @media (max-width: $forMobile) {
+    flex-direction: column;
+
+    padding: 30px 40px;
   }
 }

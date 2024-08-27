@@ -84,6 +84,26 @@
         grid-column: unset;
       }
     }
+
+    studying-step {
+      font-size: 78px;
+      line-height: 1.2;
+      color: white;
+      font-family: "Handjet", sans-serif;
+      text-shadow:
+        -4px -4px 0 #AA80F1,
+        0 -4px 0 #AA80F1,
+        4px -4px 0 #AA80F1,
+        4px 0 0 #AA80F1,
+        4px 4px 0 #AA80F1,
+        0 4px 0 #AA80F1,
+        -4px 4px 0 #AA80F1,
+        -4px 0 0 #AA80F1;
+
+      @media (max-width: $forMobile) {
+        font-size: 68px;
+      }
+    }
   }
 
   &__grid {
@@ -117,6 +137,116 @@
 }
 
 
+
+.studying {
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 140px;
+
+    max-width: 1220px;
+    margin: 0 auto;
+
+    @media (max-width: $forTablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $forMobile) {
+      gap: 20px;
+    }
+  }
+
+  &__single-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 40px;
+    border-radius: 40px;
+    border: 2px solid #AA80F1;
+
+    position: relative;
+
+    @media (max-width: $forMobile) {
+      padding: 20px;
+    }
+  }
+
+  &__single-step::before,
+  &__single-step::after {
+    content: "";
+    display: block;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  &__single-step:nth-child(2n + 1)::before {
+    width: 60px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    right: calc(100% + 20px);
+  }
+
+  &__single-step:nth-child(2n + 1)::after {
+    width: 100px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-long-arrow.svg");
+    left: calc(100% + 20px);
+  }
+
+  &__single-step:nth-child(2n)::after {
+    width: 60px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-dashed-line.svg");
+    left: calc(100% + 20px);
+  }
+
+  &__single-step:first-child::before {
+    width: 60px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-start.svg");
+    right: calc(100% + 20px);
+  }
+
+  &__single-step:last-child::after {
+    width: 60px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-end.svg");
+    right: calc(100% + 20px);
+  }
+
+  @media (max-width: $forTablet) {
+    &__single-step:not(:first-child):nth-child(n)::before {
+      width: 60px;
+      height: 60px;
+      right: calc(100% + 20px);
+      background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    }
+
+    &__single-step:not(:last-child):nth-child(n)::after {
+      width: 60px;
+      height: 60px;
+      left: calc(100% + 20px);
+      background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    }
+  }
+
+  @media (max-width: $forMobile) {
+
+    .studying__single-step:nth-child(n)::before,
+    .studying__single-step:nth-child(n)::after {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
 
 
 

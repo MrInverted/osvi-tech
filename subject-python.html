@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <title>OsviTech</title>
+    <meta name="description" content="OsviTech">
+    <meta name="keywords" content="OsviTech">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css?v=3">
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <script>
+      const linkCanonical = document.createElement("link");
+      const linkHref = window.location.href.replace(/[?#].*/gi, "");
+
+      linkCanonical.setAttribute("rel", "canonical");
+      linkCanonical.setAttribute("href", linkHref)
+
+      document.head.append(linkCanonical);
+    </script>
+
+    <meta name="robots" content="noindex, nofollow">
+  </head>
+
+  <body class="">
+    <div class="wrapper subject">
+      <header class="header" id="header">
+        <my-container>
+          <div class="header__content">
+            <div class="header__row">
+              <div class="header__left">
+                <a href="/">
+                  <img src="/images/header-logo.svg" alt="">
+                </a>
+              </div>
+
+              <div class="header__right">
+                <nav class="min-h-0">
+                  <ul>
+                    <li class="dropdown">
+                      <div class="dropdown-trigger">
+                        <span>Напрямки</span>
+                        <img src="/images/header-dropdown-chevron.svg" alt="">
+                      </div>
+
+                      <div class="dropdown-content">
+                        <div class="min-h-0">
+                          <ul>
+                            <li><a href="#">Програмування</a></li>
+                            <li><a href="#">Шкільна програма</a></li>
+                            <li><a href="#">Іноземні мови</a></li>
+                            <li><a href="#">Дизайн</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                    <li><a href="#footer">Контакти</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="header__burger">
+                <img src="/images/burger-closed.svg" alt="" class="burger-closed">
+                <img src="/images/burger-opened.svg" alt="" class="burger-opened">
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </header>
+
+      <main>
+        <section class="intro" id="intro">
+          <my-container>
+            <div class="intro__content">
+              <div class="intro__row --center">
+                <div class="intro__left">
+                  <intro-sub>Почни свій шлях в ІТ впевнено!</intro-sub>
+                  <h1>Програмування для підлітків та дорослих на Python</h1>
+                  <p style="max-width: 760px;">Python для дітей, підлітків та дорослих одна з найлегших для вивчення мов програмування.
+                    Онлайн школа OsviTech пропонує курси програмування які дозволять учню розібратися внутрішньою будовою програм та працювати як Junior Python Developer</p>
+                  <button class="btn popup-question-trigger">Забронювати місце на курсі</button>
+                </div>
+                <div class="intro__right">
+                  <img src="/images/subjects/subject-python.png" alt="">
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="advantages" id="advantages">
+          <my-container>
+            <div class="advantages__content">
+              <hgroup>
+                <h2>Переваги курсу Python</h2>
+              </hgroup>
+
+              <div class="advantages__grid">
+                <advantages-item>
+                  <img src="/images/subjects/advantages-python-1.png" alt="">
+                  <h3>Онлайн навчання в зручний час</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-python-2.png" alt="">
+                  <h3>Цікаві домашні завдання</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-python-3.png" alt="">
+                  <h3>Навчання з початкового рівня</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-python-4.png" alt="">
+                  <h3>Підтримка та зворотний зв'язок</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-roblox-1.png" alt="">
+                  <h3>Сертифікат та портфоліо в кінці курсу</h3>
+                </advantages-item>
+
+                <advantages-item>
+                  <img src="/images/subjects/advantages-python-5.png" alt="">
+                  <h3>Професійні викладачі</h3>
+                </advantages-item>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="student" id="student-why">
+          <my-container>
+            <div class="student__content">
+              <hgroup>
+                <h2>Чому ви навчитеся?</h2>
+              </hgroup>
+
+              <div class="student__row">
+                <div class="student__row-left fz24">
+                  <ul>
+                    <li>
+                      <student-step>1</student-step>
+                      <span>Познайомишся із середовищем Python</span>
+                    </li>
+
+                    <li>
+                      <student-step>2</student-step>
+                      <span>Вивчиш базовий синтакс, оператори та цикли</span>
+                    </li>
+
+                    <li>
+                      <student-step>3</student-step>
+                      <span>Розглянемо функції та як з ними працювати</span>
+                    </li>
+
+                    <li>
+                      <student-step>4</student-step>
+                      <span>Вивчиш властивості графіки та анімації</span>
+                    </li>
+
+                    <li>
+                      <student-step>5</student-step>
+                      <span>Вивчиш парсинг інформації та роботу з базами даних</span>
+                    </li>
+
+                    <li>
+                      <student-step>6</student-step>
+                      <span>Навчишся створювати ботів та програми</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="student__row-right fz24">
+                  <h3>Ти отримаєш в кінці курсу:</h3>
+                  <ul>
+                    <li>дві власно розроблені програми</li>
+                    <li>власний сайт з активним функціоналом</li>
+                    <li>сертифікат</li>
+                    <li>два власно створені боти</li>
+                    <li>навички проєктної розробки</li>
+                    <li>портфоліо</li>
+                  </ul>
+                  <button class="btn-outline popup-question-trigger">Подивитись результати наших учнів</button>
+                  <img class="student--chicken" src="/images/subjects/student-chicken-gamer.png" alt="">
+                </div>
+              </div>
+
+              <article class="student-banner">
+                <img src="/images/subjects/how-big-1.png" alt="">
+                <div class="student-banner__text">
+                  <h3>Що необхідно для навчання?</h3>
+                  <p class="fz24">Мова програмування Python для початківців не потребує якоїсь підготовки, тому щоби зареєструватися на наші IT курси для дітей вам необхідно лише зручне місце, ноутбук, інтернет, вільний час та бажання стати програмістом.</p>
+                </div>
+              </article>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="program" id="program">
+          <my-container>
+            <div class="program__content">
+              <hgroup>
+                <h2>Програма курсу</h2>
+              </hgroup>
+
+              <article class="program__single--big">
+                <div class="program__single-text">
+                  <h3>На курсі ти дізнаєшся:</h3>
+                  <ul class="fz24">
+                    <li>Базовий синтаксис Python</li>
+                    <li>Принципи роботи з функціями</li>
+                    <li>Роботу з циклами</li>
+                    <li>Роботу з базами даних</li>
+                    <li>Flask, HTML, CSS та JavaScript</li>
+                    <li>Роботу із зовнішніми API</li>
+                  </ul>
+                </div>
+
+                <img src="/images/subjects/program-2-big.png" alt="">
+              </article>
+
+              <a class="btn-outline" href="#">Подивитись повну програму курсу</a>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="teachers" id="teachers">
+          <my-container>
+            <div class="teachers__content">
+              <hgroup>
+                <h2>Викладачі курсу Python</h2>
+              </hgroup>
+
+              <div class="teachers__row">
+                <div class="teachers__image">
+                  <img src="/images/subjects/teachers-4.jpg" alt="">
+                  <img class="teachers--book" src="/images/reviews-book.png" alt="">
+                </div>
+                <div class="teachers__text fz24">
+                  <p>Майстерно володіють мовою програмування та можуть створювати боти, додатки, ігри та сайти. Вони з легкістю навчать тебе цього мистецтва. З їх наставництвом та індивідуальним форматом навчання ти швидко освоїш професію програміста.  Пайтон для дітей кращий варіант освоєння програмування.</p>
+                </div>
+              </div>
+
+              <img class="teachers--star-1" src="/images/reviews-star.png" alt="">
+              <img class="teachers--star-2" src="/images/reviews-star.png" alt="">
+              <img class="teachers--star-3" src="/images/reviews-star.png" alt="">
+            </div>
+          </my-container>
+        </section>
+
+        <section class="student" id="student-how">
+          <my-container>
+            <div class="student__content">
+              <hgroup>
+                <h2>Як стати студентом</h2>
+                <p class="fz24">Мова програмування Python для початківців ідеальна для старту в ІТ</p>
+              </hgroup>
+
+              <div class="student__row">
+                <div class="student__row-left fz24">
+                  <ul>
+                    <li>
+                      <student-step>1</student-step>
+                      <span>Зареєструйся на сайті</span>
+                    </li>
+
+                    <li>
+                      <student-step>2</student-step>
+                      <span>Очікуй дзвінка менеджера</span>
+                    </li>
+
+                    <li>
+                      <student-step>3</student-step>
+                      <span>Пройдіть пробне заняття</span>
+                    </li>
+
+                    <li>
+                      <student-step>4</student-step>
+                      <span>Обери пакет навчання</span>
+                    </li>
+
+                    <li>
+                      <student-step>5</student-step>
+                      <span>Внеси оплату</span>
+                    </li>
+
+                    <li>
+                      <student-step>6</student-step>
+                      <span>Починай навчатись</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="student__row-right fz24">
+                  <h3>Пройди пробне безкоштовне заняття вже зараз</h3>
+                  <p>На ньому ти:</p>
+                  <ul>
+                    <li>познайомишся з нашою школою та методикою викладання</li>
+                    <li>протестиш свої можливості та знання</li>
+                    <li>створиш свій перший мініпроект</li>
+                    <li>разом визначимо оптимальну програму навчання</li>
+                  </ul>
+                  <button class="btn popup-question-trigger">Реєструйся</button>
+                  <img class="student--chicken" src="/images/subjects/student-chicken-gamer.png" alt="">
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="studying" id="studying">
+          <my-container>
+            <div class="studying__content fz24">
+              <hgroup>
+                <h2>Як проходить навчання?</h2>
+                <p>Отримай навички та знання програміста та працюй як фрілансер</p>
+              </hgroup>
+
+              <div class="studying__steps fz24">
+                <div class="studying__single-step">
+                  <studying-step>1</studying-step>
+                  <p>IT курси для дітей починаються із зарахування на курс</p>
+                </div>
+
+                <div class="studying__single-step">
+                  <studying-step>2</studying-step>
+                  <p>Потім ви отримаєте допомогу із налаштування необхідного програмного забезпечення</p>
+                </div>
+
+                <div class="studying__single-step">
+                  <studying-step>3</studying-step>
+                  <p>Починаєте проходити уроки за означеним графіком</p>
+                </div>
+
+                <div class="studying__single-step">
+                  <studying-step>4</studying-step>
+                  <p>За підтримки викладачів робите проєкти, поступово просуваєтесь від простого до складно</p>
+                </div>
+
+                <div class="studying__single-step">
+                  <studying-step>5</studying-step>
+                  <p>Створюєте власне портфоліо</p>
+                </div>
+
+                <div class="studying__single-step">
+                  <studying-step>6</studying-step>
+                  <p>В кінці курсу отримаєте сертифікат</p>
+                </div>
+              </div>
+
+            </div>
+          </my-container>
+        </section>
+
+        <section class="faq" id="faq">
+          <my-container>
+            <div class="faq__content">
+              <h2>FAQ</h2>
+
+              <div class="faq__questions">
+                <dl>
+                  <dt>
+                    <span>Що таке Python?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Це одна з найпопулярніших мов програмування у світі. Логіка та синтаксис цієї мови достатньо прости і це робить її ідеальною для вивчення і старту в професії. IT курси для підлітків слід розпочинати саме з цієї мови.</span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Який комп'ютер потрібен для навчання?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Потужності комп'ютера повинно вистачити для того щоби одночасно запустити конференцію і браузер, адже айті курси для дітей проводяться онлайн і треба одночасно спілкуватися з викладачем та працювати в програмі.</span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Якими навичками потрібно володіти, щоби розпочати навчання на курсі?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>На наших курсах ми вивчаємо Python з нуля, українською мовою. Тобто учні не мають досвіду з програмування, тому додаткової підготовки не потрібно.</span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Що робити якщо дитина пропустить заняття?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Всі матеріали та уроки є в записі, якщо дитина пропустить заняття, то зможе відпрацювати їх самостійно. Ми онлайн школа, тому наші курси програмування для дітей в Києві та в інших містах побудовані таким чином, щоби учню було зручно проходити курс.</span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Яка вартість курсу?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Вартість курсу залежить від кількості занять. Основні уроки програмування для дітей онлайн починаються після пробного уроку, на якому наші викладачі підберуть індивідуальну програму для кожного учня. Заповніть форму зворотного зв'язку і наш менеджер зв'яжеться з вами.</span>
+                    </div>
+                  </dd>
+                </dl>
+
+                <dl>
+                  <dt>
+                    <span>Скільки тривають курси програмування для дітей?</span>
+                  </dt>
+                  <dd>
+                    <div class="min-h-0">
+                      <span>Курси Пайтон в нашій школі передбачають індивідуальне навчання, тому тривалість залежить від ваших початкових знань. Пройдіть пробне заняття і ми підберемо оптимальний пакет навчання.</span>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="see-also" id="see-also">
+          <my-container>
+            <div class="see-also__content">
+              <hgroup>
+                <h2>Дивиться також</h2>
+              </hgroup>
+
+              <div class="see-also__grid">
+                <a href="#">Python</a>
+                <a href="#">Scratch</a>
+                <a href="#">Minecraft</a>
+                <a href="#">Unity</a>
+              </div>
+            </div>
+          </my-container>
+        </section>
+
+        <section class="banner-question banner--blue" id="banner-question">
+          <my-container>
+            <div class="banner-question__content">
+              <div class="banner-question__row">
+                <div class="banner-question__left">
+                  <img src="/images/banner-question-2.png" alt="" class="banner-question__dog">
+                  <h2>Є питання? Ми з радістю відповімо!</h2>
+                  <p>Залишай свій номер і ми перетелефонуємо</p>
+                  <img src="/images/black-arrow.svg" alt="" class="banner-question__arrow">
+                </div>
+                <div class="banner-question__right">
+                  <form action="" method="post" render-form="banner-question-form">
+                    <input type="tel" name="tel" placeholder="Номер телефону" required>
+                    <button class="btn">Передзвоніть мені</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </my-container>
+        </section>
+      </main>
+
+      <footer class="footer" id="footer">
+        <my-container>
+          <div class="footer__content">
+            <div class="footer__row">
+              <div class="footer__left">
+                <a href="/">
+                  <img src="/images/footer-logo.svg" alt="">
+                </a>
+                <p>Онлайн школа для дітей від 5 до 17 років</p>
+              </div>
+              <div class="footer__right">
+                <footer-links-block>
+                  <footer-links-title>Меню</footer-links-title>
+                  <ul>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#formats">Формати</a></li>
+                  </ul>
+                </footer-links-block>
+
+                <footer-links-block>
+                  <footer-links-title>Напрямки</footer-links-title>
+                  <ul>
+                    <li><a href="#">Програмування</a></li>
+                    <li><a href="#">Шкільна програма</a></li>
+                    <li><a href="#">Іноземні мови</a></li>
+                    <li><a href="#">Дизайн</a></li>
+                  </ul>
+                </footer-links-block>
+
+                <footer-links-block>
+                  <footer-links-title>Контакти</footer-links-title>
+                  <ul>
+                    <li>
+                      <a href="tel:+3800998887766">
+                        <img src="/images/footer-phone.svg" alt="">
+                        <span>+380 (099) 888 77 66</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:info@osvitech.com">
+                        <img src="/images/footer-mail.svg" alt="">
+                        <span>info@osvitech.com</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <footer-messangers>
+                    <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-telegram"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-ticktock"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-instagram"></use>
+                      </svg>
+                    </a>
+
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-viber"></use>
+                      </svg>
+                    </a> -->
+                    <!-- <a href="#">
+                      <svg>
+                        <use href="/images/footer-sprite.svg#footer-youtube"></use>
+                      </svg>
+                    </a> -->
+                  </footer-messangers>
+                </footer-links-block>
+              </div>
+            </div>
+
+            <div class="footer__sub footer__row">
+              <div class="footer__left">
+                <p>© 2023 OsviTech. All rights reserved.</p>
+              </div>
+              <div class="footer__right">
+                <a href="#">Політика конфідеційності</a>
+                <a href="#">Умови надання послуг</a>
+                <a href="#">Налаштування Cookies</a>
+              </div>
+            </div>
+          </div>
+        </my-container>
+      </footer>
+
+      <!-- popups -->
+
+      <div class="popup-question" id="popup-question">
+        <my-container>
+          <div class="popup-question__content">
+            <h3>Записатися на курс</h3>
+            <p>Заповніть форму і ми зв'яжемось з вами найближчим часом</p>
+
+            <form action="./telegram.php" method="post">
+              <div class="popup-question__form-flex">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="tel" name="tel" placeholder="Номер телефону" required>
+                <input type="hidden" name="course" value="">
+              </div>
+              <textarea name="question" placeholder="Напишіть, що вас цікавить?" required></textarea>
+              <button class="btn">Отримати безкоштовний урок</button>
+              <label>
+                <input type="checkbox" checked required>
+                <span>Згоден(а) з <a href="/">політикою конфіденційності</a></span>
+              </label>
+            </form>
+
+            <img src="/images/popup-close.svg" alt="" class="popup-question__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="after-form" id="after-from">
+        <my-container>
+          <div class="after-form__content">
+            <h3>Ваша заявка відправлена</h3>
+            <p>Наш менеджер зв’яжеться з вами найближчим часом</p>
+            <button class="btn">На головну</button>
+            <img src="/images/popup-close.svg" alt="" class="after-form__close">
+          </div>
+        </my-container>
+      </div>
+
+      <div class="call-me">
+        <my-container>
+          <div class="call-me__trigger">
+            <img src="/images/call-me.svg" alt="">
+          </div>
+
+          <div class="call-me__popup" hidden>
+            <h3>Є питання? Ми з радістю відповімо!</h3>
+            <p>Залишай свій номер і ми передзвонимо протягом 3 хвилин</p>
+            <form action="/">
+              <input type="tel" name="tel" placeholder="Номер телефону" required="">
+              <button class="btn">Передзвоніть мені</button>
+            </form>
+          </div>
+        </my-container>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+
+</html>
+
+
+
+<script>
+  const _form = document.querySelector(".popup-question form");
+  if (_form?.course) _form.course.value = "Python";
+</script>

@@ -58,8 +58,9 @@
     subject-info-wrapper {
       display: block;
       max-height: calc(100vh - 80px - 160px); // total - popupPadding - contentPadding
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
+      padding-right: 10px;
 
       @media (max-width: $forTablet) {
         max-height: calc(100vh - 80px - 120px);

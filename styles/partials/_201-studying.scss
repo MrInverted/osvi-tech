@@ -222,28 +222,49 @@
     right: calc(100% + 20px);
   }
 
+
+
   @media (max-width: $forTablet) {
-    &__single-step:not(:first-child):nth-child(n)::before {
+    &__single-step:nth-child(n)::before {
       width: 60px;
       height: 60px;
-      right: calc(100% + 20px);
+      right: calc(100% + 10px);
       background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
     }
 
-    &__single-step:not(:last-child):nth-child(n)::after {
+    &__single-step:nth-child(n)::after {
       width: 60px;
       height: 60px;
-      left: calc(100% + 20px);
+      left: calc(100% + 10px);
       background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    }
+
+    &__single-step:first-child::before {
+      width: 60px;
+      height: 60px;
+      background-image: url("/public/images/subjects/studying-steps-start.svg");
+      right: calc(100% + 10px);
+    }
+
+    &__single-step:last-child::after {
+      width: 60px;
+      height: 60px;
+      background-image: url("/public/images/subjects/studying-steps-end.svg");
+      right: calc(100% + 10px);
     }
   }
 
-  @media (max-width: $forMobile) {
 
-    .studying__single-step:nth-child(n)::before,
+
+  @media (max-width: $forMobile) {
+    .studying__single-step:nth-child(n)::before {
+      width: 30px;
+      height: 30px;
+    }
+
     .studying__single-step:nth-child(n)::after {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
   }
 }

@@ -57,6 +57,10 @@
       }
     }
 
+    button {
+      margin-top: 40px;
+    }
+
     @media (max-width: $forTablet) {
       flex: unset;
     }
@@ -169,5 +173,37 @@
     flex-direction: column;
 
     padding: 30px 40px;
+  }
+}
+
+
+
+.blue-banner {
+  flex: 0 1 540px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  border: 2px solid #7EC0F1;
+  background-color: #AA80F1;
+  border-radius: 60px;
+
+  padding: 40px;
+  padding-bottom: 0;
+
+  color: white;
+
+  h3 {
+    color: white;
+  }
+
+  img {
+    align-self: center;
+    margin-top: auto;
+  }
+
+  @media (max-width: $forTablet) {
+    flex: unset;
   }
 }

@@ -636,16 +636,16 @@ h3 {
 }
 @media (max-width: 1260px) {
   .header__right {
-    max-width: 100%;
     background-color: white;
     display: grid;
     grid-template-rows: 0fr;
     transition: 0.6s;
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
+    left: -20px;
+    right: -20px;
     z-index: 99;
+    width: unset;
   }
   .header__right.menu-is-opened {
     grid-template-rows: 1fr;
@@ -4965,24 +4965,39 @@ body.color-quiz {
   right: calc(100% + 20px);
 }
 @media (max-width: 1260px) {
-  .studying__single-step:not(:first-child):nth-child(n)::before {
+  .studying__single-step:nth-child(n)::before {
     width: 60px;
     height: 60px;
-    right: calc(100% + 20px);
+    right: calc(100% + 10px);
     background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
   }
-  .studying__single-step:not(:last-child):nth-child(n)::after {
+  .studying__single-step:nth-child(n)::after {
     width: 60px;
     height: 60px;
-    left: calc(100% + 20px);
+    left: calc(100% + 10px);
     background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+  }
+  .studying__single-step:first-child::before {
+    width: 60px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-start.svg");
+    right: calc(100% + 10px);
+  }
+  .studying__single-step:last-child::after {
+    width: 60px;
+    height: 60px;
+    background-image: url("/public/images/subjects/studying-steps-end.svg");
+    right: calc(100% + 10px);
   }
 }
 @media (max-width: 768px) {
-  .studying .studying__single-step:nth-child(n)::before,
+  .studying .studying__single-step:nth-child(n)::before {
+    width: 30px;
+    height: 30px;
+  }
   .studying .studying__single-step:nth-child(n)::after {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -5144,6 +5159,7 @@ body.color-quiz {
 @media (max-width: 768px) {
   .program .program__single--big {
     flex-direction: column;
+    padding: 40px;
   }
 }
 
@@ -5315,6 +5331,9 @@ body.color-quiz {
     gap: 20px;
   }
 }
+.student__row-left button {
+  margin-top: 40px;
+}
 @media (max-width: 1260px) {
   .student__row-left {
     flex: unset;
@@ -5414,6 +5433,31 @@ body.color-quiz {
   .student-banner {
     flex-direction: column;
     padding: 30px 40px;
+  }
+}
+
+.blue-banner {
+  flex: 0 1 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 2px solid #7EC0F1;
+  background-color: #AA80F1;
+  border-radius: 60px;
+  padding: 40px;
+  padding-bottom: 0;
+  color: white;
+}
+.blue-banner h3 {
+  color: white;
+}
+.blue-banner img {
+  align-self: center;
+  margin-top: auto;
+}
+@media (max-width: 1260px) {
+  .blue-banner {
+    flex: unset;
   }
 }
 

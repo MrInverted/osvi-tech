@@ -69,7 +69,6 @@
     }
 
     @media (max-width: $forTablet) {
-      max-width: 100%;
       background-color: white;
 
       display: grid;
@@ -78,9 +77,10 @@
 
       position: absolute;
       top: 100%;
-      left: 0;
-      right: 0;
+      left: -20px;
+      right: -20px;
       z-index: 99;
+      width: unset;
 
       &.menu-is-opened {
         grid-template-rows: 1fr;

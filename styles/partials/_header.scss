@@ -69,6 +69,7 @@
     }
 
     @media (max-width: $forTablet) {
+      max-width: unset;
       background-color: white;
 
       display: grid;

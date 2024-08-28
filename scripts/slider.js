@@ -1,110 +1,111 @@
-(function () {
-  try {
-    const swiper = new Swiper('.reviews .swiper', {
-      loop: false,
-      speed: 800,
-      spaceBetween: 200,
-      grabCursor: true,
-      loopPreventsSliding: false,
-      autoHeight: true,
+try {
+  const swiper = new Swiper('.reviews .swiper', {
+    loop: false,
+    speed: 800,
+    spaceBetween: 200,
+    grabCursor: true,
+    loopPreventsSliding: false,
+    autoHeight: true,
 
-      pagination: {
-        el: '.reviews .swiper-pagination',
-        type: 'bullets',
-        clickable: true,
+    pagination: {
+      el: '.reviews .swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.reviews .swiper-button-next',
+      prevEl: '.reviews .swiper-button-prev',
+    },
+  });
+} catch {
+  console.warn("reviews swiper catch")
+}
+
+
+
+try {
+  new Swiper('.fs-1 .swiper', {
+    loop: false,
+    speed: 800,
+    spaceBetween: 20,
+    grabCursor: true,
+    loopPreventsSliding: false,
+    slidesPerView: 1,
+    mousewheel: true,
+    freeMode: true,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2,
       },
-
-      navigation: {
-        nextEl: '.reviews .swiper-button-next',
-        prevEl: '.reviews .swiper-button-prev',
+      1260: {
+        slidesPerView: 3.7,
       },
-    });
+      1740: {
+        slidesPerView: 5,
+      }
+    },
 
-  } catch {
-    console.warn("swiper's catch")
-  }
+    navigation: {
+      nextEl: '.fs-1 .swiper-button-next',
+      prevEl: '.fs-1 .swiper-button-prev',
+    },
 
-  try {
-    new Swiper('.fs-1 .swiper', {
-      loop: false,
-      speed: 800,
-      spaceBetween: 20,
-      grabCursor: true,
-      loopPreventsSliding: false,
-      slidesPerView: 1,
-      mousewheel: true,
-      freeMode: true,
+    pagination: {
+      el: '.fs-1 .swiper-pagination',
+      type: 'bullets',
+    },
 
-      breakpoints: {
-        768: {
-          slidesPerView: 2.2,
-        },
-        1260: {
-          slidesPerView: 3.7,
-        },
-        1740: {
-          slidesPerView: 5,
-        }
+    scrollbar: {
+      el: '.fs-1 .swiper-scrollbar',
+      draggable: true,
+    },
+  });
+} catch (error) {
+  console.warn("formats swiper 1 catch")
+}
+
+
+
+try {
+  new Swiper('.fs-2 .swiper', {
+    loop: false,
+    speed: 800,
+    spaceBetween: 20,
+    grabCursor: true,
+    loopPreventsSliding: false,
+    slidesPerView: 1,
+    mousewheel: true,
+    freeMode: true,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2,
       },
-
-      navigation: {
-        nextEl: '.fs-1 .swiper-button-next',
-        prevEl: '.fs-1 .swiper-button-prev',
+      1260: {
+        slidesPerView: 3.7,
       },
+      1740: {
+        slidesPerView: 5,
+      }
+    },
 
-      pagination: {
-        el: '.fs-1 .swiper-pagination',
-        type: 'bullets',
-      },
+    navigation: {
+      nextEl: '.fs-2 .swiper-button-next',
+      prevEl: '.fs-2 .swiper-button-prev',
+    },
 
-      scrollbar: {
-        el: '.fs-1 .swiper-scrollbar',
-        draggable: true,
-      },
-    });
-  } catch (error) {
-    console.warn("swiper's catch")
-  }
+    pagination: {
+      el: '.fs-2 .swiper-pagination',
+      type: 'bullets',
+    },
 
-  try {
-    new Swiper('.fs-2 .swiper', {
-      loop: false,
-      speed: 800,
-      spaceBetween: 20,
-      grabCursor: true,
-      loopPreventsSliding: false,
-      slidesPerView: 1,
-      mousewheel: true,
-      freeMode: true,
-
-      breakpoints: {
-        768: {
-          slidesPerView: 2.2,
-        },
-        1260: {
-          slidesPerView: 3.7,
-        },
-        1740: {
-          slidesPerView: 5,
-        }
-      },
-
-      navigation: {
-        nextEl: '.fs-2 .swiper-button-next',
-        prevEl: '.fs-2 .swiper-button-prev',
-      },
-
-      pagination: {
-        el: '.fs-2 .swiper-pagination',
-        type: 'bullets',
-      },
-
-      scrollbar: {
-        el: '.fs-2 .swiper-scrollbar',
-        draggable: true,
-      },
-    });
-  } catch (error) {
-    console.warn("swiper's catch")
-  }
-})();
+    scrollbar: {
+      el: '.fs-2 .swiper-scrollbar',
+      draggable: true,
+    },
+  });
+} catch (error) {
+  console.warn("formats swiper 2 catch")
+}

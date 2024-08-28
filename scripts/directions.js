@@ -1,8 +1,8 @@
-import {
+const {
   openAndCloseChooser,
   setMainTitle,
   closePopup
-} from "./helpers.js"
+} = window;
 
 import { db } from "./subjects-db.js";
 

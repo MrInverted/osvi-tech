@@ -1,21 +1,30 @@
-export const userInfo = {
+const userInfo = {
   name: "",
   tel: "",
   course: "",
   question: ""
 }
 
-export const addActiveClass = (item, activeClass, disabledClass) => {
+window.userInfo = userInfo;
+
+
+
+const addActiveClass = (item, activeClass, disabledClass) => {
   item.classList.add(activeClass);
   item.classList.remove(disabledClass);
 }
 
-export const removeActiveClass = (item, activeClass, disabledClass) => {
+const removeActiveClass = (item, activeClass, disabledClass) => {
   item.classList.remove(activeClass);
   item.classList.add(disabledClass);
 }
 
-export const openAndCloseChooser = (chooserNodeList) => {
+window.addActiveClass = addActiveClass;
+window.removeActiveClass = removeActiveClass;
+
+
+
+const openAndCloseChooser = (chooserNodeList) => {
   chooserNodeList.forEach(item => {
     const title = item.querySelector(".chooser__title");
 
@@ -33,7 +42,11 @@ export const openAndCloseChooser = (chooserNodeList) => {
   })
 }
 
-export const switchTabs = (tabsNodeList, chooserNodeList) => {
+window.openAndCloseChooser = openAndCloseChooser;
+
+
+
+const switchTabs = (tabsNodeList, chooserNodeList) => {
   tabsNodeList.forEach((item, index) => {
     item.onclick = () => {
       for (let i = 0; i < tabsNodeList.length; i++) {
@@ -47,7 +60,11 @@ export const switchTabs = (tabsNodeList, chooserNodeList) => {
   })
 }
 
-export const setMainTitle = (titleNodeList, badgeNodeList, chooserNodeList) => {
+window.switchTabs = switchTabs;
+
+
+
+const setMainTitle = (titleNodeList, badgeNodeList, chooserNodeList) => {
   badgeNodeList.forEach(badge => {
     badge.onclick = () => {
       for (let title of titleNodeList) {
@@ -63,7 +80,11 @@ export const setMainTitle = (titleNodeList, badgeNodeList, chooserNodeList) => {
   })
 }
 
-export const closePopup = (popupBlock, popupContent, popupCloseButton) => {
+window.setMainTitle = setMainTitle;
+
+
+
+const closePopup = (popupBlock, popupContent, popupCloseButton) => {
   popupBlock.onclick = (e) => {
     if (!e.composedPath().includes(popupContent)) {
       popupBlock.classList.remove("opened");
@@ -76,3 +97,5 @@ export const closePopup = (popupBlock, popupContent, popupCloseButton) => {
     document.body.classList.remove("popup-is-opened");
   }
 }
+
+window.closePopup = closePopup;

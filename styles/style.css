@@ -636,6 +636,7 @@ h3 {
 }
 @media (max-width: 1260px) {
   .header__right {
+    max-width: unset;
     background-color: white;
     display: grid;
     grid-template-rows: 0fr;

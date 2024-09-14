@@ -131,6 +131,12 @@
     @media (max-width: $forTablet) {
       flex: unset;
     }
+
+    p br {
+      display: block;
+      content: "";
+      height: 16px;
+    }
   }
 
   &__right {

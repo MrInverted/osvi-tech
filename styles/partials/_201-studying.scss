@@ -134,6 +134,15 @@
     margin: 0 auto;
     margin-top: 60px;
   }
+
+  &__button-trigger.--center {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: unset;
+    }
+  }
 }
 
 

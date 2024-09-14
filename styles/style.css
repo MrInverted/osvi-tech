@@ -1069,6 +1069,11 @@ h3 {
     flex: unset;
   }
 }
+.intro__left p br {
+  display: block;
+  content: "";
+  height: 16px;
+}
 .intro__right {
   flex: 0 1 820px;
 }
@@ -4893,6 +4898,13 @@ body.color-quiz {
   margin: 0 auto;
   margin-top: 60px;
 }
+.studying__button-trigger.--center {
+  display: flex;
+  justify-content: center;
+}
+.studying__button-trigger.--center button {
+  width: unset;
+}
 
 .studying__steps {
   display: grid;
@@ -5162,6 +5174,35 @@ body.color-quiz {
     flex-direction: column;
     padding: 40px;
   }
+}
+
+.program__single-text.--math {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.program__single-text.--math h3 {
+  margin-bottom: 0;
+}
+.program__single-text.--math ul {
+  margin-bottom: 0;
+}
+
+.program__single--big.--math {
+  padding: 40px;
+}
+
+.program__single--big.--math + h2 {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.program__single--big.--math + h2 + .btn {
+  display: block;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .teachers__content {
@@ -5507,4 +5548,71 @@ body.color-quiz {
     grid-template-columns: repeat(1, 1fr);
     max-width: 200px;
   }
+}
+
+.how__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px 140px;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+@media (max-width: 1260px) {
+  .how__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.how__item {
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: 2px solid #AA80F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.how__item::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-image: url("/public/images/subjects/studying-steps-long-arrow.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateX(20px) translateY(-50%);
+}
+@media (max-width: 1260px) {
+  .how__item::after {
+    display: none;
+  }
+}
+.how__item:nth-child(2n):after {
+  display: none;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 1260px) {
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.why__item {
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: 2px solid #AA80F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

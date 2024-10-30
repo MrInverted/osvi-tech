@@ -394,7 +394,7 @@ h3 {
   border: 2px solid #ffd66c;
 }
 
-.hover-yellow:hover {
+.hover-yellow:hover, .see-also a.hover-yellow:hover {
   background-color: #ffd66c;
 }
 
@@ -406,7 +406,7 @@ h3 {
   border: 2px solid #f1807e;
 }
 
-.hover-red:hover {
+.hover-red:hover, .see-also a.hover-red:hover {
   background-color: #f1807e;
 }
 
@@ -753,6 +753,35 @@ h3 {
 }
 .header .dropdown.active .dropdown-content {
   grid-template-rows: 1fr;
+}
+
+.breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--gray);
+}
+.breadcrumbs ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 10px;
+}
+.breadcrumbs li {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.breadcrumbs li::after {
+  content: ">";
+}
+.breadcrumbs li:last-child::after {
+  display: none;
+}
+.breadcrumbs a:hover {
+  opacity: 0.6;
 }
 
 .footer {
@@ -1999,7 +2028,7 @@ h3 {
   display: block;
   width: 16px;
   height: 16px;
-  background-image: url("/public/images/list-icon.svg");
+  background-image: url("/images/list-icon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2575,18 +2604,6 @@ h3 {
   transition: margin 0.6s;
   cursor: pointer;
   position: relative;
-  font-size: 24px;
-  line-height: 140%;
-}
-@media (max-width: 1740px) {
-  .faq__content dt {
-    font-size: 22px;
-  }
-}
-@media (max-width: 768px) {
-  .faq__content dt {
-    font-size: 18px;
-  }
 }
 .faq__content dt::after {
   content: "+";
@@ -2602,7 +2619,26 @@ h3 {
   right: 0;
   transform: translateY(-50%);
 }
-.faq__content dt:hover {
+.faq__content dt,
+.faq__content dt h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media (max-width: 1740px) {
+  .faq__content dt,
+  .faq__content dt h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .faq__content dt,
+  .faq__content dt h3 {
+    font-size: 18px;
+  }
+}
+.faq__content dt:hover,
+.faq__content dt h3:hover {
   color: #aa80f1;
 }
 .faq__content dd {
@@ -2610,9 +2646,6 @@ h3 {
   grid-template-rows: 0fr;
   overflow: hidden;
   transition: 0.6s;
-}
-.faq__content h3 {
-  margin-bottom: 8px;
 }
 .faq__content button {
   background-color: #f1807e;
@@ -2672,6 +2705,9 @@ h3 {
 }
 .faq__right img {
   width: 130px;
+}
+.faq__right h3 {
+  margin-bottom: 8px;
 }
 .faq__right p {
   font-size: 24px;
@@ -4449,6 +4485,16 @@ body.color-quiz {
   margin-bottom: 24px;
 }
 
+.button-trigger-wrapper {
+  margin-top: 80px;
+}
+.button-trigger-wrapper button {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
 .banner-question {
   margin-bottom: 80px;
 }
@@ -4950,31 +4996,31 @@ body.color-quiz {
 .studying__single-step:nth-child(2n+1)::before {
   width: 60px;
   height: 60px;
-  background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+  background-image: url("/images/subjects/studying-steps-short-arrow.svg");
   right: calc(100% + 20px);
 }
 .studying__single-step:nth-child(2n+1)::after {
   width: 100px;
   height: 60px;
-  background-image: url("/public/images/subjects/studying-steps-long-arrow.svg");
+  background-image: url("/images/subjects/studying-steps-long-arrow.svg");
   left: calc(100% + 20px);
 }
 .studying__single-step:nth-child(2n)::after {
   width: 60px;
   height: 60px;
-  background-image: url("/public/images/subjects/studying-steps-dashed-line.svg");
+  background-image: url("/images/subjects/studying-steps-dashed-line.svg");
   left: calc(100% + 20px);
 }
 .studying__single-step:first-child::before {
   width: 60px;
   height: 60px;
-  background-image: url("/public/images/subjects/studying-steps-start.svg");
+  background-image: url("/images/subjects/studying-steps-start.svg");
   right: calc(100% + 20px);
 }
 .studying__single-step:last-child::after {
   width: 60px;
   height: 60px;
-  background-image: url("/public/images/subjects/studying-steps-end.svg");
+  background-image: url("/images/subjects/studying-steps-end.svg");
   right: calc(100% + 20px);
 }
 @media (max-width: 1260px) {
@@ -4982,24 +5028,24 @@ body.color-quiz {
     width: 60px;
     height: 60px;
     right: calc(100% + 10px);
-    background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    background-image: url("/images/subjects/studying-steps-short-arrow.svg");
   }
   .studying__single-step:nth-child(n)::after {
     width: 60px;
     height: 60px;
     left: calc(100% + 10px);
-    background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    background-image: url("/images/subjects/studying-steps-short-arrow.svg");
   }
   .studying__single-step:first-child::before {
     width: 60px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-start.svg");
+    background-image: url("/images/subjects/studying-steps-start.svg");
     right: calc(100% + 10px);
   }
   .studying__single-step:last-child::after {
     width: 60px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-end.svg");
+    background-image: url("/images/subjects/studying-steps-end.svg");
     right: calc(100% + 10px);
   }
 }
@@ -5119,6 +5165,31 @@ body.color-quiz {
     gap: 40px;
   }
 }
+.program__grid.--two-items {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1260px) {
+  .program__grid.--two-items {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.program__grid.--one-item {
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(1, 1fr);
+}
+.program__grid.--one-item article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.program__grid.--one-item article ul {
+  margin-bottom: 0;
+}
+.program__grid.--one-item article img {
+  margin-top: 20px;
+}
 .program .--scratch + .btn-outline {
   margin-top: 0;
 }
@@ -5185,6 +5256,13 @@ body.color-quiz {
   margin-bottom: 0;
 }
 .program__single-text.--math ul {
+  margin-bottom: 0;
+}
+
+.program__single--big.--with-padding-bottom {
+  padding: 40px;
+}
+.program__single--big.--with-padding-bottom ul {
   margin-bottom: 0;
 }
 
@@ -5351,6 +5429,7 @@ body.color-quiz {
 @media (max-width: 1260px) {
   .student__row {
     flex-direction: column;
+    align-items: stretch;
     gap: 60px;
   }
 }
@@ -5441,6 +5520,37 @@ body.color-quiz {
     flex: unset;
   }
 }
+.student__row-right-wrapper {
+  flex: 0 1 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 1260px) {
+  .student__row-right-wrapper {
+    flex: unset;
+  }
+}
+.student__row-right-wrapper > div {
+  flex: unset;
+}
+.student__row-right-wrapper .student__row-right {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.student__row-right-wrapper .student__row-right p {
+  padding: 0px;
+  margin: 0;
+}
+.student__row-right-wrapper .student__row-right h3 {
+  padding: 0px;
+  margin: 0;
+}
+.student__row-right-wrapper .student__row-right button {
+  margin: 0px;
+}
 .student .student--chicken {
   border-radius: unset;
   position: absolute;
@@ -5497,6 +5607,10 @@ body.color-quiz {
   align-self: center;
   margin-top: auto;
 }
+.blue-banner li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
 @media (max-width: 1260px) {
   .blue-banner {
     flex: unset;
@@ -5536,20 +5650,34 @@ body.color-quiz {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-@media (max-width: 1260px) {
+@media (max-width: 1740px) {
   .see-also__grid {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1260px) {
+  .see-also__grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 400px;
+  }
+}
+.see-also__grid.--three-items {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1380px;
+  margin: 0 auto;
+}
+@media (max-width: 1740px) {
+  .see-also__grid.--three-items {
+    grid-template-columns: repeat(1, 1fr);
     max-width: 400px;
     margin: 0 auto;
   }
 }
-@media (max-width: 768px) {
-  .see-also__grid {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 200px;
-  }
+.see-also a.hover-yellow:hover {
+  color: initial;
 }
-
 .how__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5577,7 +5705,7 @@ body.color-quiz {
   display: block;
   width: 100px;
   height: 50px;
-  background-image: url("/public/images/subjects/studying-steps-long-arrow.svg");
+  background-image: url("/images/subjects/studying-steps-long-arrow.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

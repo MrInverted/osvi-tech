@@ -199,35 +199,35 @@
   &__single-step:nth-child(2n + 1)::before {
     width: 60px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+    background-image: url("/images/subjects/studying-steps-short-arrow.svg");
     right: calc(100% + 20px);
   }
 
   &__single-step:nth-child(2n + 1)::after {
     width: 100px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-long-arrow.svg");
+    background-image: url("/images/subjects/studying-steps-long-arrow.svg");
     left: calc(100% + 20px);
   }
 
   &__single-step:nth-child(2n)::after {
     width: 60px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-dashed-line.svg");
+    background-image: url("/images/subjects/studying-steps-dashed-line.svg");
     left: calc(100% + 20px);
   }
 
   &__single-step:first-child::before {
     width: 60px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-start.svg");
+    background-image: url("/images/subjects/studying-steps-start.svg");
     right: calc(100% + 20px);
   }
 
   &__single-step:last-child::after {
     width: 60px;
     height: 60px;
-    background-image: url("/public/images/subjects/studying-steps-end.svg");
+    background-image: url("/images/subjects/studying-steps-end.svg");
     right: calc(100% + 20px);
   }
 
@@ -238,27 +238,27 @@
       width: 60px;
       height: 60px;
       right: calc(100% + 10px);
-      background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+      background-image: url("/images/subjects/studying-steps-short-arrow.svg");
     }
 
     &__single-step:nth-child(n)::after {
       width: 60px;
       height: 60px;
       left: calc(100% + 10px);
-      background-image: url("/public/images/subjects/studying-steps-short-arrow.svg");
+      background-image: url("/images/subjects/studying-steps-short-arrow.svg");
     }
 
     &__single-step:first-child::before {
       width: 60px;
       height: 60px;
-      background-image: url("/public/images/subjects/studying-steps-start.svg");
+      background-image: url("/images/subjects/studying-steps-start.svg");
       right: calc(100% + 10px);
     }
 
     &__single-step:last-child::after {
       width: 60px;
       height: 60px;
-      background-image: url("/public/images/subjects/studying-steps-end.svg");
+      background-image: url("/images/subjects/studying-steps-end.svg");
       right: calc(100% + 10px);
     }
   }

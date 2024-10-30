@@ -1,0 +1,35 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--gray);
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 10px;
+  }
+
+  li {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  li::after {
+    content: ">";
+  }
+
+  li:last-child::after {
+    display: none;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}

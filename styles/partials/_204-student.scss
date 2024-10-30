@@ -33,6 +33,7 @@
 
     @media (max-width: $forTablet) {
       flex-direction: column;
+      align-items: stretch;
       gap: 60px;
     }
   }
@@ -131,6 +132,44 @@
     }
   }
 
+  &__row-right-wrapper {
+    flex: 0 1 540px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (max-width: $forTablet) {
+      flex: unset;
+    }
+
+    &>div {
+      flex: unset;
+    }
+
+    .student__row-right {
+      padding: 40px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .student__row-right p {
+      padding: 0px;
+      margin: 0;
+    }
+
+    .student__row-right h3 {
+      padding: 0px;
+      margin: 0;
+    }
+
+    .student__row-right button {
+      margin: 0px;
+    }
+  }
+
   .student--chicken {
     border-radius: unset;
     position: absolute;
@@ -201,6 +240,11 @@
   img {
     align-self: center;
     margin-top: auto;
+  }
+
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
   }
 
   @media (max-width: $forTablet) {

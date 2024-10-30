@@ -35,15 +35,36 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 
-    @media (max-width: $forTablet) {
+    @media (max-width: $forDesktop) {
       grid-template-columns: repeat(2, 1fr);
-      max-width: 400px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    @media (max-width: $forMobile) {
+    @media (max-width: $forTablet) {
       grid-template-columns: repeat(1, 1fr);
-      max-width: 200px;
+      max-width: 400px;
     }
+  }
+
+  &__grid.--three-items {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1380px;
+    margin: 0 auto;
+
+    @media (max-width: $forDesktop) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  a.hover-yellow:hover {
+    @extend .hover-yellow;
+    color: initial;
+  }
+
+  a.hover-red:hover {
+    @extend .hover-red;
   }
 }

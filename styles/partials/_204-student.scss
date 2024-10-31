@@ -155,12 +155,17 @@
       gap: 16px;
     }
 
+    .student__row-right h3 {
+      padding: 0px;
+      margin: 0;
+    }
+
     .student__row-right p {
       padding: 0px;
       margin: 0;
     }
 
-    .student__row-right h3 {
+    .student__row-right ul {
       padding: 0px;
       margin: 0;
     }
@@ -249,5 +254,26 @@
 
   @media (max-width: $forTablet) {
     flex: unset;
+  }
+}
+
+
+.student .like-a-float {
+  position: relative;
+  min-height: 110px;
+
+  span {
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    right: -720px;
+
+    @media (max-width: $forDesktop) {
+      right: -550px;
+    }
+
+    @media (max-width: $forTablet) {
+      position: static;
+    }
   }
 }

@@ -4495,6 +4495,13 @@ body.color-quiz {
   margin: 0 auto;
 }
 
+.flex-row-20 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
+
 .banner-question {
   margin-bottom: 80px;
 }
@@ -5540,11 +5547,15 @@ body.color-quiz {
   flex-direction: column;
   gap: 16px;
 }
+.student__row-right-wrapper .student__row-right h3 {
+  padding: 0px;
+  margin: 0;
+}
 .student__row-right-wrapper .student__row-right p {
   padding: 0px;
   margin: 0;
 }
-.student__row-right-wrapper .student__row-right h3 {
+.student__row-right-wrapper .student__row-right ul {
   padding: 0px;
   margin: 0;
 }
@@ -5614,6 +5625,27 @@ body.color-quiz {
 @media (max-width: 1260px) {
   .blue-banner {
     flex: unset;
+  }
+}
+
+.student .like-a-float {
+  position: relative;
+  min-height: 110px;
+}
+.student .like-a-float span {
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  right: -720px;
+}
+@media (max-width: 1740px) {
+  .student .like-a-float span {
+    right: -550px;
+  }
+}
+@media (max-width: 1260px) {
+  .student .like-a-float span {
+    position: static;
   }
 }
 

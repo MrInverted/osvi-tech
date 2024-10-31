@@ -286,3 +286,10 @@
     margin: 0 auto;
   }
 }
+
+.flex-row-20 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+}
